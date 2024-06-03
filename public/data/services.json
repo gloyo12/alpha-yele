@@ -1,0 +1,5 @@
+[
+{ "id": 1, "name": "Account Management (Social Media)", "type": [{ "name": "standard", "priceUSD": 50, "priceXOF": 25000, "livraisonJour": 3 }, { "name": "express", "priceUSD": 70, "priceXOF": 35000, "livraisonJour": 1 }] },
+  { "id": 2, "name": "Account Management (Google Ads)", "type": [{ "name": "standard", "priceUSD": 60, "priceXOF": 30000, "livraisonJour": 4 }, { "name": "express", "priceUSD": 80, "priceXOF": 40000, "livraisonJour": 2 }] },
+  { "id": 3, "name": "Bi-Fold Brochure Design (1 Option)", "type": [{ "name": "standard", "priceUSD": 40, "priceXOF": 20000, "livraisonJour": 2 }, { "name": "express", "priceUSD": 55, "priceXOF": 27500, "livraisonJour":1}] } 
+]

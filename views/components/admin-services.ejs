@@ -1,0 +1,68 @@
+<div ng-show="screen === 'services'" class="px-6 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="bg-white rounded-3xl p-8 mb-5">
+
+<div class="flex items-start justify-between ">
+<h1 class="text-xl font-bold mb-10">Services ({{services.length | number}})</h1>
+
+<a
+onclick="toggleModalAddService()"
+href="javascript:void(0)"
+class="inline-block rounded bg-green-600 px-4 py-2 text-xs font-medium text-white hover:bg-green-700"
+>
+Add
+</a>
+
+</div>
+
+
+
+
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+<thead class="ltr:text-left rtl:text-right">
+<tr>
+
+<th class="whitespace-nowrap text-left px-4 py-2 font-medium text-gray-900">#ID</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Name</th>
+<th class="px-4 py-2"></th>
+</tr>
+</thead>
+
+<tbody class="divide-y divide-gray-200">
+<tr ng-repeat="x in services">
+<td class="whitespace-nowrap text-left px-4 py-2 font-medium text-gray-900">#{{x.id}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.name}}</td>
+
+<td class="whitespace-nowrap px-4 py-2">
+<a
+ng-click="setValue('selectedService',x)" onclick="toggleModalSeeService()"
+href="javascript:void(0)"
+class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+>
+View
+</a>
+
+
+<a
+ng-click="deleteService(x.id)"
+href="javascript:void(0)"
+class="inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-red-700"
+>
+Delete
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+<%-include('admin_service_modal')%>
+<%-include('admin_add_service_modal')%>

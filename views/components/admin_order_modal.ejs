@@ -1,0 +1,124 @@
+<div id="seeorders" class="fixed top-0 left-0 w-full h-full flex items-center justify-center hidden" style="background-color: rgb(0, 0, 0, .6);">
+
+
+
+<div class="bg-white w-[60%] h-[80%] p-6 rounded-xl relative">
+
+<!-- close button -->
+<div onclick="toggleModalSeeOrder()" class="absolute h-8 w-8 top-[-10%] right-[-5%] rounded-full bg-white flex items-center justify-center cursor-pointer">x</div>
+
+<!-- details of the order -->
+
+
+<div class="max-w-xl lg:max-w-3xl">
+<div class="relative block">
+<h1 class="mt-2 text-xl font-bold text-gray-900 sm:text-xl md:text-xl flex items-center justify-between">
+<span>Order #{{selectedOrder.id}}</span> 
+<span>Total: ${{selectedOrder.total | number}}</span>
+</h1>
+</div>
+
+
+
+
+<div ng-show="selectedOrder.type ==='monthly'" class="flow-root mt-8  rounded-lg border border-gray-100 py-3 shadow-sm">
+<dl class="-my-3 divide-y divide-gray-100 text-sm">
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Package</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.package}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Date</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.dateCreated | date}} at {{selectedOrder.dateCreated | date:'h:m a'}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Name</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.meta.names}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Email</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.meta.email}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Bio</dt>
+<dd class="text-gray-700 sm:col-span-2">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et facilis debitis explicabo
+doloremque impedit nesciunt dolorem facere, dolor quasi veritatis quia fugit aperiam
+aspernatur neque molestiae labore aliquam soluta architecto?
+</dd>
+</div>
+</dl>
+</div>
+
+
+<!-- Pay As You Go Orders -->
+
+
+<div ng-show="selectedOrder.type ==='payasugo'" class="flow-root mt-8  rounded-lg border border-gray-100 py-3 shadow-sm">
+<dl class="-my-3 divide-y divide-gray-100 text-sm">
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Date</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.dateCreated | date}} at {{selectedOrder.dateCreated | date:'h:m a'}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Customer</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.names}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Email</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.email}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Phone</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedOrder.phone}}</dd>
+</div>
+</dl>
+</div>
+
+
+<hr ng-show="selectedOrder.type !='monthly'" class="my-4">
+
+<div ng-show="selectedOrder.type !='monthly'" class="col-span-6">
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+<thead class="ltr:text-left rtl:text-right">
+<tr>
+<th class="whitespace-nowrap text-left px-4 py-2 font-medium text-gray-900">Service</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Type</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Price(USD)</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Price(XOF)</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Livraison(Jour)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr ng-repeat="x in selectedOrder.cart">
+<td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{x.name}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.type}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.priceUSD | number}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.priceXOF | number}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.livraisonJour}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+	
+
+
+
+</div>
+
+
+	
+</div>

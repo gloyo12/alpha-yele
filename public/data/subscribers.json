@@ -1,0 +1,48 @@
+[
+  {
+    "meta": {
+      "names": "Glody Patrick",
+      "email": "glodypatrick@gmail.com",
+      "phone": "+2250786238282"
+    },
+    "bizname": "cvxcvx",
+    "package": "Alpha Pro",
+    "industry": "Autres",
+    "primMarketingObj": true,
+    "obstacles": true,
+    "presenceDigital": "Avancee",
+    "tailleEntreprise": "StartUp",
+    "dateCreated": "2024-05-17T07:24:06.542Z",
+    "id": 3
+  },
+  {
+    "meta": {
+      "names": "Glody Patroc",
+      "email": "glodymalenge@gmail.com",
+      "phone": "+2250786238282"
+    },
+    "bizname": "Aide30.com",
+    "package": "Alpha Pro",
+    "industry": "Autres",
+    "primMarketingObj": true,
+    "obstacles": true,
+    "presenceDigital": "Avancee",
+    "tailleEntreprise": "StartUp",
+    "dateCreated": "2024-05-17T07:16:23.255Z",
+    "id": 2
+  },
+  {
+    "id": 1,
+    "bizname": "aide30",
+    "industry": "technology",
+    "primMarketingObj": "Account Management (Social Media)",
+    "package": "Alpha Pro",
+    "meta": {
+      "email": "gloyo@gmail.com",
+      "phone": "0786238282",
+      "names": "Gldodf"
+    },
+    "status": "active",
+    "dateCreated": "2024-05-16T01:08:06.480Z"
+  }
+]

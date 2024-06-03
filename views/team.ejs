@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/loader.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="/public/css/base.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
+<link rel="stylesheet" href="/public/css/modal.css" />
+
+<!-- ===== MATERIAL ICONS =====-->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+
+<!-- ===== BOXICONS =====-->
+<link
+href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+rel="stylesheet"
+/>
+
+<!-- ===== AOS (Animate On Scroll) =====-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- ===== FAVICON =====-->
+<link
+rel="apple-touch-icon"
+sizes="180x180"
+href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+
+<title>The Team - Alpha Creative</title>
+</head>
+
+<body ng-controller="MainController">
+
+<!-- <<<<<<<< HEADER >>>>>>>> -->
+<%-include('components/header')%>
+
+
+<main class="team-main">
+<!------------ ========== AERO SECTION ========== ------------>
+<section class="flex-center aero">
+<div class="flex-center ae-container" data-aos="fade-up">
+<div class="flex-center ae-content">
+<h1>
+We're Alphas <span>serving</span> our collaborators, Partners and
+Customers.
+</h1>
+
+<span class="material-symbols-outlined" id="ae-arrow">
+arrow_outward
+</span>
+</div>
+</div>
+</section>
+
+<!------------ ========== A-ABOUT SECTION ========== ------------>
+<section class="flex-center a-about">
+<div class="flex-center flex-col aa-container">
+<div class="flex-center flex-col aa-title">
+<h3>Learn more about Alpha Creative</h3>
+
+<div class="flex-center aat">
+<p>Mission</p>
+<span class="material-symbols-outlined"> add </span>
+<p>Vision</p>
+<span class="material-symbols-outlined"> add </span>
+<p>Culture</p>
+</div>
+</div>
+
+<div class="flex-center aa-about">
+<div class="aaa" data-aos="fade-up">
+<p>Our Mission</p>
+<span
+>Help our partners achieve their Leads, Sale & Awareness
+goals.</span
+>
+</div>
+
+<div class="aaa" data-aos="fade-up" data-aos-delay="300">
+<p>Our Vision</p>
+<span
+>Alphas who aspire to have a positive impact on our employees,
+partners and customers.</span
+>
+</div>
+
+<div class="aaa" data-aos="fade-up" data-aos-delay="400">
+<p>Our Culture</p>
+<span>Empathy - Collaboration - Performance</span>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== A-TEAM SECTION ========== ------------>
+<section class="flex-center a-team">
+<div class="flex-center flex-col ate-container">
+<div class="flex-center flex-col ate-title">
+<h3>
+We bring a <span>wealth of experience</span> from a wide range of
+backgrounds
+</h3>
+<p>
+We consist of professionals expertly trained with invaluable
+experiences in global companies (Google, Meta or Mckinsey &
+Company). Our Philosophy is simple; Hire great people and give
+them the resources and support to do their best work.
+</p>
+</div>
+
+<div class="flex-center ate-cards" data-aos="fade-up">
+<div class="flex-center flex-col atec">
+<div class="flex-center atec-img">
+<img
+src="https://alphacreative.netlify.app/assets/img/profile/ibrahima.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center flex-col atec-text">
+<p>Ibrahima Sylla</p>
+<span>Co-Founder & Business Lead</span>
+<a
+href="https://www.linkedin.com/in/ibrahima-sylla/"
+target="_blank"
+>Say Hi 👋</a
+>
+</div>
+</div>
+
+<div class="flex-center flex-col atec">
+<div class="flex-center atec-img">
+<img src="https://alphacreative.netlify.app/assets/img/profile/ebo.jpeg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col atec-text">
+<p>Amichia Ebo</p>
+<span>Co-founder & Operations Lead</span>
+<a
+href="https://www.linkedin.com/in/amichia-ebo-b170a7133/"
+target="_blank"
+>Say Hi 👋</a
+>
+</div>
+</div>
+
+<div class="flex-center flex-col atec">
+<div class="flex-center atec-img">
+<img
+src="https://alphacreative.netlify.app/assets/img/profile/Yacine.jpeg"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center flex-col atec-text">
+<p>Yacine Coulibaly</p>
+<span>People & Culture Lead</span>
+<a
+href="https://www.linkedin.com/in/yacine-coulibaly-0a7500174/"
+target="_blank"
+>Say Hi 👋</a
+>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== A-JOIN SECTION ========== ------------>
+<section class="flex-center a-join">
+<div class="flex-center flex-col aj-container">
+<div class="flex-center aj-title">
+<h3>
+Are you the next <span>Alpha</span>? We would love to have you!
+</h3>
+<p>
+If you believe you would make a great fit for our team, we'd love
+to hear from you. If you don't find a suitable positon, you can
+send us an email to
+<a href="">hello@alphacreative.africa</a> with your resume,
+portfolio (if applicable) & why you would like to join our team.
+Looking forward to hearing from you!
+</p>
+</div>
+
+<div class="flex-center flex-col aj-list">
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+>
+<h4>Développeur web Full Stack</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="300"
+>
+<h4>UI/UX Designer</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="400"
+>
+<h4>Graphic Designer</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<h4>Business Developer</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<h4>Demand Generator</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<h4>Performance Manager</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<h4>Account Manager</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<h4>Formateur Marketing Digital</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+
+<div
+class="ajl"
+onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<h4>Formateur Informatique & IA</h4>
+<p>Remote - Full Time</p>
+<span class="material-symbols-outlined"> arrow_outward </span>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== A-WHY SECTION ========== ------------>
+<section class="flex-center a-why">
+<div class="flex-center flex-col aw-container">
+<div class="flex-center flex-col aw-title">
+<h3>Our <span>Advantages</span> & Perks</h3>
+<p>
+Our Philosophy is simple; Hire great people and give them the
+resources and support to do their best work.
+</p>
+</div>
+
+<div class="flex-center aw-cards" data-aos="fade-up">
+<div class="flex-center flex-col awc">
+<p>Personalized Career Dev Journey</p>
+<span
+>Whether it is promotion, internal mobility or mentoring, our
+People Ops Team ensures that each AlphaMate has a personalized
+career development plan.</span
+>
+</div>
+
+<div class="flex-center flex-col awc">
+<p>Welcome Pack</p>
+<span
+>Last generation computer (Mac or PC) depending on the role,
+Alpha goodies, Onboarding Lunch & relocation budget if
+necessary.</span
+>
+</div>
+
+<div class="flex-center flex-col awc">
+<p>Formation Continue</p>
+<span
+>All AlphaMates (including co-founders) must complete a
+mandatory training program every quarter to upskill themselves
+because we believe growth is a never-ending process.</span
+>
+</div>
+
+<div class="flex-center flex-col awc">
+<p>Team Remote or Office?</p>
+<span
+>Really it depends on you. It doesn't matter where you work
+from, what matters to us is your ability to positively impact
+your colleagues, our partners and customers.</span
+>
+</div>
+
+<div class="flex-center flex-col awc">
+<p>Credits: Gym - Massage & Transport</p>
+<span
+>We offer AlphaMate credits that allow them to get reimbursed up
+to 50% of their Gym, Massage & Transport costs.</span
+>
+</div>
+
+<div class="flex-center flex-col awc">
+<p>Quarterly bonus</p>
+<span
+>In addition to a competitive salary and benefits above, all
+AlphaMates are entitled to quarterly bonuses based on their
+performance.</span
+>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== CLIENT SECTION ========== ------------>
+<section class="flex-center client">
+<div class="flex-center flex-col cl-container">
+<div class="flex-center cl-title">
+<h3>
+We Are Grateful To Work With <span>Incredible Clients</span>
+</h3>
+</div>
+
+<div class="flex-center cl-cards">
+<div class="flex-center clc">
+<img
+src="https://alphacreative.netlify.app/assets/img/clients/Bi.flaz/bif-1.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center clc">
+<img
+src="https://alphacreative.netlify.app/assets/img/clients/studios-africa/sa-2.svg"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center clc">
+<img
+src="https://alphacreative.netlify.app/assets/img/clients/talenbo/tal-3.svg"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center clc">
+<img
+src="https://alphacreative.netlify.app/assets/img/clients/Bontuteur/bon-3.svg"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center clc">
+<img src="https://alphacreative.netlify.app/assets/img/clients/HEC/hec.png" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center clc">
+<img src="https://alphacreative.netlify.app/assets/img/clients/hmc/hmc.png" alt="" loading="lazy" />
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== FAQ SECTION ========== ------------>
+<section class="flex-center faq" id="faq">
+<div class="flex-center faq-container">
+<div class="flex-center f-img">
+<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col f-content">
+<div class="flex-center flex-col fc-text">
+<span>FAQ</span>
+<h3>Frequently Asked Questions</h3>
+
+<p>You've got questions? We've got answers!</p>
+</div>
+
+<div class="flex-center flex-col fc-list">
+<div class="flex-center flex-col fcl">
+<p>What services do you offer?</p>
+<span>
+Alpha Creative offers a range of 360-degree services for the
+development of your activities
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What types of companies do you work for?</p>
+<span>
+Alpha Creative works with businesses of all sizes, across all
+industries. We specialize in providing full-stack creative
+services for B2B and B2C companies.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>How do you define success?</p>
+<span>
+We define success as achieving our clients' goals. We measure
+the success of our campaigns in terms of awareness,
+engagement, lead generation and sales.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What is your work process?</p>
+<span>
+We work closely with our clients to understand their needs and
+goals. We then develop a personalized strategy to achieve
+these objectives.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What are the needs of the clients you work with?</p>
+<span>
+Our clients' needs vary depending on their size, industry and
+goals. However, some common needs include: <br />
+<strong>Notoriety Development</strong> ●
+<strong>Improve their brand image</strong> ●
+<strong>Leads Generation</strong> ●
+<strong>Boost Sales</strong>
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== CONTACT SECTION ========== ------------>
+<section class="flex-center contact" id="contact">
+<div class="flex-center flex-col con-container">
+<div class="flex-center flex-col con-title">
+<h3>Haven't found what you are looking for?</h3>
+<p>
+Don't fret! Connect with us below via any medium of your choice
+</p>
+</div>
+
+<div class="flex-center con-cards">
+<div class="flex-center flex-col cc" data-aos="fade-up">
+<i class="bx bxl-whatsapp" id="cc-icon"></i>
+<h4>Chat to support</h4>
+<p>Chat with our friendly team</p>
+<a href="https://wa.me/2250713807994" target="_blank"
+>Chat on WhatsApp</a
+>
+</div>
+
+<div
+class="flex-center flex-col cc"
+data-aos="fade-up"
+data-aos-delay="300"
+>
+<i class="bx bx-envelope" id="cc-icon"></i>
+<h4>Send us mails</h4>
+<p>We are here to help</p>
+<a href="mailto:{hello@alphacreative.africa}" target="_blank"
+>hello@alphacreative.africa</a
+>
+</div>
+
+<div
+class="flex-center flex-col cc"
+data-aos="fade-up"
+data-aos-delay="400"
+>
+<i class="bx bx-map" id="cc-icon"></i>
+<h4>Visit Us at:</h4>
+<p>Cocody, Abidjan - Cote d’Ivoire</p>
+<a href="" target="_blank">View on Google Maps</a>
+</div>
+
+<div
+class="flex-center flex-col cc"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<i class="bx bx-phone-call" id="cc-icon"></i>
+<h4>Call us</h4>
+<p>Mon-Fri 8am to 5pm</p>
+<a href="tel:{+2250713807994}" target="_blank"
+>+225 07 13 807 994</a
+>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+
+<!-- <<<<<<<< FOOTER >>>>>>>> -->
+<%-include('components/footer')%>
+
+<!-- ============= [QUOTE MODAL] ============= -->
+<%-include('components/modal')%>
+
+
+
+
+<!-- <<<<<<<< SCRIPT >>>>>>>> -->
+<script>
+// JavaScript function to open the link in a new tab
+function redirectToLink(url) {
+window.open(url, "_blank"); // Open the specified URL in a new tab
+}
+</script>
+
+
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/app.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/modal.js"></script>
+<!-- ===== AOS (Animate On Scroll) =====-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1500,
+anchor: "top center",
+});
+
+window.addEventListener("load", AOS.refresh);
+</script>
+</body>
+</html>

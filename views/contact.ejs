@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/loader.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="/public/css/base.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
+<link rel="stylesheet" href="/public/css/modal.css" />
+
+<!-- ===== MATERIAL ICONS =====-->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+
+<!-- ===== BOXICONS =====-->
+<link
+href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+rel="stylesheet"
+/>
+
+<!-- ===== AOS (Animate On Scroll) =====-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- ===== FAVICON =====-->
+<link
+rel="apple-touch-icon"
+sizes="180x180"
+href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+
+<title>Contact Us - Alpha Creative</title>
+</head>
+
+<body ng-controller="MainController">
+
+<!-- <<<<<<<< HEADER >>>>>>>> -->
+<%-include('components/header')%>
+
+
+<main class="contact-main">
+<!------------ ========== CERO SECTION ========== ------------>
+<section class="flex-center cero">
+<div class="flex-center ce-container">
+<div class="flex-center flex-col ce-content">
+<h1>Contact Us</h1>
+<p>
+Chat, call, email or complete the form to get in touch with Alpha
+Creative
+</p>
+
+<div class="flex-center flex-col cec-contact">
+<a href="mailto:{hello@alphacreative.africa}" target="_blank"
+>hello@alphacreative.africa</a
+>
+<a href="tel:{+2250713807994}" target="_blank"
+>(+225) 07 13 807 994</a
+>
+<a href="https://wa.me/2250713807994" target="_blank"
+>Chat with our friendly team</a
+>
+</div>
+
+<div class="flex-center cec-cards" data-aos="fade-right">
+<div class="flex-center flex-col cecc">
+<h5>Customer Support</h5>
+<p>
+Our support team is available around the clock to address any
+concerns or queries you may have.
+</p>
+</div>
+
+<div class="flex-center flex-col cecc">
+<h5>Feedback</h5>
+<p>
+We value your feedback and are continuously working to improve
+Alpha Creative to ensure the best experience.
+</p>
+</div>
+
+<div class="flex-center flex-col cecc">
+<h5>Business Inquiries</h5>
+<p>
+For investment-related questions or partnership inquiries,
+contact us at
+<a href="" target="_blank">hello@alphacreative.africa</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div class="flex-center ce-img" data-aos="fade-up">
+<img src="https://alphacreative.netlify.app/assets/img/background/bg-10.jpg" alt="" loading="lazy" />
+</div>
+</div>
+</section>
+
+<!------------ ========== C-FORM SECTION ========== ------------>
+<secion class="flex-center c-form">
+<div class="flex-center flex-col cf-container">
+<div class="flex-center flex-col cf-title">
+<h3><span>Connect</span> with us! 👋</h3>
+<p>
+Need help with something? Get in touch with our friendly team and
+we will get back to you.
+</p>
+</div>
+
+<form action="" class="flex-center cf-form" data-aos="fade-up">
+<div class="flex-center cf-input">
+<div class="cfi">
+<input
+type="text"
+name=""
+id=""
+placeholder="First Name"
+required
+autocomplete="on"
+/>
+</div>
+
+<div class="cfi">
+<input
+type="text"
+name=""
+id=""
+placeholder="Last Name"
+required
+autocomplete="on"
+/>
+</div>
+
+<div class="cfi">
+<input
+type="text"
+name=""
+id=""
+placeholder="Your Email"
+required
+autocomplete="on"
+/>
+</div>
+
+<div class="cfi">
+<select name="" id="">
+<option value="">Select Your Status</option>
+<option value="">Business</option>
+<option value="">Individual</option>
+</select>
+</div>
+
+<div class="cfi">
+<label for="">What service are you contacting us for?</label>
+
+<div class="flex-center cfi-tags">
+<div class="cfit">
+<i class="bx bx-checkbox"></i>
+<p>Alpha Influencers</p>
+</div>
+
+<div class="cfit">
+<i class="bx bx-checkbox"></i>
+<p>The Podcast Room</p>
+</div>
+
+<div class="cfit">
+<i class="bx bx-checkbox"></i>
+<p>Alpha Academie</p>
+</div>
+
+<div class="cfit">
+<i class="bx bx-checkbox"></i>
+<p>Alpha Print</p>
+</div>
+
+<div class="cfit">
+<i class="bx bx-checkbox"></i>
+<p>Spontaneous Application</p>
+</div>
+
+<div class="cfit">
+<i class="bx bx-checkbox"></i>
+<p>Other</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex-center flex-col cf-action">
+<textarea
+name=""
+id=""
+placeholder="We would love to hear from you..."
+></textarea>
+
+<button type="submit" class="cfa-btn">Submit Form</button>
+</div>
+</form>
+</div>
+</secion>
+
+<!------------ ========== FAQ SECTION ========== ------------>
+<section class="flex-center faq" id="faq">
+<div class="flex-center faq-container">
+<div class="flex-center f-img">
+<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col f-content">
+<div class="flex-center flex-col fc-text">
+<span>FAQ</span>
+<h3>Frequently Asked Questions</h3>
+
+<p>You've got questions? We've got answers!</p>
+</div>
+
+<div class="flex-center flex-col fc-list">
+<div class="flex-center flex-col fcl">
+<p>What services do you offer?</p>
+<span>
+Alpha Creative offers a range of 360-degree services for the
+development of your activities
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What types of companies do you work for?</p>
+<span>
+Alpha Creative works with businesses of all sizes, across all
+industries. We specialize in providing full-stack creative
+services for B2B and B2C companies.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>How do you define success?</p>
+<span>
+We define success as achieving our clients' goals. We measure
+the success of our campaigns in terms of awareness,
+engagement, lead generation and sales.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What is your work process?</p>
+<span>
+We work closely with our clients to understand their needs and
+goals. We then develop a personalized strategy to achieve
+these objectives.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What are the needs of the clients you work with?</p>
+<span>
+Our clients' needs vary depending on their size, industry and
+goals. However, some common needs include: <br />
+<strong>Notoriety Development</strong> ●
+<strong>Improve their brand image</strong> ●
+<strong>Leads Generation</strong> ●
+<strong>Boost Sales</strong>
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+<!-- <<<<<<<< FOOTER >>>>>>>> -->
+<%-include('components/footer')%>
+
+<!-- ============= [QUOTE MODAL] ============= -->
+<%-include('components/modal')%>
+
+
+
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/app.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/modal.js"></script>
+<!-- ===== AOS (Animate On Scroll) =====-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1500,
+anchor: "top center",
+});
+
+window.addEventListener("load", AOS.refresh);
+</script>
+</body>
+</html>

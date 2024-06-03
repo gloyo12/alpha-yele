@@ -1,0 +1,99 @@
+<div id="seeservice" class="fixed top-0 left-0 w-full h-full flex items-center justify-center hidden" style="background-color: rgb(0, 0, 0, .6);">
+
+
+
+<div class="bg-white w-[60%] h-auto p-6 rounded-xl relative">
+
+<!-- close button -->
+<div onclick="toggleModalSeeService()" class="absolute h-8 w-8 top-[-10%] right-[-5%] rounded-full bg-white flex items-center justify-center cursor-pointer">x</div>
+
+<!-- details of the order -->
+
+
+<div class="max-w-xl lg:max-w-3xl">
+<div class="relative block">
+
+<h1 class="mt-2 text-lg font-bold text-gray-900 sm:text-xl md:text-2xl flex items-center justify-between">
+<span>{{selectedService.name}}</span> 
+</h1>
+
+
+</div>
+
+<div  class="mt-8 grid grid-cols-6 gap-6">
+
+<div class="col-span-2">
+<label for="FirstName" class="block text-sm font-medium text-gray-700">
+Type: <span class="font-bold">STANDARD</span>
+</label>
+<div
+class="mt-1 w-full p-2 border-gray-700 bg-gray-100 font-bold text-sm text-black shadow-sm">
+Price (USD) : {{selectedService.type[0].priceUSD | number}}
+</div>
+</div>
+
+<div class="col-span-2">
+<label for="LastName" class="block text-sm font-medium text-white mb-1">
+Type: <span class="font-bold">STANDARD</span>
+</label>
+<div
+class="mt-1 w-full p-2 border-gray-700 bg-gray-100 font-bold text-sm text-black shadow-sm">
+Price (XOF) : {{selectedService.type[0].priceXOF | number}}
+</div>
+</div>
+
+<div class="col-span-2">
+<label for="LastName" class="block text-sm font-medium text-white mb-1">
+Type: <span class="font-bold">STANDARD</span>
+</label>
+<div
+class="mt-1 w-full p-2 border-gray-700 bg-gray-100 font-bold text-sm text-black shadow-sm">
+Livraison (Jour) : {{selectedService.type[0].livraisonJour | number}}
+</div>
+</div>
+
+
+
+<div class="col-span-2">
+<label for="FirstName" class="block text-sm font-medium text-gray-700">
+Type: <span class="font-bold">EXPRESS</span>
+</label>
+<div
+class="mt-1 w-full p-2 border-gray-700 bg-gray-100 font-bold text-sm text-black shadow-sm">
+Price (USD) : {{selectedService.type[1].priceUSD | number}}
+</div>
+</div>
+
+<div class="col-span-2">
+<label for="LastName" class="block text-sm font-medium text-white mb-1">
+Type: <span class="font-bold">EXPRESS</span>
+</label>
+<div
+class="mt-1 w-full p-2 border-gray-700 bg-gray-100 font-bold text-sm text-black shadow-sm">
+Price (XOF) : {{selectedService.type[1].priceXOF | number}}
+</div>
+</div>
+
+<div class="col-span-2">
+<label for="LastName" class="block text-sm font-medium text-white mb-1">
+Type: <span class="font-bold">EXPRESS</span>
+</label>
+<div
+class="mt-1 w-full p-2 border-gray-700 bg-gray-100 font-bold text-sm text-black shadow-sm">
+Livraison (Jour) : {{selectedService.type[1].livraisonJour | number}}
+</div>
+</div>
+
+
+
+</div>
+</div>
+	
+
+
+
+</div>
+
+
+	
+</div>

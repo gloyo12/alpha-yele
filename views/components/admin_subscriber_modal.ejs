@@ -1,0 +1,57 @@
+<div id="seesubscriber" class="fixed top-0 left-0 w-full h-full flex items-center justify-center hidden" style="background-color: rgb(0, 0, 0, .6);">
+
+
+
+<div class="bg-white w-[60%] h-[80%] p-6 rounded-xl relative">
+
+<!-- close button -->
+<div onclick="toggleModalSeeSubscriber()" class="absolute h-8 w-8 top-[-10%] right-[-5%] rounded-full bg-white flex items-center justify-center cursor-pointer">x</div>
+
+<!-- details of the order -->
+
+
+<div class="max-w-xl lg:max-w-3xl">
+<div class="relative block">
+<h1 class="mt-2 text-lg font-bold text-gray-900 sm:text-lg md:text-lg flex items-center justify-between">
+<span>Subscriber ID #{{selectedSubscriber.id}}</span> 
+<span>Status: {{selectedSubscriber.status}}</span> 
+</h1>
+</div>
+
+
+<div  class="flow-root mt-8  rounded-lg border border-gray-100 py-3 shadow-sm">
+<dl class="-my-3 divide-y divide-gray-100 text-sm">
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Package</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedSubscriber.package}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Joined On</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedSubscriber.dateCreated | date}} at {{selectedSubscriber.dateCreated | date:'h:m a'}}</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Customer</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedSubscriber.meta.names}} | {{selectedSubscriber.meta.email}} | </dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Bizname - Industry</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedSubscriber.bizname}} ({{selectedSubscriber.industry}})</dd>
+</div>
+
+<div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-gray-900">Marketing Objective</dt>
+<dd class="text-gray-700 sm:col-span-2">{{selectedSubscriber.primMarketingObj}}</dd>
+</div>
+</dl>
+</div>
+
+</div>
+	
+</div>
+
+
+	
+</div>

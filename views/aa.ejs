@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/loader.css" />
+<link rel="stylesheet" href="/public/css/base.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
+<link rel="stylesheet" href="/public/css/modal.css" />
+
+<!-- ===== MATERIAL ICONS =====-->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+
+<!-- ===== BOXICONS =====-->
+<link
+href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+rel="stylesheet"
+/>
+
+<!-- ===== AOS (Animate On Scroll) =====-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- ===== FAVICON =====-->
+<link
+rel="apple-touch-icon"
+sizes="180x180"
+href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+
+<title>
+Alpha Creative: The pan-African agency that thinks about the future!
+</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body ng-controller="MainController">
+
+<!-- <<<<<<<< HEADER >>>>>>>> -->
+<%-include('components/header')%>
+
+
+
+<main class="aa-main">
+<!------------ ========== S-HERO SECTION ========== ------------>
+<section class="flex-center sero">
+<div class="flex-center se-container">
+<div class="flex-center flex-col se-content" data-aos="fade-up">
+<div class="flex-center flex-col sec-text">
+<h1>
+Boost your employees' digital skills with
+<span>customized training</span>
+</h1>
+
+<p>
+<strong>The Reality:</strong> In a constantly evolving digital
+world, do your employees have the digital skills necessary to
+remain competitive? Alpha Academie offers customized training to
+equip your teams with the digital skills they need.
+</p>
+</div>
+
+<a
+href="https://alphacreative.typeform.com/Academie"
+target="_blank"
+class="flex-center sec-link"
+>
+Get In Touch With Us
+<span class="material-symbols-outlined"> arrow_outward </span>
+</a>
+</div>
+</div>
+</section>
+
+<!------------ ========== S-SERVICE SECTION ========== ------------>
+<section class="flex-center ses">
+<div class="flex-center flex-col ses-container">
+<div class="flex-center ses-title">
+<h3>Tailor-made training</h3>
+<p>
+No longer be dependent on external partners, equip your teams with
+key digital skills of the 21st century.
+</p>
+</div>
+
+<div class="flex-center ses-content">
+<div class="flex-center flex-col sesc" data-aos="fade-up">
+<span>01.</span>
+<h4>Diversified Training Catalog</h4>
+<p>
+From the MS Office pack (Word - PowerPoint - Excel), Web
+development, Marketing, etc. We have what you need.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="300"
+>
+<span>02.</span>
+<h4>Innovative pedagogy</h4>
+<p>
+Innovative and engaging teaching methods to foster learning and
+motivation.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="400"
+>
+<span>03.</span>
+<h4>International experts</h4>
+<p>Support from experts throughout the training course.</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<!-- <div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<span>04.</span>
+<h4>Flexible formats</h4>
+<p>In-person or E-learning - you decide.</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div> -->
+</div>
+</div>
+</section>
+
+<!------------ ========== S-APPROACH SECTION ========== ------------>
+<section class="flex-center sa">
+<div class="flex-center flex-col sa-container" data-aos="fade-up">
+<div class="flex-center sa-title">
+<h3>Concrete Benefits</h3>
+<p>
+More than a course, a transformation of your teams that will
+result in:
+</p>
+</div>
+
+<div class="flex-center sa-content">
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img
+src="https://alphacreative.netlify.app/assets/img/icons/productivity.png"
+alt=""
+loading="lazy"
+/>
+
+<h5>
+Improved productivity and <span>efficiency</span> within your
+company.
+</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img
+src="https://alphacreative.netlify.app/assets/img/icons/creativity.png"
+alt=""
+loading="lazy"
+/>
+
+<h5>
+Increased <span>innovation</span> and agility to face new
+digital challenges.
+</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img
+src="https://alphacreative.netlify.app/assets/img/icons/employees.png"
+alt=""
+loading="lazy"
+/>
+
+<h5>
+Improved engagement with employees thanks to
+<span>valued skills</span>.
+</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img src="https://alphacreative.netlify.app/assets/img/icons/talent.png" alt="" loading="lazy" />
+
+<h5>
+Increased <span>incentive</span> for young talents looking for
+continuing education
+</h5>
+</div>
+</div>
+</div>
+
+<button
+class="flex-center sec-btn"
+onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+>
+Get Started
+<span class="material-symbols-outlined"> arrow_outward </span>
+</button>
+</div>
+</section>
+
+<!------------ ========== STEPS SECTION ========== ------------>
+<section class="flex-center steps">
+<div class="flex-center flex-col st-container">
+<div class="flex-center st-title">
+<h3>How Does It Work?</h3>
+
+<div class="flex-center st-tags">
+<div class="flex-center stt active">
+<p>4 Simple Steps</p>
+</div>
+<span></span>
+</div>
+</div>
+
+<div class="flex-center st-main" data-aos="fade-up">
+<div class="flex-center stm active stm-1">
+<div class="flex-center flex-col stmc">
+<span>Step 01.</span>
+
+<div class="flex-center stmc-text">
+<p>Define Your Needs.</p>
+<span id="stmct"
+>During an initial meeting, we will discuss your objectives,
+your challenges and the digital skills that you wish to
+develop.</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+>
+Let's Get In Touch
+</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 02.</span>
+
+<div class="flex-center stmc-text">
+<p>Let's Design Your Training.</p>
+<span id="stmct"
+>We develop a personalized program by selecting the modules
+best suited to your needs and choosing the most relevant
+educational format.</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+>
+Let's Get In Touch
+</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 03.</span>
+
+<div class="flex-center stmc-text">
+<p>Let's Deploy The Training.</p>
+<span id="stmct"
+>Our experts provide training according to the chosen
+format, adapting to the pace and needs of the participants.
+4. Let's evaluate</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+>
+Let's Get In Touch
+</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 04.</span>
+
+<div class="flex-center stmc-text">
+<p>Let's evaluate l'impact.</p>
+<span id="stmct"
+>At the end of the training, we measure the acquisition of
+skills and the impact on your results using questionnaires
+and key performance indicators.</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+>
+Let's Get In Touch
+</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex-center a-stats" data-aos="fade-up">
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="50">50</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Companies Supported / Yr</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="500">500</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Projects Delivered</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<sub>$</sub>
+<h4 class="count" data-target="100">100</h4>
+<sub>k+</sub>
+</div>
+<span></span>
+<p>Monthly Media Budget</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="10">10</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Seasoned Experts</p>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== FAQ SECTION ========== ------------>
+<section class="flex-center faq" id="faq">
+<div class="flex-center faq-container">
+<div class="flex-center f-img">
+<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col f-content">
+<div class="flex-center flex-col fc-text">
+<span>FAQ</span>
+<h3>Frequently Asked Questions</h3>
+
+<p>You've got questions? We've got answers!</p>
+</div>
+
+<div class="flex-center flex-col fc-list">
+<div class="flex-center flex-col fcl">
+<p>What services do you offer?</p>
+<span>
+Alpha Creative offers a range of 360-degree services for the
+development of your activities
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What types of companies do you work for?</p>
+<span>
+Alpha Creative works with businesses of all sizes, across all
+industries. We specialize in providing full-stack creative
+services for B2B and B2C companies.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>How do you define success?</p>
+<span>
+We define success as achieving our clients' goals. We measure
+the success of our campaigns in terms of awareness,
+engagement, lead generation and sales.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What is your work process?</p>
+<span>
+We work closely with our clients to understand their needs and
+goals. We then develop a personalized strategy to achieve
+these objectives.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What are the needs of the clients you work with?</p>
+<span>
+Our clients' needs vary depending on their size, industry and
+goals. However, some common needs include: <br />
+<strong>Notoriety Development</strong> ●
+<strong>Improve their brand image</strong> ●
+<strong>Leads Generation</strong> ●
+<strong>Boost Sales</strong>
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+
+<!-- <<<<<<<< FOOTER >>>>>>>> -->
+<%-include('components/footer')%>
+
+<!-- ============= [QUOTE MODAL] ============= -->
+<%-include('components/modal')%>
+
+
+
+
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/modal.js"></script>
+<script src="/public/js/app.js"></script>
+<!-- ===== AOS (Animate On Scroll) =====-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1500,
+anchor: "top center",
+});
+
+window.addEventListener("load", AOS.refresh);
+</script>
+</body>
+</html>

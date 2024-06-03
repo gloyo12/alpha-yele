@@ -1,0 +1,4 @@
+[
+{"id":1, "code": "SAVE10", "type": "amount", "value": 10 },
+{"id":2, "code": "SAVE20", "type": "percentage", "value": 20 }
+]

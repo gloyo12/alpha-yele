@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/public/css/loader.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style type="text/css">
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+/* Only the scroll bar */
+::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.15);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,.3);
+}
+</style>
+
+</head>
+<body class="relative bg-yellow-50 overflow-hidden max-h-screen" ng-controller="MainController" ng-cloak>
+
+
+
+
+
+
+<aside class="fixed inset-y-0 left-0 bg-white shadow-md max-h-screen w-60">
+<div class="flex flex-col justify-between h-full">
+<div class="flex-grow">
+<div class="px-4 py-6 text-center border-b">
+<img src="https://alphacreative.netlify.app/assets/img/brand/logo-black.png" class="h-7 w-auto">
+</div>
+<div class="p-4">
+<ul class="space-y-1">
+<li>
+<a ng-click="setValue('screen','home')" href="javascript:void(0)" class="flex items-center  rounded-xl font-bold text-sm {{screen === 'home' ? 'bg-yellow-200 text-yellow-900' : 'hover:bg-yellow-50 bg-white text-gray-900'}} py-3 px-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+<path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+</svg>Home
+</a>
+</li>
+
+<li>
+<a ng-click="setValue('screen','subscribers')" href="javascript:void(0)" class="flex  rounded-xl font-bold text-sm {{screen === 'subscribers' ? 'bg-yellow-200 text-yellow-900' : 'hover:bg-yellow-50 bg-white text-gray-900'}} py-3 px-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+<path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+</svg>Subscribers
+</a>
+</li>
+
+<li>
+<a ng-click="setValue('screen','payasyougo')" href="javascript:void(0)" class="flex  rounded-xl font-bold text-sm {{screen === 'payasyougo' ? 'bg-yellow-200 text-yellow-900' : 'hover:bg-yellow-50 bg-white text-gray-900'}} py-3 px-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+<path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+</svg>Pay as you go
+</a>
+</li>
+
+
+<li class="hidden">
+<a ng-click="setValue('screen','orders')" href="javascript:void(0)" class="flex  rounded-xl font-bold text-sm {{screen === 'orders' ? 'bg-yellow-200 text-yellow-900' : 'hover:bg-yellow-50 bg-white text-gray-900'}} py-3 px-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+<path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+</svg>Orders
+</a>
+</li>
+
+<li>
+<a ng-click="setValue('screen','services')" href="javascript:void(0)" class="flex rounded-xl font-bold text-sm {{screen === 'services' ? 'bg-yellow-200 text-yellow-900' : 'hover:bg-yellow-50 bg-white text-gray-900'}} py-3 px-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+<path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+</svg>Services
+</a>
+</li>
+
+<li>
+<a ng-click="setValue('screen','coupons')" href="javascript:void(0)" class="flex rounded-xl font-bold text-sm {{screen === 'coupons' ? 'bg-yellow-200 text-yellow-900' : 'hover:bg-yellow-50 bg-white text-gray-900'}} py-3 px-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-lg mr-4" viewBox="0 0 16 16">
+<path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+</svg>Coupons
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div onclick="window.location.href = '/logout/user'" class="p-4">
+<button type="button" class="inline-flex items-center justify-center h-9 px-4 rounded-xl bg-gray-900 text-gray-300 hover:text-white text-sm font-semibold transition">
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="" viewBox="0 0 16 16">
+<path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>
+</button> <span class="font-bold cursor-pointer text-sm ml-2">Logout</span>
+</div>
+</div>
+</aside>
+
+
+<main class="ml-60 pt-2 max-h-screen overflow-auto">
+<%-include('components/admin-home')%>
+<%-include('components/admin-subscribers')%>
+<%-include('components/admin-payasyougo')%>
+<%-include('components/admin-orders')%>
+<%-include('components/admin-services')%>
+<%-include('components/admin-coupons')%>
+</main>
+
+
+
+<!-- see order details Modal -->
+<%-include('components/admin_order_modal')%>
+
+
+<script type="text/javascript">
+const toggleModalSeeOrder = () =>{
+document.getElementById('seeorders').classList.toggle('hidden');
+}
+
+const toggleModalSeeService = () =>{
+document.getElementById('seeservice').classList.toggle('hidden');	
+}
+
+const toggleModalAddService = () =>{
+document.getElementById('addservice').classList.toggle('hidden');	
+}
+
+const toggleModalAddCoupon = () =>{
+document.getElementById('addcoupon').classList.toggle('hidden');	
+}
+const toggleModalSeeSubscriber = () =>{
+document.getElementById('seesubscriber').classList.toggle('hidden');	
+}
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js'></script>
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/admin-app.js"></script>
+</body>
+</html>

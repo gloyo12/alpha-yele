@@ -1,0 +1,156 @@
+
+<div ng-show="screen === 'subscribers'" class="px-6 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="bg-white rounded-3xl p-8 mb-5">
+<div class="grid grid-cols-1 gap-20">
+
+<div>
+<h2 class="text-2xl font-bold mb-4">Subscribers</h2>
+
+<div class="grid grid-cols-4 gap-4">
+
+
+<!-- subcribers revenue -->
+<div class="col-span-2">
+<div class="p-4 bg-green-100 rounded-xl">
+<div class="font-bold text-xl text-gray-800 leading-none">${{calculateTotal(Subscriptions,'total') | number }}</div>
+<div class="mt-2">Revenue</div>
+</div>
+</div>
+<!-- //subscribers revenue -->
+
+
+
+<!-- subscribers -->
+<div class="col-span-2">
+<div class="p-4 bg-yellow-100 rounded-xl text-gray-800">
+<div class="font-bold text-2xl leading-none">{{Subscribers.length | number}}</div>
+<div class="mt-2">Subscribers</div>
+</div>
+</div>
+<!-- //subscribers -->
+
+
+<!-- package breakdown -->
+<div class="col-span-2">
+<div class="p-4 bg-yellow-100 rounded-xl text-gray-800">
+<div class="font-bold text-md leading-none">Package breakdown</div>
+
+<!-- table -->
+<div class="overflow-x-auto mt-8">
+<table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+<thead class="ltr:text-left rtl:text-right">
+<tr>
+<th class="whitespace-nowrap text-left px-4 py-2 font-medium text-gray-900">Package</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Total</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr ng-repeat="x in packageBreakdown">
+<td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{x.package}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.total}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- //table -->
+</div>
+</div>
+<!-- //package breakdown -->
+
+
+<!-- revenue per package -->
+<div class="col-span-2">
+<div class="p-4 bg-yellow-100 rounded-xl text-gray-800">
+<div class="font-bold text-md leading-none">Revenue Per Package</div>
+
+
+<div class="overflow-x-auto mt-8">
+<table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+<thead class="ltr:text-left rtl:text-right">
+<tr>
+<th class="whitespace-nowrap text-left px-4 py-2 font-medium text-gray-900">Package</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Total</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr ng-repeat="x in revenuPackagesBreakdown">
+<td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{x.package}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">${{x.total}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+<!-- // revenue per package -->
+
+
+
+
+
+
+<!-- table -->
+<div  class="col-span-4">
+<div class="p-4 bg-purple-100 shadow-lg rounded-xl text-gray-800">
+
+<!-- header -->
+<div class="flex items-center justify-between mb-10">
+<span class="font-bold text-md leading-none">Subscribers List </span>
+</div>
+<!-- //header -->
+
+<!-- table -->
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+<thead class="ltr:text-left rtl:text-right">
+<tr>
+<th class="whitespace-nowrap text-left px-4 py-2 font-medium text-gray-900">Name/Email</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Biz Name/Industry</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Package</th>
+<th class="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">Status</th>
+
+</tr>
+</thead>
+
+<tbody class="divide-y divide-gray-200">
+<tr ng-repeat="x in Subscribers">
+<td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{x.meta.names}}<br>{{x.meta.email}}<br>{{x.meta.phone}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.bizname}}<br>{{x.industry}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.package}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">{{x.status}}</td>
+<td class="whitespace-nowrap text-center px-4 py-2 text-gray-700">
+<a
+ng-click="setValue('selectedSubscriber',x)" onclick="toggleModalSeeSubscriber()"
+href="javascript:void(0)"
+class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+>
+View
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<!-- //table -->
+
+</div>
+</div>
+<!-- //graph -->
+
+
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+<%-include('admin_subscriber_modal')%>

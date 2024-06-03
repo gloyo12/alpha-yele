@@ -1,0 +1,182 @@
+<style type="text/css">
+.toggleColor{
+color: #228B22!important;
+}
+</style>
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+
+<section class="flex-center quote-modal" ng-init="getServices();getCoupons()">
+<span
+class="material-symbols-outlined"
+id="qm-close"
+onclick="toggleQuote()"
+>
+close
+</span>
+
+<div class="flex-center flex-col qm-container">
+<div class="flex-center qm-header">
+<div class="flex-center qmh">
+<a href="/" target="_blank">
+<img
+src="/public/img/brand/logo-black.png"
+alt=""
+loading="lazy"
+/>
+</a>
+</div>
+
+<div class="flex-center qm-title">
+<div class="flex-center qmtt">
+<p>Pay-As-You-Go</p>
+</div>
+</div>
+</div>
+
+<div class="flex-center qm-main">
+<div class="flex-center qmm-services">
+
+
+<form ng-submit="addToCart(addons,express_service,service)" class="flex-center qmms qs-pyg">
+<div class="flex-center flex-col qsp-create">
+<h4>Kindly select preferred services(s)  </h4>
+
+<div class="flex-center qspc-input">
+<i class="bx bx-search"></i>
+<select name="cars" id="service" ng-model="service" required>
+<option value="">Select Preferred Service</option>
+<option ng-repeat="x in services" value="{{x}}">
+{{x.name}}
+</option>
+</select>
+</div>
+</div>
+
+<div class="flex-center qsp-extra">
+<p id="qspe-p">Further Requirements?</p>
+
+<div class="flex-center flex-col qspe">
+<h4>Extra Add-Ons (Requirements)</h4>
+
+<div class="flex-center qspe-input">
+<i class="bx bx-search"></i>
+<select name="add-ons" id="add-ons" ng-model="addons">
+<option value="">Select Add-ons</option>
+</select>
+</div>
+</div>
+</div>
+
+<div ng-init="express_service = false" class="flex-center qsp-status">
+<p>Standard</p>
+<i ng-click="setValue('express_service',!express_service)" class="bx {{express_service?'toggleColor':null}}  {{express_service?'bxs-toggle-right' : 'bxs-toggle-left'}}" id="qsps"></i>
+<p>Express</p>
+</div>
+
+<div class="flex-center qsp-btn">
+<button type="submit" class="qspb">
+Create Order
+<span class="material-symbols-outlined"> library_add </span>
+</button>
+</div>
+</form>
+
+</div>
+
+<form ng-submit="placeOrder(totalCart())" class="flex-center flex-col qmm-quote">
+<div class="flex-center qu-title">
+<h4>Order Summary</h4>
+
+<div class="flex-center qut">
+<p>US - USD($)</p>
+</div>
+</div>
+
+<div class="flex-center flex-col qu-list">
+
+<div ng-repeat="x in cart" class="flex-center qul">
+<div class="flex-center qul-serv">
+<span ng-click="removeFromCart(x)" class="material-symbols-outlined" id="delete-serv">
+delete
+</span>
+
+<p>{{x.name}}</p>
+</div>
+
+<span>x1</span>
+</div>
+
+</div>
+
+<div class="flex-center qu-price">
+<div class="flex-center qup-promo">
+<input type="text" ng-model="coupon" placeholder="Promo Code?" />
+<span ng-click="totalCart()" class="material-symbols-outlined"> arrow_forward </span>
+</div>
+
+<div class="flex-center qup-cost">
+<span>Total:</span>
+<p>${{ totalCart() | number }}</p>
+</div>
+</div>
+
+<div class="flex-center flex-col qu-contact">
+<h5>Kindly enter your contact details</h5>
+
+<div class="flex-center quc-form">
+<div class="flex-center qucf-input">
+<input
+type="text"
+name="names"
+id="names"
+ng-model="names"
+placeholder="Enter your full name"
+autocomplete="off"
+required
+/>
+</div>
+
+<div class="flex-center qucf-input">
+<input
+type="email"
+name="email"
+id="email"
+ng-model="email"
+placeholder="Enter your email address"
+autocomplete="off"
+required
+/>
+</div>
+
+<div class="flex-center qucf-input">
+<input
+type="text"
+name="phone"
+id="phone"
+ng-model="phone"
+placeholder="Enter your phone number"
+autocomplete="off"
+required
+/>
+</div>
+</div>
+
+<div class="flex-center quc-agree">
+<input type="checkbox" name="agree to quote terms" value="" required />
+<p>
+I agree to the
+<a href="" target="_blank">terms & conditions</a>
+</p>
+</div>
+</div>
+
+<div class="flex-center qu-btn">
+<button type="submit" class="qub-btn">Submit Order</button>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</section>

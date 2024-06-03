@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/loader.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link rel="stylesheet" href="/public/css/base.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
+<link rel="stylesheet" href="/public/css/modal.css" />
+
+<!-- ===== MATERIAL ICONS =====-->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+
+<!-- ===== BOXICONS =====-->
+<link
+href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+rel="stylesheet"
+/>
+
+<!-- ===== AOS (Animate On Scroll) =====-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- ===== FAVICON =====-->
+<link
+rel="apple-touch-icon"
+sizes="180x180"
+href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+
+<title>Digital Marketing - Alpha Creative</title>
+</head>
+
+<body ng-controller="MainController">
+
+
+<!-- <<<<<<<< HEADER >>>>>>>> -->
+<%-include('components/header')%>
+
+
+<main class="dm-main">
+<!------------ ========== S-HERO SECTION ========== ------------>
+<section class="flex-center sero">
+<div class="flex-center se-container">
+<div class="flex-center flex-col se-content" data-aos="fade-up">
+<div class="flex-center flex-col sec-text">
+<h1>
+The 360 degree Creative Studio you need to
+<span>dominate</span> your market!
+</h1>
+
+<p>
+Reach your digital objective with creative and effective visual
+content.
+</p>
+</div>
+
+<button
+class="flex-center sec-btn"
+onclick="window.location.href = 'pricing'"
+>
+Get Started
+<span class="material-symbols-outlined"> arrow_outward </span>
+</button>
+</div>
+</div>
+</section>
+
+<!------------ ========== S-SERVICE SECTION ========== ------------>
+<section class="flex-center ses">
+<div class="flex-center flex-col ses-container">
+<div class="flex-center ses-title">
+<h3>A whole Creative studio just for you</h3>
+<p>
+Entrust the creation of your creative projects to an Alpha team
+with dual operational and creative expertise. We work with 50+
+companies of various sectors per year.
+</p>
+</div>
+
+<div class="flex-center ses-content">
+<div class="flex-center flex-col sesc" data-aos="fade-up">
+<span>01.</span>
+<h4>Content Strategy</h4>
+<p>
+Develop a comprehensive plan to effectively deliver content that
+resonates with your target audience.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="300"
+>
+<span>02.</span>
+<h4>Content Creation</h4>
+<p>
+Craft compelling and engaging content tailored to your brand's
+voice and objectives.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="400"
+>
+<span>03.</span>
+<h4>Paid Advertising</h4>
+<p>
+Utilize strategic paid campaigns to maximize your brand's
+visibility and reach your target audience effectively.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="500"
+>
+<span>04.</span>
+<h4>Creative Analysis</h4>
+<p>
+Analyze the performance of your creative assets and campaigns to
+optimize future strategies and maximize ROI.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="600"
+>
+<span>05.</span>
+<h4>SEO & SEA Optimization</h4>
+<p>
+Enhance your online presence and increase website traffic
+through strategic SEO and SEA techniques.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="600"
+>
+<span>06.</span>
+<h4>Offline Advertising</h4>
+<p>
+Leverage the power of out-of-door advertising to reach your
+customers where they are.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== S-APPROACH SECTION ========== ------------>
+<section class="flex-center sa">
+<div class="flex-center flex-col sa-container" data-aos="fade-up">
+<div class="flex-center sa-title">
+<h3>Media Campaign Management</h3>
+<p>
+Focus on your growth, we handle your marketing campaigns!
+<strong>Strategy, creation, management and optimization:</strong>
+We take care of your Online and Offline marketing campaigns, for
+optimal performance.
+</p>
+</div>
+
+<div class="flex-center sa-content">
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img src="https://alphacreative.netlify.app/assets/img/icons/globe.gif" alt="" loading="lazy" />
+
+<h5>Our <span>International</span> Partners</h5>
+</div>
+
+<div class="flex-center sac-content">
+<div class="flex-center sac-img">
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/google-ads.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/meta-ads.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/linked-in-ads.jpg"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/tiktok-ads.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/snapchat-ads.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/spotify-ads.png"
+alt=""
+loading="lazy"
+/>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img src="https://alphacreative.netlify.app/assets/img/icons/africa.png" alt="" loading="lazy" />
+
+<h5>Our <span>Local</span> Partners</h5>
+</div>
+
+<div class="flex-center sac-content">
+<div class="flex-center sac-img">
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/alliance-media.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/adafri.webp"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/sb-outdoor.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/ads/yira-meida.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/clients/alx.jfif"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div class="flex-center saci">
+<img
+src="https://alphacreative.netlify.app/assets/img/clients/ispring.png"
+alt=""
+loading="lazy"
+/>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<button
+class="flex-center sac-btn"
+onclick="window.location.href = 'Pricing'"
+>
+Get Started
+<span class="material-symbols-outlined"> arrow_outward </span>
+</button>
+</div>
+</section>
+
+<!------------ ========== STEPS SECTION ========== ------------>
+<section class="flex-center steps">
+<div class="flex-center flex-col st-container">
+<div class="flex-center st-title">
+<h3>Your Project In <span>3 Steps</span></h3>
+
+<div class="flex-center st-tags">
+<div class="flex-center stt active">
+<p>Pay As You Go</p>
+</div>
+</div>
+</div>
+
+<div class="flex-center st-main" data-aos="fade-up">
+<div class="flex-center stm">
+<div class="flex-center flex-col stmc">
+<span>Step 01.</span>
+
+<div class="flex-center stmc-text">
+<p>Place Your Order And Pay</p>
+</div>
+
+<div class="flex-center stmc-btn">
+<button onclick="toggleQuote()">Get Started</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 02.</span>
+
+<div class="flex-center stmc-text">
+<p>Fill Project Details Form</p>
+</div>
+
+<div class="flex-center stmc-btn">
+<button onclick="toggleQuote()">Get Started</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 03.</span>
+
+<div class="flex-center stmc-text">
+<p>Delivery Of Final Project</p>
+</div>
+
+<div class="flex-center stmc-btn">
+<button onclick="toggleQuote()">Get Started</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex-center a-stats" data-aos="fade-up">
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="50">50</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Companies Supported / Yr</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="500">500</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Projects Delivered</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<sub>$</sub>
+<h4 class="count" data-target="100">100</h4>
+<sub>k+</sub>
+</div>
+<span></span>
+<p>Monthly Media Budget</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="10">10</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Seasoned Experts</p>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== FAQ SECTION ========== ------------>
+<section class="flex-center faq" id="faq">
+<div class="flex-center faq-container">
+<div class="flex-center f-img">
+<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col f-content">
+<div class="flex-center flex-col fc-text">
+<span>FAQ</span>
+<h3>Frequently Asked Questions</h3>
+
+<p>You've got questions? We've got answers!</p>
+</div>
+
+<div class="flex-center flex-col fc-list">
+<div class="flex-center flex-col fcl">
+<p>What services do you offer?</p>
+<span>
+Alpha Creative offers a range of 360-degree services for the
+development of your activities
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What types of companies do you work for?</p>
+<span>
+Alpha Creative works with businesses of all sizes, across all
+industries. We specialize in providing full-stack creative
+services for B2B and B2C companies.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>How do you define success?</p>
+<span>
+We define success as achieving our clients' goals. We measure
+the success of our campaigns in terms of awareness,
+engagement, lead generation and sales.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What is your work process?</p>
+<span>
+We work closely with our clients to understand their needs and
+goals. We then develop a personalized strategy to achieve
+these objectives.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What are the needs of the clients you work with?</p>
+<span>
+Our clients' needs vary depending on their size, industry and
+goals. However, some common needs include: <br />
+<strong>Notoriety Development</strong> ●
+<strong>Improve their brand image</strong> ●
+<strong>Leads Generation</strong> ●
+<strong>Boost Sales</strong>
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+<!-- <<<<<<<< FOOTER >>>>>>>> -->
+<%-include('components/footer')%>
+
+<!-- ============= [QUOTE MODAL] ============= -->
+<%-include('components/modal')%>
+
+
+
+<!-- <<<<<<<< SCRIPT >>>>>>>> -->
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/app.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/modal.js"></script>
+<!-- ===== AOS (Animate On Scroll) =====-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1500,
+anchor: "top center",
+});
+
+window.addEventListener("load", AOS.refresh);
+</script>
+</body>
+</html>

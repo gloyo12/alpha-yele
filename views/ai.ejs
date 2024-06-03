@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="/public/css/loader.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="/public/css/base.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
+<link rel="stylesheet" href="/public/css/modal.css" />
+
+<!-- ===== MATERIAL ICONS =====-->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+
+<!-- ===== BOXICONS =====-->
+<link
+href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+rel="stylesheet"
+/>
+
+<!-- ===== AOS (Animate On Scroll) =====-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- ===== FAVICON =====-->
+<link
+rel="apple-touch-icon"
+sizes="180x180"
+href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+
+<title>
+Alpha Creative: The pan-African agency that thinks about the future!
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body ng-controller="MainController">
+
+<!-- <<<<<<<< HEADER >>>>>>>> -->
+<%-include('components/header')%>
+
+
+<main class="ai-main">
+<!------------ ========== S-HERO SECTION ========== ------------>
+<section class="flex-center sero">
+<div class="flex-center se-container">
+<div class="flex-center flex-col se-content" data-aos="fade-up">
+<div class="flex-center flex-col sec-text">
+<h1>
+Outsource your Influencer <span>campaigns</span> with success!
+</h1>
+
+<p>
+From selecting influencers to reporting results, we take care of
+everything.
+</p>
+</div>
+
+<a
+href="https://alphacreative.typeform.com/influencers"
+target="_blank"
+class="flex-center sec-link"
+>
+Get Started
+<span class="material-symbols-outlined"> arrow_outward </span>
+</a>
+</div>
+</div>
+</section>
+
+<!------------ ========== S-SERVICE SECTION ========== ------------>
+<section class="flex-center ses">
+<div class="flex-center flex-col ses-container">
+<div class="flex-center ses-title">
+<h3>A whole Creative studio just for you</h3>
+<p>
+Entrust the creation of your creative projects to an Alpha team
+with dual operational and creative expertise. We work with 50+
+companies of various sectors per year.
+</p>
+</div>
+
+<div class="flex-center ses-content">
+<div class="flex-center flex-col sesc" data-aos="fade-up">
+<span>01</span>
+<h4>Custom Strategy</h4>
+<p>
+We offer you a 100% personalized strategy to align with your
+values and meet your and your objectives.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="300"
+>
+<span>02</span>
+<h4>On The Go</h4>
+<p>
+Save time and maximize your marketing results by collaborating
+with over 10,000 hand-picked influencers.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="400"
+>
+<span>03</span>
+<h4>UGC Production</h4>
+<p>
+We offer you a strategy to find the key to a successful User
+Generated Content campaign.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== STEPS SECTION ========== ------------>
+<section class="flex-center steps">
+<div class="flex-center flex-col st-container">
+<div class="flex-center st-title">
+<h3>How Does It Work</h3>
+
+<div class="flex-center st-tags">
+<div class="flex-center stt active">
+<p>4 Simple Steps</p>
+</div>
+</div>
+</div>
+
+<div class="flex-center st-main" data-aos="fade-up">
+<div class="flex-center stm">
+<div class="flex-center flex-col stmc">
+<span>Step 01.</span>
+
+<div class="flex-center stmc-text">
+<p>Meet with the team</p>
+<span id="stmct"
+>45 min meeting with our team to identify your objectives,
+your values and your budget.</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="redirectToLink('https://alphacreative.typeform.com/influencers')"
+>
+Book Your Influencer
+</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 02.</span>
+
+<div class="flex-center stmc-text">
+<p>Creator's selection</p>
+<span id="stmct"
+>We make a refined and strategic selection of 5-10 Top
+profiles that match your values and objectives.</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="redirectToLink('https://alphacreative.typeform.com/influencers')"
+>
+Book Your Influencer
+</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 03.</span>
+
+<div class="flex-center stmc-text">
+<p>Action Plan & Execution</p>
+<span id="stmct"
+>We draw up a short personalized brief that includes your
+objectives, the chosen influencer and the campaign's
+editorial calendar, as well as the key performance
+indicators (KPIs).</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="redirectToLink('https://alphacreative.typeform.com/influencers')"
+>
+Book Your Influencer
+</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 04.</span>
+
+<div class="flex-center stmc-text">
+<p>Reporting & Monitoring</p>
+<span id="stmct"
+>Our team will send you a report at the end of each campaign
+with KPIs and learnings that we can apply to future
+campaigns</span
+>
+</div>
+
+<div class="flex-center stmc-btn">
+<button
+onclick="redirectToLink('https://alphacreative.typeform.com/influencers')"
+>
+Book Your Influencer
+</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex-center a-stats" data-aos="fade-up">
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="50">50</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Companies Supported / Yr</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="500">500</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Projects Delivered</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<sub>$</sub>
+<h4 class="count" data-target="100">100</h4>
+<sub>k+</sub>
+</div>
+<span></span>
+<p>Monthly Media Budget</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="10">10</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Seasoned Experts</p>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== FAQ SECTION ========== ------------>
+<section class="flex-center faq" id="faq">
+<div class="flex-center faq-container">
+<div class="flex-center f-img">
+<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col f-content">
+<div class="flex-center flex-col fc-text">
+<span>FAQ</span>
+<h3>Frequently Asked Questions</h3>
+
+<p>You've got questions? We've got answers!</p>
+</div>
+
+<div class="flex-center flex-col fc-list">
+<div class="flex-center flex-col fcl">
+<p>What services do you offer?</p>
+<span>
+Alpha Creative offers a range of 360-degree services for the
+development of your activities
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What types of companies do you work for?</p>
+<span>
+Alpha Creative works with businesses of all sizes, across all
+industries. We specialize in providing full-stack creative
+services for B2B and B2C companies.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>How do you define success?</p>
+<span>
+We define success as achieving our clients' goals. We measure
+the success of our campaigns in terms of awareness,
+engagement, lead generation and sales.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What is your work process?</p>
+<span>
+We work closely with our clients to understand their needs and
+goals. We then develop a personalized strategy to achieve
+these objectives.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What are the needs of the clients you work with?</p>
+<span>
+Our clients' needs vary depending on their size, industry and
+goals. However, some common needs include: <br />
+<strong>Notoriety Development</strong> ●
+<strong>Improve their brand image</strong> ●
+<strong>Leads Generation</strong> ●
+<strong>Boost Sales</strong>
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+<!-- <<<<<<<< FOOTER >>>>>>>> -->
+<%-include('components/footer')%>
+
+<!-- ============= [QUOTE MODAL] ============= -->
+<%-include('components/modal')%>
+
+
+
+<!-- <<<<<<<< SCRIPT >>>>>>>> -->
+<script>
+// JavaScript function to open the link in a new tab
+function redirectToLink(url) {
+window.open(url, "_blank"); // Open the specified URL in a new tab
+}
+</script>
+
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/app.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/modal.js"></script>
+<!-- ===== AOS (Animate On Scroll) =====-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1500,
+anchor: "top center",
+});
+
+window.addEventListener("load", AOS.refresh);
+</script>
+</body>
+</html>

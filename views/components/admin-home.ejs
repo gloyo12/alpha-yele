@@ -1,0 +1,171 @@
+
+<div ng-show="screen === 'home'" class="px-6 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="bg-white rounded-3xl p-8 mb-5">
+<h1 class="text-3xl font-bold mb-2">Good Day, Admin</h1>
+<p class="mb-10"><b>Notre mission:</b> Aider nos clients à atteindre leurs objectifs de ventes, de Leads ou encore de
+notoriété.</p>
+ 
+<hr class="my-10">
+
+<div class="grid grid-cols-1 gap-20">
+
+<div>
+<h2 class="text-2xl font-bold mb-4">General Stats</h2>
+
+<div class="grid grid-cols-4 gap-4">
+
+<div class="col-span-4">
+<div class="p-4 bg-purple-100 rounded-xl text-gray-800">
+<div class="font-bold text-xl leading-none">Today's Orders</div>
+<div class="mt-2">{{TodayOrders.length | number}}</div>
+
+<div class="mt-5">
+<a href="#todayorders" class="inline-flex items-center justify-center py-2 px-3 rounded-xl bg-white text-gray-800 hover:text-red-500 text-sm font-semibold transition">
+See Today's orders
+</a>
+</div>
+
+</div>
+</div>
+
+
+<!-- subcribers revenue -->
+<div class="col-span-1">
+<div class="p-4 bg-green-100 rounded-xl">
+<div class="font-bold text-xl text-gray-800 leading-none">${{calculateTotal(Subscriptions,'total') | number }}</div>
+<div class="mt-2">Sub. Revenue</div>
+<div class="mt-5">
+<button ng-click="setValue('screen','orders')" class="inline-flex items-center justify-center py-2 px-3 rounded-xl bg-white text-gray-800 hover:text-green-500 text-sm font-semibold transition">
+See all
+</button>
+</div>
+</div>
+</div>
+<!-- //subscribers revenue -->
+
+
+
+<!-- subscribers -->
+<div class="p-4 bg-yellow-100 rounded-xl text-gray-800">
+<div class="font-bold text-2xl leading-none">{{Subscribers.length | number}}</div>
+<div class="mt-2">Subscribers</div>
+<div class="mt-5">
+<button ng-click="setValue('screen','subscribers')" class="inline-flex items-center justify-center py-2 px-3 rounded-xl bg-white text-gray-800 hover:text-green-500 text-sm font-semibold transition">
+See all
+</button>
+</div>
+</div>
+<!-- //subscribers -->
+
+
+
+<!-- pay as you go -->
+<div class="p-4 bg-yellow-100 rounded-xl text-gray-800">
+<div class="font-bold text-2xl leading-none">${{calculateTotal(Payasugo,'total') | number }}</div>
+<div class="mt-2">Payg Revenue</div>
+<div class="mt-5">
+<button ng-click="setValue('screen','payasugo')" class="inline-flex items-center justify-center py-2 px-3 rounded-xl bg-white text-gray-800 hover:text-green-500 text-sm font-semibold transition">
+See all
+</button>
+</div>
+</div>
+<!-- //pay as you go -->
+
+
+
+<!-- pas as you go orders -->
+<div class="p-4 bg-yellow-100 rounded-xl text-gray-800">
+<div class="font-bold text-2xl leading-none">{{Payasugo.length | number }}</div>
+<div class="mt-2">Payg Orders</div>
+<div class="mt-5">
+<button ng-click="setValue('screen','payasugo')" class="inline-flex items-center justify-center py-2 px-3 rounded-xl bg-white text-gray-800 hover:text-green-500 text-sm font-semibold transition">
+See all
+</button>
+</div>
+</div>
+<!-- //pay as you go orders -->
+
+
+
+
+<!-- graph -->
+<div class="col-span-4">
+<div class="p-4 bg-white shadow-lg rounded-xl text-gray-800">
+
+<!-- header -->
+<div class="flex items-center justify-between mb-10">
+<span class="font-bold text-md leading-none">Summary Revenue {{selectedYear}}</span>
+
+<span class="inline-flex cursor-pointer items-center justify-center w-6 h-6 text-gray-600 text-xs rounded bg-white transition relative shadow-lg">
+<img onclick="document.getElementById('years').classList.toggle('hidden')" src="/public/img/calendar.png" width="80%" height="80%">
+
+<!-- calendar of years -->
+<div onclick="document.getElementById('years').classList.toggle('hidden')" id="years" class="absolute hidden rounded-xl bg-purple-300 left-[-5rem] top-[1rem] w-[5rem] h-auto p-2">
+<ul class="text-center space-y-2">
+<li class="font-bold">2024</li>
+</ul>
+</div>
+<!-- //calendar of years -->
+</span>
+</div>
+<!-- //header -->
+
+<canvas id="revenue-monthly" class="w-full"></canvas>
+</div>
+</div>
+<!-- //graph -->
+
+
+</div>
+</div>
+
+
+
+<!-- your orders today -->
+<div id="todayorders">
+<h2 class="text-md font-bold mb-4">Your orders today</h2>
+
+<div class="space-y-4">
+
+
+<div ng-repeat="x in TodayOrders | limitTo:3" class="p-4 bg-white border rounded-xl text-gray-800 space-y-2" ng-click="setValue('selectedOrder',x)" onclick="toggleModalSeeOrder()">
+
+<div class="flex justify-between mb-5">
+<div class="text-gray-800 flex flex-col font-semibold text-xs"><span>Order ID#{{x.id}}</span>
+<span>Order Type: {{x.type === 'monthly'?'Subscription' : 'Pay As You Go' }}</span>
+</div>
+<div class="text-gray-800  font-semibold text-xs">Placed at {{x.dateCreated | date:'h:m a'}}</div>
+</div>
+
+<a ng-show="x.type != 'monthly'" href="javascript:void(0)" class="font-bold hover:text-yellow-800">{{x.names}}<br> {{x.email}}<br> {{x.phone}}</a>
+<div ng-show="x.type != 'monthly'" class="text-sm text-gray-800">
+Ordered {{x.cart.length | number}} service(s)
+</div>
+
+<a ng-show="x.type === 'monthly'" href="javascript:void(0)" class="font-bold hover:text-yellow-800">{{x.meta.names}}<br> {{x.meta.email}}<br> {{x.meta.phone}}</a>
+<div ng-show="x.type === 'monthly'" class="text-sm text-gray-800">
+Ordered {{x.package}} package
+</div>
+
+</div>
+
+
+<div ng-show="x.cart.length > 3" class="p-4 bg-white border rounded-xl text-gray-800 space-y-2 text-center">
+<a href="javascript:void(0)" class="hover:text-yellow-800 hover:underline">See {{(x.cart.length - 3) > 0 ? (x.cart.length - 3) : '0' }} More</a>
+</div>
+
+
+
+</div>
+</div>
+<!-- //your orders today -->
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>

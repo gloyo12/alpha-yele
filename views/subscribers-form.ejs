@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta content="#000000" name="theme-color"/>
+  <title>Package Subs - Onboarding</title>
+  <meta content="#000000" name="msapplication-TileColor"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<link rel="stylesheet" href="/public/css/loader.css" />
+  <meta content="https://public-assets.typeform.com/public/favicon/browserconfig.xml" name="msapplication-config"/>
+<link href="https://public-assets.typeform.com/public/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://public-assets.typeform.com/public/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://public-assets.typeform.com/public/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://public-assets.typeform.com/public/favicon/site.webmanifest" rel="manifest"/>
+<link href="https://public-assets.typeform.com/public/favicon/favicon.ico" rel="shortcut icon"/>
+<link color="#000000" href="https://public-assets.typeform.com/public/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="https://alphacreative.typeform.com/Subscribers" property="og:url"/><meta content="Package Subs - Onboarding" property="og:title"/><meta content="Aidez-nous à vous offrir la meilleure expérience client possible." property="og:description"/><meta content="https://images.typeform.com/images/Uw4rNPY25Arw/image/default" property="og:image"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link as="image" href="https://images.typeform.com/images/3jLihsBdP37c/image/default" rel="preload"/>
+<link rel="stylesheet" href="/public/css/typeform-clone.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<style type="text/css">
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+/* Only the scroll bar */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.15);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,.3);
+}
+</style>
+
+</head>
+<body class="bg-black" ng-controller="MainController" ng-init="getCountries();getobjectifBusiness();getobstacleBusiness();getsecteurActivity();
+getTailleEntreprise();getPresenceDigital();getAlphaPackage();">
+
+
+<section class="section">
+<main class="section__main">
+<form ng-submit="createSubscriber()" class="form-slider" data-slider>
+<div class="form-slide active" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Tout d'abord faisons connaissance...<small class="text-danger">*</small></h3>
+
+<div class="mb-10">
+<label class="text-white">Nom <small class="text-danger">*</small></label>
+<input type="text" name="question_1" class="form-content__question__input form-content__question__input--input bg-black" data-form-inner="input" placeholder="Ex: Martin" autocomplete="off" ng-model="names" required>
+</div>
+
+<div class="mb-10">
+<label class="text-white">Numéro de téléphone <small class="text-danger">*</small></label>
+<div class="flex gap-4 relative">
+
+<!-- country selector -->
+<div id="select-country" onclick="toggleCountrySelector()" class="form-content__question__input cursor-pointer form-content__question__input--input flex justify-between gap-3 items-center px-4"  style="flex:.13;">
+<span>
+<img ng-src="{{selectedCountry.flag}}" class="h-10 w-auto rounded-lg">
+</span>
+<span class="">
+<i class="bi bi-chevron-down" style="font-size: 2.5rem;"></i>
+</span>
+</div>
+
+<!-- phone number -->
+<input id="phone_number" type="text" name="question_1" class="flex-1 form-content__question__input  form-content__question__input--input bg-black" data-form-inner="input" min="0" placeholder="01 23 45 6789" autocomplete="off" ng-model="phone_number" required>
+
+
+<!-- country selector -->
+<div id="country-selector" class="absolute top-0 left-0 w-[60%] bg-black fade-in-bottom hidden border-2 border-white rounded-xl p-6">
+ <input type="text" class="w-full h-16 bg-transparent placeholder:text-[#333] text-white text-4xl mb-3" placeholder="Rechercher des pays" ng-model="keyword">
+
+<div class="h-[25rem] overflow-y-scroll space-y-3">
+<span ng-repeat="x in countries | filter:{country:keyword}" ng-click="setValue('selectedCountry',x)" onclick="toggleCountrySelector()" class="bg-[#111] w-full border-2 border-white rounded-xl p-3 flex items-center text-white justify-between cursor-pointer hover:bg-[#333]">
+<div class="flex items-center gap-3">
+<img ng-src="{{x.flag}}" class="h-10 w-auto rounded-lg">
+<span>{{x.country}}</span>
+</div>
+<div>{{x.phoneCode}}</div>
+</span>
+</div>
+</div>
+<!-- //country selector -->
+
+</div>
+</div>
+
+
+<div class="mb-10">
+<label class="text-white">Email <small class="text-danger">*</small></label>
+<input type="email" name="question_1" class="form-content__question__input form-content__question__input--input bg-black" data-form-inner="input" ng-model="email" placeholder="youremail@email.com" autocomplete="off" required>
+</div>
+
+
+<div class="mb-10">
+<label class="text-white">Entreprise <small class="text-danger">*</small></label>
+<input type="text" name="question_1" class="form-content__question__input form-content__question__input--input bg-black" data-form-inner="input" ng-model="bizname" placeholder="Votre Entreprise" autocomplete="off" required>
+</div>
+
+
+
+
+<button type="button" data-slide-toggle="down" class="form-content__question__btn">
+Ok
+
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="form-slide" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Quelle formule avez-vous choisi? <small class="text-danger">*</small></h3>
+
+<div type="text" name="question_2" class="form-content__question__input form-content__question__input--input bg-black flex items-center justify-between relative">
+<input onfocus="togglePackageList()" type="text" placeholder="Ecrivez ou selectionnez une option" class="text-white w-full bg-transparent placeholder:text-[#333]" ng-model="package" required />
+<span class="">
+<i id="package-list-icon" class="bi bi-chevron-down" style="font-size: 2.5rem;"></i>
+</span>
+
+<div id="package-list" class="absolute hidden fade-in-top top-[100%] mt-[1rem] left-0 w-full bg-black h-[15rem] overflow-y-scroll space-y-3">
+  
+<span ng-repeat="x in alpha_packages" ng-click="setValue('package',x)" onclick="togglePackageList()" class="bg-[#111] text-3xl w-full border-2 border-white rounded-xl p-3 flex items-center text-white justify-between cursor-pointer hover:bg-[#333]">
+<div>{{x}}</div>
+</span>
+
+</div>
+
+</div>
+
+<button type="button" data-slide-toggle="down" class="form-content__question__btn">
+Ok
+
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="form-slide" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Comment décririez-vous la presence digitale actuelle de votre entreprise?<small class="text-danger">*</small></h3>
+<!-- <input type="email" name="question_3" class="form-content__question__input" data-form-inner="input" placeholder="Enter your email" pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}" title="Enter a valid email address" required> -->
+
+<div type="text" name="question_3" class="form-content__question__input form-content__question__input--input bg-black flex items-center justify-between relative">
+<input onfocus="togglePresenceDigital()" type="text" placeholder="Ecrivez ou selectionnez une option" class="text-white w-full bg-transparent placeholder:text-[#333]" ng-model="presenceDigital" required />
+<span class="">
+<i id="presence-digital-icon" class="bi bi-chevron-down" style="font-size: 2.5rem;"></i>
+</span>
+
+<div id="presence-digital" class="absolute hidden fade-in-top top-[100%] mt-[1rem] left-0 w-full bg-black h-[15rem] overflow-y-scroll space-y-3">
+  
+<span ng-repeat="x in presence_digital" ng-click="setValue('presenceDigital',x)" onclick="togglePresenceDigital()" class="bg-[#111] text-3xl w-full border-2 border-white rounded-xl p-3 flex items-center text-white justify-between cursor-pointer hover:bg-[#333]">
+<div>{{x}}</div>
+</span>
+
+</div>
+
+</div>
+
+<button type="button" data-slide-toggle="down" class="form-content__question__btn">
+Ok
+
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="form-slide" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Parfait! Quelle est la taille de votre entreprise?<small class="text-danger">*</small></h3>
+
+<div type="text" name="question_4" class="form-content__question__input form-content__question__input--input bg-black flex items-center justify-between relative">
+<input onfocus="toggleTailleEntreprise()" type="text" placeholder="Ecrivez ou selectionnez une option" class="text-white w-full bg-transparent placeholder:text-[#333]" ng-model="tailleEntreprise" required />
+<span class="">
+<i id="taille-entreprise-icon" class="bi bi-chevron-down" style="font-size: 2.5rem;"></i>
+</span>
+
+<div id="taille-entreprise" class="absolute hidden fade-in-top top-[100%] mt-[1rem] left-0 w-full bg-black h-[15rem] overflow-y-scroll space-y-3">
+  
+<span ng-repeat="x in TailleEntreprise" ng-click="setValue('tailleEntreprise',x)" onclick="toggleTailleEntreprise()" class="bg-[#111] text-3xl w-full border-2 border-white rounded-xl p-3 flex items-center text-white justify-between cursor-pointer hover:bg-[#333]">
+<div>{{x}}</div>
+</span>
+
+</div>
+
+</div>
+
+<button type="button" data-slide-toggle="down" class="form-content__question__btn">
+Ok
+
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="form-slide" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Quel est votre secteur d'activité?<small class="text-danger">*</small></h3>
+
+<div type="text" name="question_5" class="form-content__question__input form-content__question__input--input bg-black flex items-center justify-between relative">
+<input onfocus="toggleSecteurActivity()" type="text" placeholder="Ecrivez ou selectionnez une option" class="text-white w-full bg-transparent placeholder:text-[#333]" ng-model="industry" required />
+<span class="">
+<i id="secteur-activity-icon" class="bi bi-chevron-down" style="font-size: 2.5rem;"></i>
+</span>
+
+<div id="secteur-activity" class="absolute hidden fade-in-top top-[100%] mt-[1rem] left-0 w-full bg-black h-[15rem] overflow-y-scroll space-y-3">
+  
+<span ng-repeat="x in secteurActivity" ng-click="setValue('industry',x)" onclick="toggleSecteurActivity()" class="bg-[#111] text-3xl w-full border-2 border-white rounded-xl p-3 flex items-center text-white justify-between cursor-pointer hover:bg-[#333]">
+<div>{{x}}</div>
+</span>
+
+</div>
+
+</div>
+
+<button type="button" data-slide-toggle="down" class="form-content__question__btn">
+Ok
+
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="form-slide" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Quels sont vos objectifs business actuels?<small class="text-danger">*</small></h3>
+
+<div class="form-content__question__option-list" data-option-group data-input-required>
+
+<label ng-repeat="x in objectifBusiness" class="form-content__question__option">
+<input type="checkbox" name="question_7" value="{{x}}" class="form-content__question__option__input" data-form-inner="input" ng-model="primMarketingObj">
+<span class="form-content__question__option__text">{{x}}</span>
+</label>
+
+
+
+
+
+
+</div>
+<button type="button" data-slide-toggle="down" class="form-content__question__btn">
+Ok
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="form-slide" data-slide>
+<div class="form-content" data-form="inner">
+<div class="form-content__question">
+<div class="form-content__question__count">
+<i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+</div>
+<div class="form-content__question__main">
+<h3 class="form-content__question__title text-white">Quels sont les obstacles que vous rencontrez actuellement dans votre entreprise ? <small class="text-danger">*</small></h3>
+
+<div class="form-content__question__option-list" data-option-group data-input-required>
+
+<label ng-repeat="x in obstacleBusiness" class="form-content__question__option">
+<input type="checkbox" name="question_8" value="{{x}}" class="form-content__question__option__input" data-form-inner="input" ng-model="obstacles">
+<span class="form-content__question__option__text">{{x}}</span>
+</label>
+
+
+</div>
+<button type="submit" data-slide-toggle="down" class="form-content__question__btn">
+Terminer
+</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</form>
+<nav class="form-navigation">
+<button type="button" class="form-navigation__btn form-navigation__btn--up" data-slide-toggle="up">
+<i class="bi bi-chevron-up"></i>
+</button>
+<button type="button" class="form-navigation__btn form-navigation__btn--down" data-slide-toggle="down">
+<i class="bi bi-chevron-down"></i>
+</button>
+</nav>
+</main>
+</section>
+
+
+<script type="text/javascript">
+var countrySelector = document.getElementById('country-selector'); 
+var packageList = document.getElementById('package-list'); 
+var selectCountryBtn= document.getElementById('select-country');
+window.addEventListener('click', function(e){  
+if (!countrySelector.contains(e.target) && !selectCountryBtn.contains(e.target)){
+countrySelector.classList.add('hidden')
+}
+});
+const toggleCountrySelector = () =>{
+countrySelector.classList.toggle('hidden');
+}
+
+const togglePackageList = () =>{
+packageList.classList.toggle('hidden');
+document.getElementById('package-list-icon').classList.toggle('bi-chevron-down');    
+document.getElementById('package-list-icon').classList.toggle('bi-chevron-up');    
+
+};
+
+const togglePresenceDigital = () =>{
+ document.getElementById('presence-digital-icon').classList.toggle('bi-chevron-down');   
+ document.getElementById('presence-digital-icon').classList.toggle('bi-chevron-up');  
+ document.getElementById('presence-digital').classList.toggle('hidden');   
+  
+}
+
+
+const toggleTailleEntreprise = () =>{
+ document.getElementById('taille-entreprise-icon').classList.toggle('bi-chevron-down');   
+ document.getElementById('taille-entreprise-icon').classList.toggle('bi-chevron-up');  
+ document.getElementById('taille-entreprise').classList.toggle('hidden');   
+  
+}
+
+const toggleSecteurActivity = () =>{
+  document.getElementById('secteur-activity-icon').classList.toggle('bi-chevron-down');   
+ document.getElementById('secteur-activity-icon').classList.toggle('bi-chevron-up');  
+ document.getElementById('secteur-activity').classList.toggle('hidden');   
+}
+
+
+document.getElementById('phone_number').addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+
+
+</script>
+<script src="/public/js/popup.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/public/js/typeform-script.js"></script>
+<script src="/public/js/app.js"></script>
+</body>
+</html>

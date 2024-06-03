@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/loader.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="/public/css/base.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
+<link rel="stylesheet" href="/public/css/modal.css" />
+
+<!-- ===== MATERIAL ICONS =====-->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+
+<!-- ===== BOXICONS =====-->
+<link
+href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+rel="stylesheet"
+/>
+
+<!-- ===== AOS (Animate On Scroll) =====-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- ===== FAVICON =====-->
+<link
+rel="apple-touch-icon"
+sizes="180x180"
+href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+/>
+<link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+
+<title>Alpha Print - Alpha Creative</title>
+</head>
+
+<body ng-controller="MainController">
+
+
+<!-- <<<<<<<< HEADER >>>>>>>> -->
+<%-include('components/header')%>
+
+
+<main class="ap-main">
+<!------------ ========== S-HERO SECTION ========== ------------>
+<section class="flex-center sero">
+<div class="flex-center se-container">
+<div class="flex-center flex-col se-content" data-aos="fade-up">
+<div class="flex-center flex-col sec-text">
+<h1>
+If you can <span>imagine</span>, we can create it on any
+physical medium.
+</h1>
+
+<p>
+<strong>High quality</strong> printing for all your needs, from
+brochures to Billboards.
+</p>
+</div>
+
+<button
+class="flex-center sec-btn"
+onclick="window.location.href = 'Pricing'"
+>
+Learn More
+<span class="material-symbols-outlined"> arrow_outward </span>
+</button>
+</div>
+</div>
+</section>
+
+<!------------ ========== S-SERVICE SECTION ========== ------------>
+<section class="flex-center ses">
+<div class="flex-center flex-col ses-container">
+<div class="flex-center ses-title">
+<h3>Our Guarantee To You</h3>
+</div>
+
+<div class="flex-center ses-content">
+<div class="flex-center flex-col sesc" data-aos="fade-up">
+<span>01.</span>
+<h4>Our Custom Solutions</h4>
+<p>
+We offer tailor-made solutions meticulously crafted to perfectly
+match your unique needs and specifications.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="300"
+>
+<span>02.</span>
+<h4>Our Custom Service</h4>
+<p>
+Our commitment to outstanding customer service ensures every
+interaction exceeds your expectations, guaranteeing an
+unparalleled experience.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+
+<div
+class="flex-center flex-col sesc"
+data-aos="fade-up"
+data-aos-delay="400"
+>
+<span>03.</span>
+<h4>Our Custom Experience</h4>
+<p>
+Experience swift delivery coupled with unbeatable prices,
+designed to not only meet but exceed your expectations, ensuring
+utmost satisfaction.
+</p>
+<img
+src="https://alphacreative.netlify.app/assets/img/brand/emblem-black.png"
+alt=""
+loading="lazy"
+/>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== S-APPROACH SECTION ========== ------------>
+<section class="flex-center sa">
+<div class="flex-center flex-col sa-container" data-aos="fade-up">
+<div class="flex-center sa-title">
+<h3>Running out of ideas?</h3>
+<p>
+Discover our selection of supports adaptable to your needs and get
+inspired
+</p>
+</div>
+
+<div class="flex-center sa-content">
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img
+src="https://alphacreative.netlify.app/assets/img/icons/brochure.png"
+alt=""
+loading="lazy"
+/>
+
+<h5>Brochures and leaflets</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img
+src="https://alphacreative.netlify.app/assets/img/icons/stationery.png"
+alt=""
+loading="lazy"
+/>
+
+<h5>Stationery & Office</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img src="https://alphacreative.netlify.app/assets/img/icons/banner.png" alt="" loading="lazy" />
+
+<h5>Stand - Banner & Roll Up</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img src="https://alphacreative.netlify.app/assets/img/icons/gadgets.png" alt="" loading="lazy" />
+
+<h5>Gadgets (Tasse de the + Thermos)</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img src="https://alphacreative.netlify.app/assets/img/icons/store.png" alt="" loading="lazy" />
+
+<h5>Store Selection</h5>
+</div>
+</div>
+
+<div class="flex-center flex-col sac">
+<div class="flex-center sac-title">
+<img
+src="https://alphacreative.netlify.app/assets/img/icons/clothing.png"
+alt=""
+loading="lazy"
+/>
+
+<h5>Clothing (T-shirt + Polo + Hoodie)</h5>
+</div>
+</div>
+</div>
+
+<button
+class="flex-center sec-btn"
+onclick="window.location.href = 'Pricing'"
+>
+Learn More
+<span class="material-symbols-outlined"> arrow_outward </span>
+</button>
+</div>
+</section>
+
+<!------------ ========== STEPS SECTION ========== ------------>
+<section class="flex-center steps">
+<div class="flex-center flex-col st-container">
+<div class="flex-center st-title">
+<h3>Your Project In <span>3 Steps</span></h3>
+
+<div class="flex-center st-tags">
+<div class="flex-center stt active">
+<p>Pay As You Go</p>
+</div>
+</div>
+</div>
+
+<div class="flex-center st-main" data-aos="fade-up">
+<div class="flex-center stm">
+<div class="flex-center flex-col stmc">
+<span>Step 01.</span>
+
+<div class="flex-center stmc-text">
+<p>Place Your Order And Pay</p>
+</div>
+
+<div class="flex-center stmc-btn">
+<button onclick="toggleQuote()">Get Started</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 02.</span>
+
+<div class="flex-center stmc-text">
+<p>Fill Project Details Form</p>
+</div>
+
+<div class="flex-center stmc-btn">
+<button onclick="toggleQuote()">Get Started</button>
+</div>
+</div>
+
+<div class="flex-center flex-col stmc">
+<span>Step 03.</span>
+
+<div class="flex-center stmc-text">
+<p>Delivery Of Final Project</p>
+</div>
+
+<div class="flex-center stmc-btn">
+<button onclick="toggleQuote()">Get Started</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex-center a-stats" data-aos="fade-up">
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="50">50</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Companies Supported / Yr</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="500">500</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Projects Delivered</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<sub>$</sub>
+<h4 class="count" data-target="100">100</h4>
+<sub>k+</sub>
+</div>
+<span></span>
+<p>Monthly Media Budget</p>
+</div>
+
+<div class="flex-center flex-col as">
+<div class="flex-center as-no">
+<h4 class="count" data-target="10">10</h4>
+<sub>+</sub>
+</div>
+<span></span>
+<p>Seasoned Experts</p>
+</div>
+</div>
+</div>
+</section>
+
+<!------------ ========== FAQ SECTION ========== ------------>
+<section class="flex-center faq" id="faq">
+<div class="flex-center faq-container">
+<div class="flex-center f-img">
+<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
+</div>
+
+<div class="flex-center flex-col f-content">
+<div class="flex-center flex-col fc-text">
+<span>FAQ</span>
+<h3>Frequently Asked Questions</h3>
+
+<p>You've got questions? We've got answers!</p>
+</div>
+
+<div class="flex-center flex-col fc-list">
+<div class="flex-center flex-col fcl">
+<p>What services do you offer?</p>
+<span>
+Alpha Creative offers a range of 360-degree services for the
+development of your activities
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What types of companies do you work for?</p>
+<span>
+Alpha Creative works with businesses of all sizes, across all
+industries. We specialize in providing full-stack creative
+services for B2B and B2C companies.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>How do you define success?</p>
+<span>
+We define success as achieving our clients' goals. We measure
+the success of our campaigns in terms of awareness,
+engagement, lead generation and sales.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What is your work process?</p>
+<span>
+We work closely with our clients to understand their needs and
+goals. We then develop a personalized strategy to achieve
+these objectives.
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+
+<div class="flex-center flex-col fcl">
+<p>What are the needs of the clients you work with?</p>
+<span>
+Our clients' needs vary depending on their size, industry and
+goals. However, some common needs include: <br />
+<strong>Notoriety Development</strong> ●
+<strong>Improve their brand image</strong> ●
+<strong>Leads Generation</strong> ●
+<strong>Boost Sales</strong>
+</span>
+<i class="bx bx-plus" id="fcl-icon"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+<!-- <<<<<<<< FOOTER >>>>>>>> -->
+<%-include('components/footer')%>
+
+<!-- ============= [QUOTE MODAL] ============= -->
+<%-include('components/modal')%>
+
+
+<script src="/public/js/popup.js"></script>
+<script src="/public/js/app.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/modal.js"></script>
+<!-- ===== AOS (Animate On Scroll) =====-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1500,
+anchor: "top center",
+});
+
+window.addEventListener("load", AOS.refresh);
+</script>
+</body>
+</html>

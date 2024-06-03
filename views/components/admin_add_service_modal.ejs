@@ -1,0 +1,184 @@
+<div id="addservice" class="fixed top-0 left-0 w-full h-full flex items-center justify-center hidden" style="background-color: rgb(0, 0, 0, .6);">
+
+
+
+<div class="bg-white w-[60%] h-auto p-6 rounded-xl relative">
+
+<!-- close button -->
+<div onclick="toggleModalAddService()" class="absolute h-8 w-8 top-[-10%] right-[-5%] rounded-full bg-white flex items-center justify-center cursor-pointer">x</div>
+
+<!-- details of the order -->
+
+
+<div class="max-w-xl lg:max-w-3xl">
+<div class="relative block">
+<h1 class="mt-2 text-lg font-bold text-gray-900 sm:text-xl md:text-2xl flex items-center justify-between">
+<span>Add Service</span> 
+</h1>
+</div>
+
+
+
+<form ng-submit="addService()" class="mt-8 grid grid-cols-6 gap-6">
+<div class="col-span-9">
+<label for="FirstName" class="block text-sm font-medium text-gray-700">
+Name
+</label>
+
+<input
+type="text"
+id="name"
+name="name"
+ng-model="service.name"
+required
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+
+<div class="col-span-9">
+<label for="MarketingAccept" class="flex gap-4">
+<span class="text-sm text-gray-800 font-bold">
+Type: STANDARD
+</span>
+</label>
+</div>
+
+<div class="col-span-2 sm:col-span-3">
+<label for="LastName" class="block text-sm font-medium text-gray-700">
+Price USD
+</label>
+
+<input
+type="number"
+id="priceUSD"
+name="priceUSD"
+ng-model="service.type[0].priceUSD"
+placeholder="Price USD"
+required
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+<div class="col-span-2 sm:col-span-3">
+<label for="LastName" class="block text-sm font-medium text-gray-700">
+Price XOF
+</label>
+
+<input
+type="number"
+id="priceXOF"
+name="priceXOF"
+ng-model="service.type[0].priceXOF"
+placeholder="Price XOF"
+required
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+
+<div class="col-span-2 sm:col-span-3">
+<label for="LastName" class="block text-sm font-medium text-gray-700">
+Livraison (Jour)
+</label>
+
+<input
+type="number"
+id="livraisonJour"
+name="livraisonJour"
+ng-model="service.type[0].livraisonJour"
+required
+placeholder="Livraison Jour"
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+
+
+
+
+
+<div class="col-span-9">
+<label for="MarketingAccept" class="flex gap-4">
+<span class="text-sm text-gray-800 font-bold">
+Type: EXPRESS
+</span>
+</label>
+</div>
+
+<div class="col-span-2 sm:col-span-3">
+<label for="LastName" class="block text-sm font-medium text-gray-700">
+Price USD
+</label>
+
+<input
+type="number"
+id="priceUSD"
+name="priceUSD"
+ng-model="service.type[1].priceUSD"
+required
+placeholder="Price USD"
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+<div class="col-span-2 sm:col-span-3">
+<label for="LastName" class="block text-sm font-medium text-gray-700">
+Price XOF
+</label>
+
+<input
+type="number"
+id="priceXOF"
+name="priceXOF"
+ng-model="service.type[1].priceXOF"
+required
+placeholder="Price XOF"
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+
+<div class="col-span-2 sm:col-span-3">
+<label for="LastName" class="block text-sm font-medium text-gray-700">
+Livraison (Jour)
+</label>
+
+<input
+type="number"
+id="livraisonJour"
+name="livraisonJour"
+ng-model="service.type[1].livraisonJour"
+required
+placeholder="Livraison Jour"
+class="mt-1 w-full  border-gray-700 bg-gray-100 p-2 text-sm text-gray-700 shadow-sm"
+/>
+</div>
+
+
+
+
+
+<div class="col-span-6 mt-6 sm:flex sm:items-center sm:gap-4">
+<button
+type="submit"
+class="inline-block shrink-0  border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+>
+Create Service
+</button>
+
+<p class="mt-4 text-sm text-gray-500 sm:mt-0">
+<a onclick="toggleModalAddService()" ng-click="setValue('service',undefined)" href="javascript:void(0)" class="text-gray-700 underline">CANCEL</a>
+</p>
+</div>
+</form>
+
+
+
+</div>
+
+</div>
+
+
+	
+</div>
