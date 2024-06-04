@@ -2940,7 +2940,7 @@
 }
 
 .pt-tab {
-  flex: 0 0 18.75%;
+  flex: 0 0 18.25%;
   height: 100%;
   padding: var(--mb-1) var(--mb-1-5);
   row-gap: var(--mb-0-5);
@@ -2955,7 +2955,7 @@
 }
 
 .pt-tab:first-child {
-  flex: 0 0 25%;
+  flex: 0 0 27%;
   height: 100%;
 }
 
@@ -3021,9 +3021,9 @@
 }
 
 .ptbr {
-  flex: 0 0 18.75%;
-  height: 80px;
-  padding: var(--mb-1) var(--mb-1-5);
+  flex: 0 0 18.25%;
+  height: 75px;
+  padding: var(--mb-0-75) var(--mb-1-5);
   row-gap: var(--mb-0-5);
   justify-content: flex-end;
   align-items: flex-start;
@@ -3036,7 +3036,7 @@
 }
 
 .ptbr:first-child {
-  flex: 0 0 25%;
+  flex: 0 0 27%;
 }
 
 .ptbr:first-child p {
