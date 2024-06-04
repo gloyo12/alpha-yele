@@ -349,12 +349,12 @@ button {
 }
 
 .nav-logo img {
-  width: 90px;
+  width: 80px;
   object-fit: cover;
 }
 
 .nav.active .nav-logo img {
-  width: 80px;
+  width: 75px;
 }
 
 .nm-open,
@@ -739,7 +739,7 @@ button {
   }
 
   .nav-logo img {
-    width: 70px;
+    width: 65px;
   }
 
   .nav.active .nav-logo img {
@@ -923,6 +923,13 @@ button {
   .nml-s:focus .nml-wrapper,
   .nml-s:active .nml-wrapper {
     display: flex;
+  }
+
+  .nm-btn {
+    flex: 0 0 auto;
+    padding: var(--mb-0-75) var(--mb-1);
+    font-size: 0.95rem;
+    border-radius: 5px;
   }
 
   /*========== FOOTER SECTION ==========*/
