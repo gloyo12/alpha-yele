@@ -1,480 +1,1272 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-
-<!-- CSS -->
-<link rel="stylesheet" href="/public/css/loader.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<link rel="stylesheet" href="/public/css/base.css" />
-<link rel="stylesheet" href="/public/css/style.css" />
-<link rel="stylesheet" href="/public/css/modal.css" />
-
-<!-- ===== MATERIAL ICONS =====-->
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
-
-<!-- ===== BOXICONS =====-->
-<link
-href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-rel="stylesheet"
-/>
-
-<!-- ===== AOS (Animate On Scroll) =====-->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-<!-- ===== FAVICON =====-->
-<link
-rel="apple-touch-icon"
-sizes="180x180"
-href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="32x32"
-href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="16x16"
-href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
-/>
-<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
-
-<title>Pricing - Alpha Creative</title>
-</head>
-
-<body ng-controller="MainController">
-
-
-<!-- <<<<<<<< HEADER >>>>>>>> -->
-<%-include('components/header')%>
-
-
-<main class="pricing-page-main">
-<!------------ ========== PERO SECTION ========== ------------>
-<section class="flex-center pero">
-<div class="flex-center pe-container">
-<div class="flex-center flex-col pe-content">
-<h1 data-aos="fade-up">
-Pricing Plans For <span>Every</span> Need
-</h1>
-<p>
-Choose the plan that best fits your business and propels it to the
-top! 🚀
-</p>
-
-<a href="" class="mouse-scroll">
-<span class="mouse-wheel"></span>
-</a>
-</div>
-</div>
-</section>
-
-<!------------ ========== PRICING PACKS SECTION ========== ------------>
-<section class="flex-center pp">
-<img src="assets/img/scri-1.png" alt="" loading="lazy" class="scri-1" />
-<img src="assets/img/scri-2.png" alt="" loading="lazy" class="scri-2" />
-
-<div class="flex-center flex-col pp-container">
-<div class="flex-center flex-col pp-title">
-<h3>Discover <span>Plans</span> For You</h3>
-
-<p>
-Explore the perfect plan to drive your business forward. Our
-Pricing choices are thoughtfully designed to meet the needs of
-your business.
-</p>
-
-<img src="assets/img/h-arrow.png" alt="" loading="lazy" />
-</div>
-
-<div class="flex-center pp-wrapper" data-aos="fade-up">
-<div class="flex-center ppw pp-quarter">
-<div class="flex-center flex-col ppq">
-<h3>Alpha Nano</h3>
-
-<ul class="flex-center flex-col ppq-ul">
-<li>
-<span class="material-symbols-outlined"> check </span
->Branding (Logo, business card, packaging)
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Catalogue products
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span> 4
-flyers/month
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Google SEO (Google my Business)
-</li>
-<li>
-<span class="material-symbols-outlined"> close </span>
-Storefront on E-commerce sites such as Afrikrea, Jumia or
-Amazon
-</li>
-</ul>
-
-<div class="flex-center ppq-action">
-<p>€50<span> / month</span></p>
-<button onclick="window.location.href='/subscribers-form?pck=alpha-nano&amt=50'">Choose Plan</button>
-</div>
-</div>
-
-<div class="flex-center flex-col ppq active">
-<span id="pp-popular">Popular</span>
-
-<h3>Alpha Pro</h3>
-
-<ul class="flex-center flex-col ppq-ul">
-<li>
-<span class="material-symbols-outlined"> check </span>
-Branding (Logo, business card, packaging)
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Catalogue products
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span> 7
-Free flyers/month
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Storefront on E-commerce sites such as Afrikrea, Jumia or
-Amazon
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span> SMS
-campaign
-</li>
-</ul>
-
-<div class="flex-center ppq-action">
-<p>€150<span> / month</span></p>
-<button onclick="window.location.href='/subscribers-form?pck=alpha-pro&amt=150'">Choose Plan</button>
-</div>
-</div>
-
-<div class="flex-center flex-col ppq">
-<h3>Alpha Plus</h3>
-
-<ul class="flex-center flex-col ppq-ul">
-<li>
-<span class="material-symbols-outlined"> check </span>
-Everything included in the Pro offer
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Creation of professional email address
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Social Media Advertising (Facebook, Instagram, TikTok &
-Twitter)
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Google & Youtube Advertising
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Community manager personnel
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span> 30%
-off photo/video shooting costs
-</li>
-</ul>
-
-<div class="flex-center ppq-action">
-<p>€400<span> / month</span></p>
-<button onclick="window.location.href='/subscribers-form?pck=alpha-plus&amt=400'">Choose Plan</button>
-</div>
-</div>
-
-<div class="flex-center flex-col ppq">
-<h3>Alpha Ultra</h3>
-
-<p>
-Unleash the full potential of your business with our Ultra
-Plan
-</p>
-
-<ul class="flex-center flex-col ppq-ul">
-<li>
-<span class="material-symbols-outlined"> check </span>
-Everything included in the Plus offer
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Complete dedicated department
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Priority on services
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Ability to customize services based on specific business
-needs
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Access to exclusive tools and resources
-</li>
-<li>
-<span class="material-symbols-outlined"> check </span>
-Assistance 24h/24 et 7j/7s
-</li>
-</ul>
-
-<div class="flex-center ppq-action">
-<button onclick="window.location.href='/subscribers-form?pck=alpha-ultra'">Contact Us For a Quote</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== STEPS SECTION ========== ------------>
-<section class="flex-center steps">
-<div class="flex-center flex-col st-container">
-<div class="flex-center st-title">
-<h3>Your Project In <span>3 Steps</span></h3>
-
-<div class="flex-center st-tags">
-<div class="flex-center stt active">
-<p>Pay As You Go</p>
-</div>
-</div>
-</div>
-
-<div class="flex-center st-main">
-<div class="flex-center stm">
-<div class="flex-center flex-col stmc">
-<span>Step 01.</span>
-
-<div class="flex-center stmc-text">
-<p>Place Your Order And Pay</p>
-</div>
-
-<div class="flex-center stmc-btn">
-<button onclick="toggleQuote()">Get Started</button>
-</div>
-</div>
-
-<div class="flex-center flex-col stmc">
-<span>Step 02.</span>
-
-<div class="flex-center stmc-text">
-<p>Fill Project Details Form</p>
-</div>
-
-<div class="flex-center stmc-btn">
-<button onclick="toggleQuote()">Get Started</button>
-</div>
-</div>
-
-<div class="flex-center flex-col stmc">
-<span>Step 03.</span>
-
-<div class="flex-center stmc-text">
-<p>Delivery Of Final Project</p>
-</div>
-
-<div class="flex-center stmc-btn">
-<button onclick="toggleQuote()">Get Started</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== CLIENT SECTION ========== ------------>
-<section class="flex-center client">
-<div class="flex-center flex-col cl-container">
-<div class="flex-center cl-title">
-<h3>
-We Are Grateful To Work With <span>Incredible Clients</span>
-</h3>
-</div>
-
-<div class="flex-center cl-cards">
-<div class="flex-center clc">
-<img
-src="https://alphacreative.netlify.app/assets/img/clients/Bi.flaz/bif-1.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img
-src="https://alphacreative.netlify.app/assets/img/clients/studios-africa/sa-2.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img
-src="https://alphacreative.netlify.app/assets/img/clients/talenbo/tal-3.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img
-src="https://alphacreative.netlify.app/assets/img/clients/Bontuteur/bon-3.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img src="https://alphacreative.netlify.app/assets/img/clients/HEC/hec.png" alt="" loading="lazy" />
-</div>
-
-<div class="flex-center clc">
-<img src="https://alphacreative.netlify.app/assets/img/clients/hmc/hmc.png" alt="" loading="lazy" />
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== FAQ SECTION ========== ------------>
-<section class="flex-center faq" id="faq">
-<div class="flex-center faq-container">
-<div class="flex-center f-img">
-<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
-</div>
-
-<div class="flex-center flex-col f-content">
-<div class="flex-center flex-col fc-text">
-<span>FAQ</span>
-<h3>Frequently Asked Questions</h3>
-
-<p>You've got questions? We've got answers!</p>
-</div>
-
-<div class="flex-center flex-col fc-list">
-<div class="flex-center flex-col fcl">
-<p>What services do you offer?</p>
-<span>
-Alpha Creative offers a range of 360-degree services for the
-development of your activities
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>What types of companies do you work for?</p>
-<span>
-Alpha Creative works with businesses of all sizes, across all
-industries. We specialize in providing full-stack creative
-services for B2B and B2C companies.
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>How do you define success?</p>
-<span>
-We define success as achieving our clients' goals. We measure
-the success of our campaigns in terms of awareness,
-engagement, lead generation and sales.
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>What is your work process?</p>
-<span>
-We work closely with our clients to understand their needs and
-goals. We then develop a personalized strategy to achieve
-these objectives.
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>What are the needs of the clients you work with?</p>
-<span>
-Our clients' needs vary depending on their size, industry and
-goals. However, some common needs include: <br />
-<strong>Notoriety Development</strong> ●
-<strong>Improve their brand image</strong> ●
-<strong>Leads Generation</strong> ●
-<strong>Boost Sales</strong>
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-
-
-<!-- <<<<<<<< FOOTER >>>>>>>> -->
-<%-include('components/footer')%>
-
-<!-- ============= [QUOTE MODAL] ============= -->
-<%-include('components/modal')%>
-
-
-
-<script>
-const prTab = document.querySelectorAll(".ppt");
-const prBox = document.querySelectorAll(".ppw");
-
-// Add a click event listener to each sidebar element
-prTab.forEach((element, index) => {
-element.addEventListener("click", () => {
-// Remove active class from all sidebar elements
-prTab.forEach((prt) => {
-prt.classList.remove("active");
-});
-// Add active class to the clicked sidebar element
-element.classList.add("active");
-
-// Remove active class from all containers
-prBox.forEach((prb) => {
-prb.classList.remove("active");
-});
-// Add active class to the container with the same index as the clicked sidebar element
-prBox[index].classList.add("active");
-});
-});
-</script>
-
-<script src="/public/js/popup.js"></script>
-<script src="/public/js/app.js"></script>
-<script src="/public/js/index.js"></script>
-<script src="/public/js/modal.js"></script>
-<!-- ===== AOS (Animate On Scroll) =====-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-duration: 1500,
-anchor: "top center",
-});
-
-window.addEventListener("load", AOS.refresh);
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/loader.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/public/css/base.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/modal.css" />
+
+    <!-- ===== MATERIAL ICONS =====-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- ===== FAVICON =====-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest"
+    />
+
+    <title>Pricing - Alpha Creative</title>
+  </head>
+
+  <body ng-controller="MainController">
+    <!-- <<<<<<<< HEADER >>>>>>>> -->
+    <%-include('components/header')%>
+
+    <main class="pricing-page-main">
+      <!------------ ========== PERO SECTION ========== ------------>
+      <section class="flex-center pero">
+        <div class="flex-center pe-container">
+          <div class="flex-center flex-col pe-content">
+            <h1 data-aos="fade-up">
+              Pricing Plans For <span>Every</span> Need
+            </h1>
+            <p>
+              Choose the plan that best fits your business and propels it to the
+              top! 🚀
+            </p>
+
+            <a href="" class="mouse-scroll">
+              <span class="mouse-wheel"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== PRICING PACKS SECTION ========== ------------>
+      <section class="flex-center pp">
+        <img src="assets/img/scri-1.png" alt="" loading="lazy" class="scri-1" />
+        <img src="assets/img/scri-2.png" alt="" loading="lazy" class="scri-2" />
+
+        <div class="flex-center flex-col pp-container">
+          <div class="flex-center flex-col pp-title">
+            <h3>Discover <span>Plans</span> For You</h3>
+
+            <p>
+              Explore the perfect plan to drive your business forward. Our
+              Pricing choices are thoughtfully designed to meet the needs of
+              your business.
+            </p>
+
+            <img src="assets/img/h-arrow.png" alt="" loading="lazy" />
+          </div>
+
+          <div class="flex-center pp-wrapper" data-aos="fade-up">
+            <div class="flex-center ppw pp-quarter">
+              <div class="flex-center flex-col ppq">
+                <h3>Alpha Nano</h3>
+
+                <ul class="flex-center flex-col ppq-ul">
+                  <li>
+                    <span class="material-symbols-outlined"> check </span
+                    >Branding (Logo, business card, packaging)
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Catalogue products
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span> 4
+                    flyers/month
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Google SEO (Google my Business)
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> close </span>
+                    Storefront on E-commerce sites such as Afrikrea, Jumia or
+                    Amazon
+                  </li>
+                </ul>
+
+                <div class="flex-center ppq-action">
+                  <p>€50<span> / month</span></p>
+                  <button
+                    onclick="window.location.href='/subscribers-form?pck=alpha-nano&amt=50'"
+                  >
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col ppq active">
+                <span id="pp-popular">Popular</span>
+
+                <h3>Alpha Pro</h3>
+
+                <ul class="flex-center flex-col ppq-ul">
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Branding (Logo, business card, packaging)
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Catalogue products
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span> 7
+                    Free flyers/month
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Storefront on E-commerce sites such as Afrikrea, Jumia or
+                    Amazon
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span> SMS
+                    campaign
+                  </li>
+                </ul>
+
+                <div class="flex-center ppq-action">
+                  <p>€150<span> / month</span></p>
+                  <button
+                    onclick="window.location.href='/subscribers-form?pck=alpha-pro&amt=150'"
+                  >
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col ppq">
+                <h3>Alpha Plus</h3>
+
+                <ul class="flex-center flex-col ppq-ul">
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Everything included in the Pro offer
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Creation of professional email address
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Social Media Advertising (Facebook, Instagram, TikTok &
+                    Twitter)
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Google & Youtube Advertising
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Community manager personnel
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span> 30%
+                    off photo/video shooting costs
+                  </li>
+                </ul>
+
+                <div class="flex-center ppq-action">
+                  <p>€400<span> / month</span></p>
+                  <button
+                    onclick="window.location.href='/subscribers-form?pck=alpha-plus&amt=400'"
+                  >
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col ppq">
+                <h3>Alpha Ultra</h3>
+
+                <p>
+                  Unleash the full potential of your business with our Ultra
+                  Plan
+                </p>
+
+                <ul class="flex-center flex-col ppq-ul">
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Everything included in the Plus offer
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Complete dedicated department
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Priority on services
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Ability to customize services based on specific business
+                    needs
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Access to exclusive tools and resources
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined"> check </span>
+                    Assistance 24h/24 et 7j/7s
+                  </li>
+                </ul>
+
+                <div class="flex-center ppq-action">
+                  <button
+                    onclick="window.location.href='/subscribers-form?pck=alpha-ultra'"
+                  >
+                    Contact Us For a Quote
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-center flex-col pricing-table">
+            <div class="flex-center flex-col pt-title">
+              <h3>Compare plans in detail</h3>
+              <span class="material-symbols-outlined"> south </span>
+            </div>
+
+            <div class="flex-center flex-col pt-wrapper">
+              <div class="flex-center pt-head">
+                <div class="flex-center flex-col pt-tab">
+                  <h4>What's Inside</h4>
+                </div>
+
+                <div class="flex-center flex-col pt-tab">
+                  <p>Alpha Nano</p>
+                  <span>80€/Mois</span>
+                  <button>Choose Plan</button>
+                </div>
+
+                <div class="flex-center flex-col pt-tab">
+                  <p>Alpha Pro</p>
+                  <span>150€/mois</span>
+                  <button>Choose Plan</button>
+                </div>
+
+                <div class="flex-center flex-col pt-tab">
+                  <p>Alpha Plus</p>
+                  <span> 400€/mois</span>
+                  <button>Choose Plan</button>
+                </div>
+
+                <div class="flex-center flex-col pt-tab">
+                  <p>Alpha Ultra</p>
+                  <span></span>
+                  <button>Contact Us</button>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col pt-body branding">
+                <h5>Branding</h5>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Logo</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Guide d'identité de la marque</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Création de comptes réseaux sociaux</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>3</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>4</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Illimité</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Carte de visite</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>3</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>10</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Design d'emballage</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>3</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>10</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Catalogue produit numérique</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>1 - 3 Pages</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5 - 8 Pages</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>12 - 15 Pages</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>15 - 25 Pages</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Création/ Optimisation de Profile Google my Business</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Création de contenus (Flyers)</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>4</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>7</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>12</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Illimité</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Logo</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col pt-body marketing">
+                <h5>Marketing et Publicités</h5>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>SMS Marketing</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>500 SMS</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>2500 SMS</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Audit des comptes réseaux sociaux existants</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Élaboration de stratégie de marque</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Coordination et mise en œuvre de la stratégie</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Calendrier de publication</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>
+                      Création de campagne publicitaire Facebook - Tiktok & Snap
+                    </p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Illimité</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Création de campagne publicitaire Google & Youtube</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Illimité</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>
+                      Gestion des réseaux sociaux et campagnes par account
+                      manager
+                    </p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col pt-body tech">
+                <h5>Technologie</h5>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Nom de domaine personnalisé</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Création d'adresse email professionnel</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>3</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>6</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Création de site Web</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1 - Landing Page</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>6 Pages</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Maintenance de site Web / Web App</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Référencement Naturel</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Data & Analytics</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>ChatBots alimentés par l'IA</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Setup Google Analytics</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Setup Google Tag Manager</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Setup Suivie Avance des conversion</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col pt-body reduction">
+                <h5>Réduction spéciale</h5>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Shooting Photo/Video shooting</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>10% Off</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>20% Off</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Back Up et sécurité des données</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5% Off</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>15% Off</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Campagne de marketing d'influence</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5% Off</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>15% Off</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Conception & Impression</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5% Off</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>15% Off</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Alpha Académie</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5% Off</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>15% Off</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Toute autre besoin particulier</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>5% Off</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>15% Off</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col pt-body priority">
+                <h5>Priorité</h5>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Rapport de performance mensuel</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Accès prioritaire aux services</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Séance de coaching sur la croissance des revenus</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>-</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>1</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>2</p>
+                  </div>
+                </div>
+
+                <div class="flex-center ptb-row">
+                  <div class="flex-center flex-col ptbr">
+                    <p>Assistance 24h/24 et 7j/7</p>
+                  </div>
+
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                  <div class="flex-center flex-col ptbr">
+                    <p>Oui</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== STEPS SECTION ========== ------------>
+      <section class="flex-center steps">
+        <div class="flex-center flex-col st-container">
+          <div class="flex-center st-title">
+            <h3>Your Project In <span>3 Steps</span></h3>
+
+            <div class="flex-center st-tags">
+              <div class="flex-center stt active">
+                <p>Pay As You Go</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-center st-main">
+            <div class="flex-center stm">
+              <div class="flex-center flex-col stmc">
+                <span>Step 01.</span>
+
+                <div class="flex-center stmc-text">
+                  <p>Place Your Order And Pay</p>
+                </div>
+
+                <div class="flex-center stmc-btn">
+                  <button onclick="toggleQuote()">Get Started</button>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col stmc">
+                <span>Step 02.</span>
+
+                <div class="flex-center stmc-text">
+                  <p>Fill Project Details Form</p>
+                </div>
+
+                <div class="flex-center stmc-btn">
+                  <button onclick="toggleQuote()">Get Started</button>
+                </div>
+              </div>
+
+              <div class="flex-center flex-col stmc">
+                <span>Step 03.</span>
+
+                <div class="flex-center stmc-text">
+                  <p>Delivery Of Final Project</p>
+                </div>
+
+                <div class="flex-center stmc-btn">
+                  <button onclick="toggleQuote()">Get Started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== CLIENT SECTION ========== ------------>
+      <section class="flex-center client">
+        <div class="flex-center flex-col cl-container">
+          <div class="flex-center cl-title">
+            <h3>
+              We Are Grateful To Work With <span>Incredible Clients</span>
+            </h3>
+          </div>
+
+          <div class="flex-center cl-cards">
+            <div class="flex-center clc">
+              <img
+                src="https://alphacreative.netlify.app/assets/img/clients/Bi.flaz/bif-1.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="https://alphacreative.netlify.app/assets/img/clients/studios-africa/sa-2.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="https://alphacreative.netlify.app/assets/img/clients/talenbo/tal-3.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="https://alphacreative.netlify.app/assets/img/clients/Bontuteur/bon-3.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="https://alphacreative.netlify.app/assets/img/clients/HEC/hec.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="https://alphacreative.netlify.app/assets/img/clients/hmc/hmc.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== FAQ SECTION ========== ------------>
+      <section class="flex-center faq" id="faq">
+        <div class="flex-center faq-container">
+          <div class="flex-center f-img">
+            <img
+              src="https://alphacreative.netlify.app/assets/img/background/faq.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex-center flex-col f-content">
+            <div class="flex-center flex-col fc-text">
+              <span>FAQ</span>
+              <h3>Frequently Asked Questions</h3>
+
+              <p>You've got questions? We've got answers!</p>
+            </div>
+
+            <div class="flex-center flex-col fc-list">
+              <div class="flex-center flex-col fcl">
+                <p>What services do you offer?</p>
+                <span>
+                  Alpha Creative offers a range of 360-degree services for the
+                  development of your activities
+                </span>
+                <i class="bx bx-plus" id="fcl-icon"></i>
+              </div>
+
+              <div class="flex-center flex-col fcl">
+                <p>What types of companies do you work for?</p>
+                <span>
+                  Alpha Creative works with businesses of all sizes, across all
+                  industries. We specialize in providing full-stack creative
+                  services for B2B and B2C companies.
+                </span>
+                <i class="bx bx-plus" id="fcl-icon"></i>
+              </div>
+
+              <div class="flex-center flex-col fcl">
+                <p>How do you define success?</p>
+                <span>
+                  We define success as achieving our clients' goals. We measure
+                  the success of our campaigns in terms of awareness,
+                  engagement, lead generation and sales.
+                </span>
+                <i class="bx bx-plus" id="fcl-icon"></i>
+              </div>
+
+              <div class="flex-center flex-col fcl">
+                <p>What is your work process?</p>
+                <span>
+                  We work closely with our clients to understand their needs and
+                  goals. We then develop a personalized strategy to achieve
+                  these objectives.
+                </span>
+                <i class="bx bx-plus" id="fcl-icon"></i>
+              </div>
+
+              <div class="flex-center flex-col fcl">
+                <p>What are the needs of the clients you work with?</p>
+                <span>
+                  Our clients' needs vary depending on their size, industry and
+                  goals. However, some common needs include: <br />
+                  <strong>Notoriety Development</strong> ●
+                  <strong>Improve their brand image</strong> ●
+                  <strong>Leads Generation</strong> ●
+                  <strong>Boost Sales</strong>
+                </span>
+                <i class="bx bx-plus" id="fcl-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <<<<<<<< FOOTER >>>>>>>> -->
+    <%-include('components/footer')%>
+
+    <!-- ============= [QUOTE MODAL] ============= -->
+    <%-include('components/modal')%>
+
+    <script>
+      const prTab = document.querySelectorAll(".ppt");
+      const prBox = document.querySelectorAll(".ppw");
+
+      // Add a click event listener to each sidebar element
+      prTab.forEach((element, index) => {
+        element.addEventListener("click", () => {
+          // Remove active class from all sidebar elements
+          prTab.forEach((prt) => {
+            prt.classList.remove("active");
+          });
+          // Add active class to the clicked sidebar element
+          element.classList.add("active");
+
+          // Remove active class from all containers
+          prBox.forEach((prb) => {
+            prb.classList.remove("active");
+          });
+          // Add active class to the container with the same index as the clicked sidebar element
+          prBox[index].classList.add("active");
+        });
+      });
+    </script>
+
+    <script src="/public/js/popup.js"></script>
+    <script src="/public/js/app.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/public/js/modal.js"></script>
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        anchor: "top center",
+      });
+
+      window.addEventListener("load", AOS.refresh);
+    </script>
+  </body>
 </html>
