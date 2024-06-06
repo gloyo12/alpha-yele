@@ -86,7 +86,7 @@
   width: 100%;
   height: 100dvh;
   /* border: 1px red solid; */
-  padding: var(--mb-2) var(--mb-4);
+  padding: var(--mb-2) var(--mb-6);
   padding-top: var(--mb-6-5);
   background-color: var(--theme-l-orange);
   /* background-color: var(--soft-white); */
@@ -975,7 +975,6 @@
   flex: 0 0 45%;
   height: 420px;
 }
-
 
 .aa-main .stmc {
   flex: 0 0 46%;
