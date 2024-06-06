@@ -342,7 +342,9 @@ console.error('Error fetching data:', error);
 
 
 
-
+$scope.addToServiceWanted = () =>{
+	
+}
 
 
 

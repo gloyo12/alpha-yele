@@ -32,21 +32,21 @@ rel="stylesheet"
 <link
 rel="apple-touch-icon"
 sizes="180x180"
-href="https://alphacreative.netlify.app/assets/img/favicon/apple-touch-icon.png"
+href="/public/img/favicon/apple-touch-icon.png"
 />
 <link
 rel="icon"
 type="image/png"
 sizes="32x32"
-href="https://alphacreative.netlify.app/assets/img/favicon/favicon-32x32.png"
+href="/public/img/favicon/favicon-32x32.png"
 />
 <link
 rel="icon"
 type="image/png"
 sizes="16x16"
-href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
+href="/public/img/favicon/favicon-16x16.png"
 />
-<link rel="manifest" href="https://alphacreative.netlify.app/assets/img/favicon/site.webmanifest" />
+<link rel="manifest" href="/public/img/favicon/site.webmanifest" />
 
 <title>Contact Us - Alpha Creative</title>
 </head>
@@ -64,52 +64,47 @@ href="https://alphacreative.netlify.app/assets/img/favicon/favicon-16x16.png"
 <div class="flex-center flex-col ce-content">
 <h1>Contact Us</h1>
 <p>
-Chat, call, email or complete the form to get in touch with Alpha
-Creative
+Discutez, appelez, envoyez un e-mail ou remplissez le formulaire pour entrer en contact avec nos équipes.
 </p>
 
 <div class="flex-center flex-col cec-contact">
-<a href="mailto:{hello@alphacreative.africa}" target="_blank"
->hello@alphacreative.africa</a
+<a href="mailto:{hello@alphayele.com}" target="_blank"
+>hello@alphayele.com</a
 >
 <a href="tel:{+2250713807994}" target="_blank"
 >(+225) 07 13 807 994</a
 >
 <a href="https://wa.me/2250713807994" target="_blank"
->Chat with our friendly team</a
+>Discutez avec notre équipe amicale</a
 >
 </div>
 
 <div class="flex-center cec-cards" data-aos="fade-right">
 <div class="flex-center flex-col cecc">
-<h5>Customer Support</h5>
+<h5>Service client</h5>
 <p>
-Our support team is available around the clock to address any
-concerns or queries you may have.
+Notre équipe d'assistance est disponible 24/7 pour répondre à toutes vos préoccupations ou questions.
 </p>
 </div>
 
 <div class="flex-center flex-col cecc">
 <h5>Feedback</h5>
 <p>
-We value your feedback and are continuously working to improve
-Alpha Creative to ensure the best experience.
+Nous apprécions vos feedbacks et travaillons continuellement pour vous  garantir la meilleure expérience.
 </p>
 </div>
 
 <div class="flex-center flex-col cecc">
-<h5>Business Inquiries</h5>
+<h5>Partenariats</h5>
 <p>
-For investment-related questions or partnership inquiries,
-contact us at
-<a href="" target="_blank">hello@alphacreative.africa</a>.
+Pour des questions liées à l'investissement ou des demandes de partenariat, contactez-nous à <a href="mailto:founders@africayele.com ">founders@africayele.com</a>
 </p>
 </div>
 </div>
 </div>
 
 <div class="flex-center ce-img" data-aos="fade-up">
-<img src="https://alphacreative.netlify.app/assets/img/background/bg-10.jpg" alt="" loading="lazy" />
+<img src="/public/img/background/bg-10.jpg" alt="" loading="lazy" />
 </div>
 </div>
 </section>
@@ -118,21 +113,22 @@ contact us at
 <secion class="flex-center c-form">
 <div class="flex-center flex-col cf-container">
 <div class="flex-center flex-col cf-title">
-<h3><span>Connect</span> with us! 👋</h3>
+<h3>Formulaire de contact 👋</h3>
 <p>
-Need help with something? Get in touch with our friendly team and
-we will get back to you.
+Besoin d'aide pour quelque chose ? Entrez en contact avec notre équipe sympathique et
+nous reviendrons vers vous.
 </p>
 </div>
 
-<form action="" class="flex-center cf-form" data-aos="fade-up">
+<form ng-submit="contactForm(_contactForm)" class="flex-center cf-form" data-aos="fade-up">
 <div class="flex-center cf-input">
 <div class="cfi">
 <input
 type="text"
-name=""
-id=""
-placeholder="First Name"
+name="fname"
+id="fname"
+placeholder="Prénom"
+ng-model="_contactForm.fname"
 required
 autocomplete="on"
 />
@@ -141,9 +137,10 @@ autocomplete="on"
 <div class="cfi">
 <input
 type="text"
-name=""
-id=""
-placeholder="Last Name"
+name="lname"
+id="lname"
+ng-model="_contactForm.lname"
+placeholder="Nom de famille"
 required
 autocomplete="on"
 />
@@ -151,55 +148,57 @@ autocomplete="on"
 
 <div class="cfi">
 <input
-type="text"
-name=""
-id=""
-placeholder="Your Email"
+type="email"
+name="email"
+id="email"
+ng-model="_contactForm.email"
+placeholder="Votre e-mail"
 required
 autocomplete="on"
 />
 </div>
 
 <div class="cfi">
-<select name="" id="">
-<option value="">Select Your Status</option>
-<option value="">Business</option>
-<option value="">Individual</option>
+<select name="statut" id="statut" ng-model="_contactForm.statut" required>
+<option value="">Sélectionnez votre statut</option>
+<option value="entreprise">Entreprise</option>
+<option value="individuel">Individuel</option>
 </select>
 </div>
 
 <div class="cfi">
-<label for="">What service are you contacting us for?</label>
+<label for="">Pour quel service nous contactez-vous ?</label>
 
 <div class="flex-center cfi-tags">
-<div class="cfit">
+
+<div ng-click="addToServiceWanted('alpha-inf')" class="cfit">
 <i class="bx bx-checkbox"></i>
 <p>Alpha Influencers</p>
 </div>
 
-<div class="cfit">
+<div ng-click="addToServiceWanted('podcast-r')"  class="cfit">
 <i class="bx bx-checkbox"></i>
 <p>The Podcast Room</p>
 </div>
 
-<div class="cfit">
+<div ng-click="addToServiceWanted('alpha-acad')" class="cfit">
 <i class="bx bx-checkbox"></i>
 <p>Alpha Academie</p>
 </div>
 
-<div class="cfit">
+<div ng-click="addToServiceWanted('alpha-print')" class="cfit">
 <i class="bx bx-checkbox"></i>
 <p>Alpha Print</p>
 </div>
 
-<div class="cfit">
+<div ng-click="addToServiceWanted('Spontanée')" class="cfit">
 <i class="bx bx-checkbox"></i>
-<p>Spontaneous Application</p>
+<p>Candidature Spontanée </p>
 </div>
 
-<div class="cfit">
+<div ng-click="addToServiceWanted('other')" class="cfit">
 <i class="bx bx-checkbox"></i>
-<p>Other</p>
+<p>Autre</p>
 </div>
 </div>
 </div>
@@ -207,88 +206,20 @@ autocomplete="on"
 
 <div class="flex-center flex-col cf-action">
 <textarea
-name=""
-id=""
-placeholder="We would love to hear from you..."
+name="content"
+id="content"
+ng-model="_contactForm.content"
+placeholder="Nous aimerions avoir de vos nouvelles..."
 ></textarea>
 
-<button type="submit" class="cfa-btn">Submit Form</button>
+<button type="submit" class="cfa-btn">Envoyer</button>
 </div>
 </form>
 </div>
 </secion>
 
 <!------------ ========== FAQ SECTION ========== ------------>
-<section class="flex-center faq" id="faq">
-<div class="flex-center faq-container">
-<div class="flex-center f-img">
-<img src="https://alphacreative.netlify.app/assets/img/background/faq.jpg" alt="" loading="lazy" />
-</div>
-
-<div class="flex-center flex-col f-content">
-<div class="flex-center flex-col fc-text">
-<span>FAQ</span>
-<h3>Frequently Asked Questions</h3>
-
-<p>You've got questions? We've got answers!</p>
-</div>
-
-<div class="flex-center flex-col fc-list">
-<div class="flex-center flex-col fcl">
-<p>What services do you offer?</p>
-<span>
-Alpha Creative offers a range of 360-degree services for the
-development of your activities
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>What types of companies do you work for?</p>
-<span>
-Alpha Creative works with businesses of all sizes, across all
-industries. We specialize in providing full-stack creative
-services for B2B and B2C companies.
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>How do you define success?</p>
-<span>
-We define success as achieving our clients' goals. We measure
-the success of our campaigns in terms of awareness,
-engagement, lead generation and sales.
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>What is your work process?</p>
-<span>
-We work closely with our clients to understand their needs and
-goals. We then develop a personalized strategy to achieve
-these objectives.
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-
-<div class="flex-center flex-col fcl">
-<p>What are the needs of the clients you work with?</p>
-<span>
-Our clients' needs vary depending on their size, industry and
-goals. However, some common needs include: <br />
-<strong>Notoriety Development</strong> ●
-<strong>Improve their brand image</strong> ●
-<strong>Leads Generation</strong> ●
-<strong>Boost Sales</strong>
-</span>
-<i class="bx bx-plus" id="fcl-icon"></i>
-</div>
-</div>
-</div>
-</div>
-</section>
+<%-include('components/faq-home')%>
 </main>
 
 
