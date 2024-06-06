@@ -1,148 +1,149 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
 
-<!-- CSS -->
-<link rel="stylesheet" href="/public/css/loader.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<link rel="stylesheet" href="/public/css/base.css" />
-<link rel="stylesheet" href="/public/css/style.css" />
-<link rel="stylesheet" href="/public/css/modal.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/loader.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/public/css/base.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/modal.css" />
 
-<!-- ===== MATERIAL ICONS =====-->
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
+    <!-- ===== MATERIAL ICONS =====-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
-<!-- ===== BOXICONS =====-->
-<link
-href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-rel="stylesheet"
-/>
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-<!-- ===== AOS (Animate On Scroll) =====-->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<!-- ===== FAVICON =====-->
-<link
-rel="apple-touch-icon"
-sizes="180x180"
-href="/public/img/favicon/apple-touch-icon.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="32x32"
-href="/public/img/favicon/favicon-32x32.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="16x16"
-href="/public/img/favicon/favicon-16x16.png"
-/>
-<link rel="manifest" href="/public/img/favicon/site.webmanifest" />
+    <!-- ===== FAVICON =====-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/img/favicon/site.webmanifest" />
 
-<title>The Podcast Room - Alpha Creative</title>
-</head>
+    <title>The Podcast Room - Alpha Creative</title>
+  </head>
 
-<body ng-controller="MainController">
+  <body ng-controller="MainController">
+    <!-- <<<<<<<< HEADER >>>>>>>> -->
+    <%-include('components/header')%>
 
+    <main class="pr-main">
+      <!------------ ========== S-HERO SECTION ========== ------------>
+      <section class="flex-center sero">
+        <div class="flex-center se-container">
+          <div class="flex-center flex-col se-content" data-aos="fade-up">
+            <div class="flex-center flex-col sec-text">
+              <h1>
+                Le Podcast Room: <span>Amplifiez</span> votre voix, Captiver
+                votre public
+              </h1>
 
+              <p>
+                Prêt à transformer vos rêves de podcast en réalité? Le Podcast
+                Room est votre studio tout-en-un pour services professionnels
+                d'enregistrement, de montage et de marketing.
+              </p>
+            </div>
 
-<!-- <<<<<<<< HEADER >>>>>>>> -->
-<%-include('components/header')%>
+            <button
+              class="flex-center sec-btn"
+              onclick="window.location.href = 'contact'"
+            >
+              Réservez votre séance
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </button>
+          </div>
+        </div>
+      </section>
 
+      <!------------ ========== S-SERVICE SECTION ========== ------------>
+      <section class="flex-center ses">
+        <div class="flex-center flex-col ses-container">
+          <div class="flex-center ses-title">
+            <h3>Nous vous offrons</h3>
+            <p>
+              Tout ce dont vous avez besoin pour transformer votre idée de
+              podcast en réalité.
+            </p>
+          </div>
 
+          <div class="flex-center ses-content">
+            <div class="flex-center flex-col sesc" data-aos="fade-up">
+              <span>01.</span>
+              <h4>Studio ultra moderne</h4>
+              <p>
+                Accédez à une salle d’enregistrement ultramoderne pour une
+                qualité audio & vidéo irréprochable.
+              </p>
+              <img
+                src="/public/img/brand/emblem-black.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<main class="pr-main">
-<!------------ ========== S-HERO SECTION ========== ------------>
-<section class="flex-center sero">
-<div class="flex-center se-container">
-<div class="flex-center flex-col se-content" data-aos="fade-up">
-<div class="flex-center flex-col sec-text">
-<h1>
-Le Podcast Room: <span>Amplifiez</span> votre voix, Captiver votre public
-</h1>
+            <div
+              class="flex-center flex-col sesc"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <span>02.</span>
+              <h4>Équipe expérimentée</h4>
+              <p>Une équipe passionnée et dédiée au succès de votre podcast.</p>
+              <img
+                src="/public/img/brand/emblem-black.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<p>
-Prêt à transformer vos rêves de podcast en réalité? Le Podcast Room est votre studio tout-en-un pour services professionnels d'enregistrement, de montage et de marketing.
-</p>
-</div>
+            <div
+              class="flex-center flex-col sesc"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <span>03.</span>
+              <h4>Post-production assurée</h4>
+              <p>
+                Montage et post-production impeccables pour faire passer votre
+                podcast au niveau supérieur.
+              </p>
+              <img
+                src="/public/img/brand/emblem-black.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<button
-class="flex-center sec-btn"
-onclick="window.location.href = 'contact'"
->
-Réservez votre séance
-<span class="material-symbols-outlined"> arrow_outward </span>
-</button>
-</div>
-</div>
-</section>
-
-<!------------ ========== S-SERVICE SECTION ========== ------------>
-<section class="flex-center ses">
-<div class="flex-center flex-col ses-container">
-<div class="flex-center ses-title">
-<h3>Nous vous offrons</h3>
-<p>
-Tout ce dont vous avez besoin pour transformer votre idée de podcast en réalité.
-</p>
-</div>
-
-<div class="flex-center ses-content">
-<div class="flex-center flex-col sesc" data-aos="fade-up">
-<span>01.</span>
-<h4>Studio ultra moderne</h4>
-<p>
-Accédez à une salle d’enregistrement ultramoderne pour une qualité audio & vidéo irréprochable.
-</p>
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div
-class="flex-center flex-col sesc"
-data-aos="fade-up"
-data-aos-delay="300"
->
-<span>02.</span>
-<h4>Équipe expérimentée</h4>
-<p>Une équipe passionnée et dédiée au succès de votre podcast.</p>
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div
-class="flex-center flex-col sesc"
-data-aos="fade-up"
-data-aos-delay="400"
->
-<span>03.</span>
-<h4>Post-production assurée</h4>
-<p>
-Montage et post-production impeccables pour faire passer votre podcast au niveau supérieur.
-</p>
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<!-- <div
+            <!-- <div
 class="flex-center flex-col sesc"
 data-aos="fade-up"
 data-aos-delay="500"
@@ -159,348 +160,347 @@ alt=""
 loading="lazy"
 />
 </div> -->
-</div>
-</div>
-</section>
+          </div>
+        </div>
+      </section>
 
-<!------------ ========== PR-PRICING SECTION ========== ------------>
-<section class="flex-center prp">
-<div class="flex-center flex-col prp-container">
-<div class="flex-center flex-col prp-title">
-<span>Podcast Room Pricing</span>
-<h3>Notre tarification est <strong>simple</strong>, sans frais cachés</h3>
-<p>Choisissez le tarif qui vous convient le mieux</p>
-</div>
+      <!------------ ========== PR-PRICING SECTION ========== ------------>
+      <section class="flex-center prp">
+        <div class="flex-center flex-col prp-container">
+          <div class="flex-center flex-col prp-title">
+            <span>Podcast Room Pricing</span>
+            <h3>
+              Notre tarification est <strong>simple</strong>, sans frais cachés
+            </h3>
+            <p>Choisissez le tarif qui vous convient le mieux</p>
+          </div>
 
-<div class="flex-center prp-cards">
-<div class="flex-center flex-col prpc" data-aos="fade-up">
-<div class="flex-center flex-col prpc-title">
-<span>NANO</span>
-<p>On enregistre.</p>
-<p>Et vous montez la video.</p>
-</div>
+          <div class="flex-center prp-cards">
+            <div class="flex-center flex-col prpc" data-aos="fade-up">
+              <div class="flex-center flex-col prpc-title">
+                <span>NANO</span>
+                <p>On enregistre.</p>
+                <p>Et vous montez la video.</p>
+              </div>
 
-<div class="flex-center flex-col prpc-main">
-<h4>60,000 <span>Fcfa/ Heure</span></h4>
-<p>Si vous etes / avez un monteur.</p>
-<button
-class="flex-center prpc-btn"
-onclick="window.location.href = 'contact'"
->
-<p>Reserver</p>
-<i class="bx bx-right-arrow-alt"></i>
-</button>
-</div>
+              <div class="flex-center flex-col prpc-main">
+                <h4>35,000 <span>Fcfa/ Heure</span></h4>
+                <p>Si vous etes / avez un monteur.</p>
+                <button
+                  class="flex-center prpc-btn"
+                  onclick="window.location.href = 'contact'"
+                >
+                  <p>Reserver</p>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
 
-<ul class="flex-center flex-col prpc-list">
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Capitation audio & video</p>
-</li>
+              <ul class="flex-center flex-col prpc-list">
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Capitation audio & video</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Fichiers sources audio & video</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Fichiers sources audio & video</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-x-circle"></i>
-<p>Synchronization & mixage</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-x-circle"></i>
+                  <p>Synchronization & mixage</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-x-circle"></i>
-<p>Premontage</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-x-circle"></i>
+                  <p>Premontage</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-x-circle"></i>
-<p>Insertion d'un intro/outro fournie</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-x-circle"></i>
+                  <p>Insertion d'un intro/outro fournie</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Livraisons sous 24h</p>
-</li>
-</ul>
-</div>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Livraisons sous 24h</p>
+                </li>
+              </ul>
+            </div>
 
-<div
-class="flex-center flex-col prpc"
-data-aos="fade-up"
-data-aos-delay="300"
->
-<div class="flex-center flex-col prpc-title">
-<span>PRO</span>
-<p>On enregistre.</p>
-<p>Et on pre-monte la video.</p>
-</div>
+            <div
+              class="flex-center flex-col prpc"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="flex-center flex-col prpc-title">
+                <span>PRO</span>
+                <p>On enregistre.</p>
+                <p>Et on pre-monte la video.</p>
+              </div>
 
-<div class="flex-center flex-col prpc-main">
-<h4>100,000 <span>Fcfa/ Heure</span></h4>
-<p>Si vous voulez publier ou approfondir le montage.</p>
-<button
-class="flex-center prpc-btn"
-onclick="window.location.href = 'contact'"
->
-<p>Reserver</p>
-<i class="bx bx-right-arrow-alt"></i>
-</button>
-</div>
+              <div class="flex-center flex-col prpc-main">
+                <h4>60,000 <span>Fcfa/ Heure</span></h4>
+                <p>Si vous voulez publier ou approfondir le montage.</p>
+                <button
+                  class="flex-center prpc-btn"
+                  onclick="window.location.href = 'contact'"
+                >
+                  <p>Reserver</p>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
 
-<ul class="flex-center flex-col prpc-list">
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Capitation audio & video</p>
-</li>
+              <ul class="flex-center flex-col prpc-list">
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Capitation audio & video</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Fichiers sources audio & video</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Fichiers sources audio & video</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Synchronization & mixage</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Synchronization & mixage</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Premontage</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Premontage</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Insertion d'un intro/outro fournie</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Insertion d'un intro/outro fournie</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Livraisons sous 24h</p>
-</li>
-</ul>
-</div>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Livraisons sous 24h</p>
+                </li>
+              </ul>
+            </div>
 
-<div
-class="flex-center flex-col prpc"
-data-aos="fade-up"
-data-aos-delay="400"
->
-<div class="flex-center flex-col prpc-title">
-<span>ENTERPRISE</span>
-<p>On s'occupe de tout.</p>
-<p>Confiez-nous votre projet.</p>
-</div>
+            <div
+              class="flex-center flex-col prpc"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="flex-center flex-col prpc-title">
+                <span>ENTERPRISE</span>
+                <p>On s'occupe de tout.</p>
+                <p>Confiez-nous votre projet.</p>
+              </div>
 
-<div class="flex-center flex-col prpc-main">
-<h4>Sur devis</h4>
-<p>Si vous voulez bien plus qu'une video.</p>
-<button
-class="flex-center prpc-btn"
-onclick="window.location.href = 'contact'"
->
-<p>Contacter</p>
-<i class="bx bx-right-arrow-alt"></i>
-</button>
-</div>
+              <div class="flex-center flex-col prpc-main">
+                <h4>Sur devis</h4>
+                <p>Si vous voulez bien plus qu'une video.</p>
+                <button
+                  class="flex-center prpc-btn"
+                  onclick="window.location.href = 'contact'"
+                >
+                  <p>Contacter</p>
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
 
-<ul class="flex-center flex-col prpc-list">
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Strategie 100% personnalisee</p>
-</li>
+              <ul class="flex-center flex-col prpc-list">
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Strategie 100% personnalisee</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Accompagnement editorial</p>
-</li>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Accompagnement editorial</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
 
-<p>Montage complet selon brief</p>
-</li>
+                  <p>Montage complet selon brief</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
 
-<p>Coaching prise de parole</p>
-</li>
+                  <p>Coaching prise de parole</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
 
-<p>Creation de branding</p>
-</li>
+                  <p>Creation de branding</p>
+                </li>
 
-<li class="prpcl">
-<i class="bx bxs-check-circle"></i>
-<p>Distribution du contenu</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+                <li class="prpcl">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>Distribution du contenu</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!------------ ========== STEPS SECTION ========== ------------>
-<section class="flex-center steps">
-<div class="flex-center flex-col st-container">
-<div class="flex-center st-title">
-<h3>Comment ça marche?</h3>
+      <!------------ ========== STEPS SECTION ========== ------------>
+      <section class="flex-center steps">
+        <div class="flex-center flex-col st-container">
+          <div class="flex-center st-title">
+            <h3>Comment ça marche?</h3>
 
-<div class="flex-center st-tags">
-<div class="flex-center stt active">
-<p>4 étapes simples</p>
-</div>
-</div>
-</div>
+            <div class="flex-center st-tags">
+              <div class="flex-center stt active">
+                <p>4 étapes simples</p>
+              </div>
+            </div>
+          </div>
 
-<div class="flex-center st-main" data-aos="fade-up">
-<div class="flex-center stm">
-<div class="flex-center flex-col stmc">
-<span>Etape 01.</span>
+          <div class="flex-center st-main" data-aos="fade-up">
+            <div class="flex-center stm">
+              <div class="flex-center flex-col stmc">
+                <span>Etape 01.</span>
 
-<div class="flex-center stmc-text">
-<p>Réservez votre séance</p>
-<span id="stmct"
->Choisissez le forfait qui vous convient et réservez votre
-session.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Réservez votre séance</p>
+                  <span id="stmct"
+                    >Choisissez le forfait qui vous convient et réservez votre
+                    session.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button onclick="window.location.href = 'contact'">
-Commencer
-</button>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button onclick="window.location.href = 'contact'">
+                    Commencer
+                  </button>
+                </div>
+              </div>
 
-<div class="flex-center flex-col stmc">
-<span>Etape 02.</span>
+              <div class="flex-center flex-col stmc">
+                <span>Etape 02.</span>
 
-<div class="flex-center stmc-text">
-<p>Promotion</p>
-<span id="stmct"
->Nous vous aidons à promouvoir votre podcast sur nos plateformes.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Journée de tournage</p>
+                  <span id="stmct"
+                    >Le jour de votre séance, notre équipe préparera la salle
+                    pour vous 30 minutes avant l'heure choisie afin que vous
+                    puissiez commencer immédiatement.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button onclick="window.location.href = 'contact'">
-Commencer
-</button>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button onclick="window.location.href = 'contact'">
+                    Commencer
+                  </button>
+                </div>
+              </div>
 
-<div class="flex-center flex-col stmc">
-<span>Etape 03.</span>
+              <div class="flex-center flex-col stmc">
+                <span>Etape 03.</span>
 
-<div class="flex-center stmc-text">
-<p>Journée de tournage</p>
-<span id="stmct"
->Le jour de votre séance, notre équipe préparera la salle
-pour vous 30 minutes avant l'heure choisie afin que vous puissiez commencer
-immédiatement.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Promotion</p>
+                  <span id="stmct"
+                    >Nous vous aidons à promouvoir votre podcast sur nos
+                    plateformes.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button onclick="window.location.href = 'contact'">
-Commencer
-</button>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button onclick="window.location.href = 'contact'">
+                    Commencer
+                  </button>
+                </div>
+              </div>
 
-<div class="flex-center flex-col stmc">
-<span>Etape 04.</span>
+              <div class="flex-center flex-col stmc">
+                <span>Etape 04.</span>
 
-<div class="flex-center stmc-text">
-<p>Édition</p>
-<span id="stmct"
->En fonction de votre forfait, notre équipe d'experts fera son travail
-magie et vous donner le projet final (Vidéo et Audio
-version) prête à être montrée au monde entier.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Édition</p>
+                  <span id="stmct"
+                    >En fonction de votre forfait, notre équipe d'experts fera
+                    son travail magie et vous donner le projet final (Vidéo et
+                    Audio version) prête à être montrée au monde entier.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button onclick="window.location.href = 'contact'">
-Commencer
-</button>
-</div>
-</div>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button onclick="window.location.href = 'contact'">
+                    Commencer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="flex-center a-stats" data-aos="fade-up">
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="50">50</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>PME/An </p>
-</div>
+          <div class="flex-center a-stats" data-aos="fade-up">
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="50">50</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>PME/An</p>
+            </div>
 
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="500">500</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>projets livrés </p>
-</div>
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="500">500</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>projets livrés</p>
+            </div>
 
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<sub>$</sub>
-<h4 class="count" data-target="100">100</h4>
-<sub>k+</sub>
-</div>
-<span></span>
-<p>Budget média mensuel </p>
-</div>
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <sub>$</sub>
+                <h4 class="count" data-target="100">100</h4>
+                <sub>k+</sub>
+              </div>
+              <span></span>
+              <p>Budget média mensuel</p>
+            </div>
 
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="10">10</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>Experts</p>
-</div>
-</div>
-</div>
-</section>
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="10">10</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>Experts</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!------------ ========== FAQ SECTION ========== ------------>
-<%-include('components/faq-home')%>
-</main>
+      <!------------ ========== FAQ SECTION ========== ------------>
+      <%-include('components/faq-home')%>
+    </main>
 
+    <!-- <<<<<<<< FOOTER >>>>>>>> -->
+    <%-include('components/footer')%>
 
+    <!-- ============= [QUOTE MODAL] ============= -->
+    <%-include('components/modal')%>
 
+    <script src="/public/js/popup.js"></script>
+    <script src="/public/js/app.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/public/js/modal.js"></script>
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        anchor: "center center",
+      });
 
-<!-- <<<<<<<< FOOTER >>>>>>>> -->
-<%-include('components/footer')%>
-
-<!-- ============= [QUOTE MODAL] ============= -->
-<%-include('components/modal')%>
-
-
-<script src="/public/js/popup.js"></script>
-<script src="/public/js/app.js"></script>
-<script src="/public/js/index.js"></script>
-<script src="/public/js/modal.js"></script>
-<!-- ===== AOS (Animate On Scroll) =====-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-duration: 1500,
-anchor: "center center",
-});
-
-window.addEventListener("load", AOS.refresh);
-</script>
-</body>
+      window.addEventListener("load", AOS.refresh);
+    </script>
+  </body>
 </html>

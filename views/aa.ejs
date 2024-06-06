@@ -1,151 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
 
-<!-- CSS -->
-<link rel="stylesheet" href="/public/css/loader.css" />
-<link rel="stylesheet" href="/public/css/base.css" />
-<link rel="stylesheet" href="/public/css/style.css" />
-<link rel="stylesheet" href="/public/css/modal.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/loader.css" />
+    <link rel="stylesheet" href="/public/css/base.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/modal.css" />
 
-<!-- ===== MATERIAL ICONS =====-->
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
+    <!-- ===== MATERIAL ICONS =====-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
-<!-- ===== BOXICONS =====-->
-<link
-href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-rel="stylesheet"
-/>
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-<!-- ===== AOS (Animate On Scroll) =====-->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<!-- ===== FAVICON =====-->
-<link
-rel="apple-touch-icon"
-sizes="180x180"
-href="/public/img/favicon/apple-touch-icon.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="32x32"
-href="/public/img/favicon/favicon-32x32.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="16x16"
-href="/public/img/favicon/favicon-16x16.png"
-/>
-<link rel="manifest" href="/public/img/favicon/site.webmanifest" />
+    <!-- ===== FAVICON =====-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/img/favicon/site.webmanifest" />
 
-<title>
-Alpha Creative: The pan-African agency that thinks about the future!
-</title>
+    <title>
+      Alpha Creative: The pan-African agency that thinks about the future!
+    </title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
+  <body ng-controller="MainController">
+    <!-- <<<<<<<< HEADER >>>>>>>> -->
+    <%-include('components/header')%>
 
-<body ng-controller="MainController">
+    <main class="aa-main">
+      <!------------ ========== S-HERO SECTION ========== ------------>
+      <section class="flex-center sero">
+        <div class="flex-center se-container">
+          <div class="flex-center flex-col se-content" data-aos="fade-up">
+            <div class="flex-center flex-col sec-text">
+              <h1>
+                Boostez les <span>compétences</span> numériques de vos
+                collaborateurs!
+              </h1>
 
-<!-- <<<<<<<< HEADER >>>>>>>> -->
-<%-include('components/header')%>
+              <p>
+                Dans un monde digital en constante évolution, vos collaborateurs
+                possèdent-ils <strong>les compétences</strong> numériques
+                nécessaires pour rester compétitifs? Alpha Académie offre des
+                formations personnalisées pour équiper vos équipes des
+                compétences dont elles ont besoin.
+              </p>
+            </div>
 
+            <a
+              href="https://alphacreative.typeform.com/Academie"
+              target="_blank"
+              class="flex-center sec-link"
+            >
+              Contactez-nous
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <!------------ ========== S-SERVICE SECTION ========== ------------>
+      <section class="flex-center ses">
+        <div class="flex-center flex-col ses-container">
+          <div class="flex-center ses-title">
+            <h3>Formation sur mesure</h3>
+            <p>
+              Ne soyez plus dépendant des partenaires externes, dotez vos
+              équipes des compétences digitales clés du 21ème siècle.
+            </p>
+          </div>
 
-<main class="aa-main">
-<!------------ ========== S-HERO SECTION ========== ------------>
-<section class="flex-center sero">
-<div class="flex-center se-container">
-<div class="flex-center flex-col se-content" data-aos="fade-up">
-<div class="flex-center flex-col sec-text">
-<h1>
-Boostez les <span>compétences</span> numériques de vos collaborateurs!
-</h1>
+          <div class="flex-center ses-content">
+            <div class="flex-center flex-col sesc" data-aos="fade-up">
+              <span>01.</span>
+              <h4>Catalogue de formations diversifié</h4>
+              <p>
+                Pack Microsoft, Web development, Marketing digital, Analyse de
+                données ou ChatGTP, nous avons ce qu’il vous faut.
+              </p>
+              <img
+                src="/public/img/brand/emblem-black.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<p>
-Dans un monde digital en constante évolution, vos collaborateurs possèdent-ils <strong>les compétences</strong> numériques nécessaires pour rester compétitifs? Alpha Académie offre des formations personnalisées pour équiper vos équipes des compétences dont elles ont besoin.
-</p>
-</div>
+            <div
+              class="flex-center flex-col sesc"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <span>02.</span>
+              <h4>Formats flexibles</h4>
+              <p>En présentiel ou en ligne, c'est vous qui décidez.</p>
+              <img
+                src="/public/img/brand/emblem-black.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<a
-href="https://alphacreative.typeform.com/Academie"
-target="_blank"
-class="flex-center sec-link"
->
-Contactez-nous
-<span class="material-symbols-outlined"> arrow_outward </span>
-</a>
-</div>
-</div>
-</section>
+            <div
+              class="flex-center flex-col sesc"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <span>03.</span>
+              <h4>Pédagogie innovante</h4>
+              <p>
+                Des méthodes pédagogiques innovantes et engageantes pour
+                favoriser l’apprentissage et la motivation.
+              </p>
+              <img
+                src="/public/img/brand/emblem-black.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<!------------ ========== S-SERVICE SECTION ========== ------------>
-<section class="flex-center ses">
-<div class="flex-center flex-col ses-container">
-<div class="flex-center ses-title">
-<h3>Formation sur mesure</h3>
-<p>
-Ne soyez plus dépendant des partenaires externes, dotez vos équipes des compétences digitales clés du 21ème siècle.
-</p>
-</div>
-
-<div class="flex-center ses-content">
-<div class="flex-center flex-col sesc" data-aos="fade-up">
-<span>01.</span>
-<h4>Catalogue de formations diversifié</h4>
-<p>
-Du pack Microsoft Office, Développement Web, Marketing Digital, Gestion des réseaux sociaux, Analyse de données à ChatGP ou Bard, nous avons ce qu'il vous faut.
-</p>
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div
-class="flex-center flex-col sesc"
-data-aos="fade-up"
-data-aos-delay="300"
->
-<span>02.</span>
-<h4>Formats flexibles</h4>
-<p>
-En personne ou en ligne, c'est vous qui décidez.
-</p>
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div
-class="flex-center flex-col sesc"
-data-aos="fade-up"
-data-aos-delay="400"
->
-<span>03.</span>
-<h4>Pédagogie innovante</h4>
-<p>Des méthodes pédagogiques innovantes et engageantes pour favoriser l’apprentissage et la motivation.</p>
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<!-- <div
+            <!-- <div
 class="flex-center flex-col sesc"
 data-aos="fade-up"
 data-aos-delay="500"
@@ -159,248 +163,255 @@ alt=""
 loading="lazy"
 />
 </div> -->
-</div>
-</div>
-</section>
+          </div>
+        </div>
+      </section>
 
-<!------------ ========== S-APPROACH SECTION ========== ------------>
-<section class="flex-center sa">
-<div class="flex-center flex-col sa-container" data-aos="fade-up">
-<div class="flex-center sa-title">
-<h3>Des bénéfices concrets</h3>
-<p>
-Plus qu'un cours, une transformation de vos équipes qui se traduira par :
-</p>
-</div>
+      <!------------ ========== S-APPROACH SECTION ========== ------------>
+      <section class="flex-center sa">
+        <div class="flex-center flex-col sa-container" data-aos="fade-up">
+          <div class="flex-center sa-title">
+            <h3>Des bénéfices concrets</h3>
+            <p>
+              Plus qu'un cours, une transformation de vos équipes qui se
+              traduira par :
+            </p>
+          </div>
 
-<div class="flex-center sa-content">
-<div class="flex-center flex-col sac">
-<div class="flex-center sac-title">
-<img
-src="/public/img/icons/productivity.png"
-alt=""
-loading="lazy"
-/>
+          <div class="flex-center sa-content">
+            <div class="flex-center flex-col sac">
+              <div class="flex-center sac-title">
+                <img
+                  src="/public/img/icons/productivity.png"
+                  alt=""
+                  loading="lazy"
+                />
 
-<h5>
-Productivité et <span>efficacité</span> améliorées au sein de votre entreprise.
-</h5>
-</div>
-</div>
+                <h5>
+                  Productivité et <span>efficacité</span> améliorées au sein de
+                  votre entreprise.
+                </h5>
+              </div>
+            </div>
 
-<div class="flex-center flex-col sac">
-<div class="flex-center sac-title">
-<img
-src="/public/img/icons/creativity.png"
-alt=""
-loading="lazy"
-/>
+            <div class="flex-center flex-col sac">
+              <div class="flex-center sac-title">
+                <img
+                  src="/public/img/icons/creativity.png"
+                  alt=""
+                  loading="lazy"
+                />
 
-<h5>
-<span>Innovation</span> et agilité accrues pour faire face aux nouveaux défis du numérique.
-</h5>
-</div>
-</div>
+                <h5>
+                  <span>Innovation</span> et agilité accrues pour faire face aux
+                  nouveaux défis du numérique.
+                </h5>
+              </div>
+            </div>
 
-<div class="flex-center flex-col sac">
-<div class="flex-center sac-title">
-<img
-src="/public/img/icons/employees.png"
-alt=""
-loading="lazy"
-/>
+            <div class="flex-center flex-col sac">
+              <div class="flex-center sac-title">
+                <img
+                  src="/public/img/icons/employees.png"
+                  alt=""
+                  loading="lazy"
+                />
 
-<h5>
-Meilleure satisfaction et engagement avec les employés grâce à des <span>compétences valorisées</span>.
-</h5>
-</div>
-</div>
+                <h5>
+                  Augmentation du taux de satisfaction et d’engagement des
+                  employés.
+                </h5>
+              </div>
+            </div>
 
-<div class="flex-center flex-col sac">
-<div class="flex-center sac-title">
-<img src="/public/img/icons/talent.png" alt="" loading="lazy" />
+            <div class="flex-center flex-col sac">
+              <div class="flex-center sac-title">
+                <img src="/public/img/icons/talent.png" alt="" loading="lazy" />
 
-<h5>
-<span>Attractivité</span> accrue pour les jeunes talents en recherche de formation continue.
-</h5>
-</div>
-</div>
-</div>
+                <h5>
+                  <span>Attractivité</span> accrue pour les jeunes talents en
+                  recherche de formation continue.
+                </h5>
+              </div>
+            </div>
+          </div>
 
-<button
-class="flex-center sec-btn"
-onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
->
-Commencer
-<span class="material-symbols-outlined"> arrow_outward </span>
-</button>
-</div>
-</section>
+          <button
+            class="flex-center sec-btn"
+            onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+          >
+            Commencer
+            <span class="material-symbols-outlined"> arrow_outward </span>
+          </button>
+        </div>
+      </section>
 
-<!------------ ========== STEPS SECTION ========== ------------>
-<section class="flex-center steps">
-<div class="flex-center flex-col st-container">
-<div class="flex-center st-title">
-<h3>Comment ça marche?</h3>
+      <!------------ ========== STEPS SECTION ========== ------------>
+      <section class="flex-center steps">
+        <div class="flex-center flex-col st-container">
+          <div class="flex-center st-title">
+            <h3>Comment ça marche?</h3>
 
-<div class="flex-center st-tags">
-<div class="flex-center stt active">
-<p>4 étapes simples</p>
-</div>
-<span></span>
-</div>
-</div>
+            <div class="flex-center st-tags">
+              <div class="flex-center stt active">
+                <p>4 étapes simples</p>
+              </div>
+              <span></span>
+            </div>
+          </div>
 
-<div class="flex-center st-main" data-aos="fade-up">
-<div class="flex-center stm active stm-1">
-<div class="flex-center flex-col stmc">
-<span>Etape 01.</span>
+          <div class="flex-center st-main" data-aos="fade-up">
+            <div class="flex-center stm active stm-1">
+              <div class="flex-center flex-col stmc">
+                <span>Etape 01.</span>
 
-<div class="flex-center stmc-text">
-<p>Définissez vos besoins.</p>
-<span id="stmct"
->Lors d’un premier rendez-vous, nous discuterons de vos objectifs, de vos enjeux et des compétences numériques que vous souhaitez développer.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Définissez vos besoins.</p>
+                  <span id="stmct"
+                    >Lors d’un premier rendez-vous, nous discuterons de vos
+                    objectifs, de vos enjeux et des compétences numériques que
+                    vous souhaitez développer.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button
-onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
->
-Former vos équipes
-</button>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button
+                    onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+                  >
+                    Former vos équipes
+                  </button>
+                </div>
+              </div>
 
-<div class="flex-center flex-col stmc">
-<span>Etape 02.</span>
+              <div class="flex-center flex-col stmc">
+                <span>Etape 02.</span>
 
-<div class="flex-center stmc-text">
-<p>Concevons vos formations.</p>
-<span id="stmct"
->Nous élaborons un programme personnalisé en sélectionnant les modules les plus adaptés à vos besoins et en choisissant le format pédagogique le plus pertinent.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Concevons vos formations.</p>
+                  <span id="stmct"
+                    >Nous élaborons un programme personnalisé en sélectionnant
+                    les modules les plus adaptés à vos besoins et en choisissant
+                    le format pédagogique le plus pertinent.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button
-onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
->
-Former vos équipes
-</button>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button
+                    onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+                  >
+                    Former vos équipes
+                  </button>
+                </div>
+              </div>
 
-<div class="flex-center flex-col stmc">
-<span>Etape 03.</span>
+              <div class="flex-center flex-col stmc">
+                <span>Etape 03.</span>
 
-<div class="flex-center stmc-text">
-<p>Déployons les formations</p>
-<span id="stmct"
->Nos experts dispensent des formations selon le format choisi, en s'adaptant au rythme et aux besoins des participants.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Déployons les formations</p>
+                  <span id="stmct"
+                    >Nos experts dispensent des formations selon le format
+                    choisi, en s'adaptant au rythme et aux besoins des
+                    participants.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button
-onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
->
-Former vos équipes
-</button>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button
+                    onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+                  >
+                    Former vos équipes
+                  </button>
+                </div>
+              </div>
 
-<div class="flex-center flex-col stmc">
-<span>Etape 04.</span>
+              <div class="flex-center flex-col stmc">
+                <span>Etape 04.</span>
 
-<div class="flex-center stmc-text">
-<p>Évaluons l'impact.</p>
-<span id="stmct"
->A la fin de la formation, nous mesurons l’acquisition des compétences et l’impact sur vos résultats à l’aide de questionnaires et d’indicateurs clés de performance.</span
->
-</div>
+                <div class="flex-center stmc-text">
+                  <p>Évaluons l'impact.</p>
+                  <span id="stmct"
+                    >A la fin de la formation, nous mesurons l’acquisition des
+                    compétences et l’impact sur vos résultats à l’aide de
+                    questionnaires et d’indicateurs clés de performance.</span
+                  >
+                </div>
 
-<div class="flex-center stmc-btn">
-<button
-onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
->
-Former vos équipes
-</button>
-</div>
-</div>
-</div>
-</div>
+                <div class="flex-center stmc-btn">
+                  <button
+                    onclick="window.location.href = 'https://alphacreative.typeform.com/Academie'"
+                  >
+                    Former vos équipes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="flex-center a-stats" data-aos="fade-up">
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="50">50</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>PME/An </p>
-</div>
+          <div class="flex-center a-stats" data-aos="fade-up">
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="50">50</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>PME/An</p>
+            </div>
 
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="500">500</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>projets livrés </p>
-</div>
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="500">500</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>projets livrés</p>
+            </div>
 
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<sub>$</sub>
-<h4 class="count" data-target="100">100</h4>
-<sub>k+</sub>
-</div>
-<span></span>
-<p>Budget média mensuel </p>
-</div>
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <sub>$</sub>
+                <h4 class="count" data-target="100">100</h4>
+                <sub>k+</sub>
+              </div>
+              <span></span>
+              <p>Budget média mensuel</p>
+            </div>
 
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="10">10</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>Experts</p>
-</div>
-</div>
-</div>
-</section>
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="10">10</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>Experts</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!------------ ========== FAQ SECTION ========== ------------>
-<%-include('components/faq-home')%>
-</main>
+      <!------------ ========== FAQ SECTION ========== ------------>
+      <%-include('components/faq-home')%>
+    </main>
 
+    <!-- <<<<<<<< FOOTER >>>>>>>> -->
+    <%-include('components/footer')%>
 
+    <!-- ============= [QUOTE MODAL] ============= -->
+    <%-include('components/modal')%>
 
+    <script src="/public/js/popup.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/public/js/modal.js"></script>
+    <script src="/public/js/app.js"></script>
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        anchor: "top center",
+      });
 
-<!-- <<<<<<<< FOOTER >>>>>>>> -->
-<%-include('components/footer')%>
-
-<!-- ============= [QUOTE MODAL] ============= -->
-<%-include('components/modal')%>
-
-
-
-
-<script src="/public/js/popup.js"></script>
-<script src="/public/js/index.js"></script>
-<script src="/public/js/modal.js"></script>
-<script src="/public/js/app.js"></script>
-<!-- ===== AOS (Animate On Scroll) =====-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-duration: 1500,
-anchor: "top center",
-});
-
-window.addEventListener("load", AOS.refresh);
-</script>
-</body>
+      window.addEventListener("load", AOS.refresh);
+    </script>
+  </body>
 </html>

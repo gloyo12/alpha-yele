@@ -1,947 +1,1038 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-
-<!-- CSS -->
-<link rel="stylesheet" href="/public/css/loader.css" />
-<link rel="stylesheet" href="/public/css/base.css" />
-<link rel="stylesheet" href="/public/css/style.css" />
-<link rel="stylesheet" href="/public/css/modal.css" />
-
-<!-- ===== MATERIAL ICONS =====-->
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
-
-<!-- ===== BOXICONS =====-->
-<link
-href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-rel="stylesheet"
-/>
-
-<!-- ===== AOS (Animate On Scroll) =====-->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-<!-- ===== FAVICON =====-->
-<link
-rel="apple-touch-icon"
-sizes="180x180"
-href="/public/img/favicon/apple-touch-icon.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="32x32"
-href="/public/img/favicon/favicon-32x32.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="16x16"
-href="/public/img/favicon/favicon-16x16.png"
-/>
-<link rel="manifest" href="/public/img/favicon/site.webmanifest" />
-
-<title>
-Alpha Yele: L'agence panafricaine Tech & Digital qui crée le futur! 
-</title>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-</head>
-
-<body ng-controller="MainController">
-
-<!-- <<<<<<<< HEADER >>>>>>>> -->
-<%-include('components/header')%>
-
-
-
-<main class="homepage-main">
-<!------------ ========== HERO SECTION ========== ------------>
-<section class="flex-center hero">
-<div class="flex-center h-container">
-<div class="flex-center flex-col h-content">
-<div class="flex-center flex-col hc-title">
-<h1>Atteignez vos objectifs</h1>
-
-<ul class="hct-list">
-<li class="hctl active">Vente</li>
-<li class="hctl">Leads</li>
-<li class="hctl">Notoriété</li>
-</ul>
-</div>
-
-<p>
-Chez Alpha Yele, nous sommes passionnés par le fait d'aider nos clients à accéder et à créer des solutions qui leur permettent de connecter avec leur public.
-</p>
-
-<div class="flex-center hc-btns">
-<button onclick="window.location.href = 'team'">
-Découvrir AlphaYele 
-</button>
-<button onclick="toggleQuote()">
-Commencer
-<span class="material-symbols-outlined"> arrow_outward </span>
-</button>
-</div>
-</div>
-
-<div class="flex-center h-img" data-aos="fade-up">
-<img
-src="/public/img/background/hero-3.svg"
-alt=""
-loading="lazy"
-class="himg"
-/>
-
-<div class="flex-center hi">
-<p>L'agence <strong>panafricaine</strong> Tech & Digital qui crée le futur!</p>
-
-<img
-src="/public/img/brand/emblem-white.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== PARTNERS SECTION ========== ------------>
-<section class="flex-center partners">
-<div class="flex-center flex-col pa-container">
-<div class="flex-center flex-col pa-title">
-<h3>Nos partneres</h3>
-<span></span>
-</div>
-
-<div class="flex-center pa-cards">
-<div class="pac">
-<img src="/public/img/partners/google.svg" alt="" loading="lazy" />
-</div>
-<div class="pac">
-<img src="/public/img/partners/meta.svg" alt="" loading="lazy" />
-</div>
-<div class="pac">
-<img src="/public/img/partners/amazon.svg" alt="" loading="lazy" />
-</div>
-<div class="pac">
-<img
-src="/public/img/partners/linkedin.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-<div class="pac">
-<img src="/public/img/partners/tiktok.svg" alt="" loading="lazy" />
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== ABOUT SECTION ========== ------------>
-<section class="flex-center about" id="about">
-<div class="flex-center flex-col a-container">
-<div class="flex-center flex-col a-title">
-<div class="flex-center at-tags">
-<p>Qui</p>
-<span class="material-symbols-outlined"> add </span>
-<p>nous</p>
-<span class="material-symbols-outlined"> add </span>
-<p>sommes</p>
-</div>
-
-<div class="flex-center at-text" data-aos="fade-up">
-<h3>
-Notre équipe est composée de jeunes professionnels formés par les meilleures universités (African Leadership University ou Holberton School) et ayant acquis des expériences variées et précieuses au sein d'entreprises mondiales (<a href="">Google</a>, <a href="">Meta</a> ou
-<a href="">Mckinsey & Company</a>).
-</h3>
-</div>
-</div>
-
-<div class="flex-center a-cards">
-<div class="flex-center flex-col ac" data-aos="fade-up">
-<span>01.</span>
-<h4>
-Votre objectif,  <br />
-notre guide
-</h4>
-<p>
-Nous écoutons, définissons des objectifs et développons des solutions sur mesure pour vous aider à les atteindre.
-</p>
-</div>
-
-<div
-class="flex-center flex-col ac"
-data-aos="fade-up"
-data-aos-delay="300"
->
-<span>02.</span>
-<h4>Collaboration et Innovation</h4>
-<p>
-Notre culture est motivée par la performance, la collaboration et une recherche constante de l'innovation.
-</p>
-</div>
-
-<div
-class="flex-center flex-col ac"
-data-aos="fade-up"
-data-aos-delay="400"
->
-<span>03.</span>
-<h4>Autonomiser l’Afrique par la digitalisation</h4>
-<p>
-Nous visualisons un continent où chaque entreprise prospère en ligne.
-</p>
-</div>
-</div>
-
-<div class="flex-center a-stats" data-aos="fade-up">
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="200">200</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>PME/An </p>
-</div>
-
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="500">500</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>projets livrés </p>
-</div>
-
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<sub>$</sub>
-<h4 class="count" data-target="100">30K</h4>
-<sub>k+</sub>
-</div>
-<span></span>
-<p>Budget média mensuel </p>
-</div>
-
-<div class="flex-center flex-col as">
-<div class="flex-center as-no">
-<h4 class="count" data-target="10">10</h4>
-<sub>+</sub>
-</div>
-<span></span>
-<p>Experts</p>
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== SERVICES SECTION ========== ------------>
-<section class="flex-center services">
-<div class="flex-center flex-col s-container">
-<div class="flex-center s-title">
-<div class="flex-center set-tags">
-<div class="sett active"><p>Marketing Digital</p></div>
-<div class="sett"><p>Technologie et IA</p></div>
-<div class="sett"><p>SMS Marketing</p></div>
-<div class="sett"><p>Cloud BackUp</p></div>
-<div class="sett"><p>Alpha Print</p></div>
-<div class="sett"><p>Alpha Influenceurs</p></div>
-<div class="sett"><p>Alpha Podcast Room</p></div>
-<div class="sett"><p>Alpha Academy</p></div>
-</div>
-
-<div class="flex-center st-link">
-<button onclick="toggleQuote()">
-Commencer
-<span class="material-symbols-outlined"> arrow_right_alt </span>
-</button>
-</div>
-</div>
-
-<div class="flex-center s-main" data-aos="fade-up">
-<div class="flex-center flex-col sm active">
-<div class="flex-center sm-title">
-<h3>Marketing Digital</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/Marketing-Digital.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Stratégie digitale, Création de contenu, Gestion des réseaux sociaux, Optimisation : Confiez votre présence digitale à des consultants expérimentés. Ensemble, atteignons vos objectifs et développons votre entreprise.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>100<span>+</span></h4>
-<span id="smcs-line"></span>
-<p>PME/Mois </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>
-4.8/5
-<span class="material-symbols-outlined"> star </span>
-</h4>
-<span id="smcs-line"></span>
-<p>Avis</p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>3<span>x</span></h4>
-<span id="smcs-line"></span>
-<p>Bénéfices</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'dm'"
->
-En savoir plus
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>Technologie et IA</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/Technologie-Ai.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Site Internet, Applications, Logiciels d'automatisation, collecte et analyse de données : Nos solutions sur mesure vous aideront à atteindre vos objectifs.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>30<span>+</span></h4>
-<span id="smcs-line"></span>
-<p>Website/Mois </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>
-20
-<span>+</span>
-</h4>
-<span id="smcs-line"></span>
-<p>Solutions basées sur l'IA </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>70<span>+</span></h4>
-<span id="smcs-line"></span>
-<p>Systèmes automatisés</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'ita'"
->
-Découvrir
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>SMS Marketing</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/sms.jpg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Nos experts copywriters et  magnats du marketing vous guident dans la création de messages engageants, personnalisés et efficaces. Nous le faisons pour plus de 100 PME/mois, vous pouvez aussi en  profiter.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>99<span>%</span></h4>
-<span id="smcs-line"></span>
-<p>Taux d'ouverture </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>
-4.8/5
-<span>⭐</span>
-</h4>
-<span id="smcs-line"></span>
-<p>Avis</p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>999<span>k</span></h4>
-<span id="smcs-line"></span>
-<p>SMS délivrés</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'sms'"
->
-Envoyer des SMS
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>Cloud Backup</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/cloud-backup.webp"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-En tant qu'entrepreneurs aussi, nous comprenons l'inquiétude constante concernant la sécurité des données et le fardeau des sauvegardes manuelles. C'est pourquoi nous avons créé une solution de sauvegarde cloud spécialement conçue pour vous.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>300<span>+</span></h4>
-<span id="smcs-line"></span>
-<p>Clients/An </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>
-99.9
-<span>%</span>
-</h4>
-<span id="smcs-line"></span>
-<p>Données récupérées </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>100<span>%</span></h4>
-<span id="smcs-line"></span>
-<p>Sécurité</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'cloud'"
->
-Sécuriser vos données
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>Alpha Print</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/Alpha-Print.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Si vous pouvez l'imaginer, nous pouvons le concevoir et le mettre à votre disposition sur n'importe quel support physique.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>500<span>+</span></h4>
-<span id="smcs-line"></span>
-<p>Projets livrés </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>
-5/5
-<span class="material-symbols-outlined"> star </span>
-</h4>
-<span id="smcs-line"></span>
-<p>Avis</p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>90<span>%</span></h4>
-<span id="smcs-line"></span>
-<p>Clients récurrents</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'ap'"
->
-En savoir plus
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>Alpha Influenceurs</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/Alpha-Influencers.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Externalisez vos campagnes d’influence avec succès! De la sélection des influenceurs au reporting des résultats, nous nous occupons de tout.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>15<span>K+</span></h4>
-<span id="smcs-line"></span>
-<p>Créateurs </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>1<span>M+</span></h4>
-<span id="smcs-line"></span>
-<p>Engagements </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>500<span>K+</span></h4>
-<span id="smcs-line"></span>
-<p>Ventes</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'ai'"
->
-Réservez votre créateur
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>Alpha Podcast Room</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/Podcast-Room.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Prêt à transformer vos rêves de podcast en réalité? Alpha Podcast Room est votre spot unique pour les services professionnels d’enregistrement, d’édition et de marketing.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>4<span>+</span></h4>
-<span id="smcs-line"></span>
-<p>Différents Set </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>One</h4>
-<span id="smcs-line"></span>
-<p>Équipe de rêve </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>100<span>%</span></h4>
-<span id="smcs-line"></span>
-<p>Clients satisfaits</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'pr'"
->
-En savoir plus
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-
-<div class="flex-center flex-col sm">
-<div class="flex-center sm-title">
-<h3>Alpha Academy</h3>
-
-<div class="flex-center smt-img">
-<img
-src="/public/img/brand/emblem-black.png"
-alt=""
-loading="lazy"
-/>
-</div>
-</div>
-
-<div class="flex-center sm-content">
-<div class="flex-center smc-img">
-<img
-src="/public/img/services/Alpha-Academie.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center flex-col smc-text">
-<p>
-Boostez vos collaborateurs avec les compétences digitales d’aujourd’hui et de demain! Nous dotons les auditeurs de compétences en Web, Word, PowerPoint, Excel,, Vente, Marketing , Création de contenu et Intelligence Artificielle.
-</p>
-
-<div class="flex-center smc-stats">
-<div class="flex-center flex-col smcs">
-<h4>5<span>K</span></h4>
-<span id="smcs-line"></span>
-<p>Auditeurs </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>25</h4>
-<span id="smcs-line"></span>
-<p>Experts </p>
-</div>
-
-<div class="flex-center flex-col smcs">
-<h4>
-4.9/5<span class="material-symbols-outlined">
-star
-</span>
-</h4>
-<span id="smcs-line"></span>
-<p>Avis</p>
-</div>
-</div>
-
-<button
-class="flex-center smc-btn"
-onclick="window.location.href = 'aa'"
->
-Commencer
-<span class="material-symbols-outlined">
-arrow_outward
-</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="flex-center s-header">
-<div class="flex-center sh">
-<p>Marketing Digital</p>
-<i class="bx bxs-circle"></i>
-<p>Technologie et IA</p>
-<i class="bx bxs-circle"></i>
-<p>Alpha Print</p>
-<i class="bx bxs-circle"></i>
-</div>
-
-<div class="flex-center sh">
-<p>Alpha Influenceurs</p>
-<i class="bx bxs-circle"></i>
-<p>Alpha Podcast Room</p>
-<i class="bx bxs-circle"></i>
-<p>Alpha Academy</p>
-<i class="bx bxs-circle"></i>
-</div>
-</div>
-</section>
-
-<!------------ ========== STEPS SECTION ========== ------------>
-<section class="flex-center steps">
-<div class="flex-center flex-col st-container">
-<div class="flex-center st-title">
-<h3>Votre projet en <span>3 étapes</span></h3>
-
-<div class="flex-center stt">
-<p>Projet ponctuel</p>
-</div>
-</div>
-
-<div class="flex-center stm">
-<div class="flex-center flex-col stmc">
-<span>Etape 01.</span>
-
-<div class="flex-center stmc-text">
-<p>Passez votre commande et payez</p>
-</div>
-
-<div class="flex-center stmc-btn">
-<button onclick="toggleQuote()">Commencer un projet </button>
-</div>
-</div>
-
-<div class="flex-center flex-col stmc">
-<span>Etape 02.</span>
-
-<div class="flex-center stmc-text">
-<p>Remplissez le formulaire de détails du projet</p>
-</div>
-
-<div class="flex-center stmc-btn">
-<button onclick="toggleQuote()">Commencer un projet</button>
-</div>
-</div>
-
-<div class="flex-center flex-col stmc">
-<span>Etape 03.</span>
-
-<div class="flex-center stmc-text">
-<p>Livraison du produit final</p>
-</div>
-
-<div class="flex-center stmc-btn">
-<button onclick="toggleQuote()">Commencer un projet</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== CLIENT SECTION ========== ------------>
-<section class="flex-center client">
-<div class="flex-center flex-col cl-container">
-<div class="flex-center cl-title">
-<h3>
-Nous sommes reconnaissants de travailler avec des <span>clients incroyables</span>
-</h3>
-</div>
-
-<div class="flex-center cl-cards">
-<div class="flex-center clc">
-<img
-src="/public/img/clients/Bi.flaz/bif-1.png"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img
-src="/public/img/clients/studios-africa/sa-2.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img
-src="/public/img/clients/talenbo/tal-3.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img
-src="/public/img/clients/Bontuteur/bon-3.svg"
-alt=""
-loading="lazy"
-/>
-</div>
-
-<div class="flex-center clc">
-<img src="/public/img/clients/HEC/hec.png" alt="" loading="lazy" />
-</div>
-
-<div class="flex-center clc">
-<img src="/public/img/clients/hmc/hmc.png" alt="" loading="lazy" />
-</div>
-</div>
-</div>
-</section>
-
-<!------------ ========== FAQ SECTION ========== ------------>
-<%-include('components/faq-home')%>
-
-
-
-<!------------ ========== CONTACT SECTION ========== ------------>
-<%-include('components/contact-us')%>
-</main>
-
-<!-- <<<<<<<< FOOTER >>>>>>>> -->
-<%-include('components/footer')%>
-
-<!-- ============= [QUOTE MODAL] ============= -->
-<%-include('components/modal')%>
-
-
-
-
-<!-- <<<<<<<< SCRIPT >>>>>>>> -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-var items = document.querySelectorAll(".hctl");
-var currentIndex = 0;
-
-function showNextItem() {
-items[currentIndex].classList.remove("active");
-currentIndex = (currentIndex + 1) % items.length;
-items[currentIndex].classList.add("active");
-}
-
-setInterval(showNextItem, 3000); // Adjust the interval as needed (in milliseconds)
-});
-</script>
-
-<script src="/public/js/popup.js"></script>
-<script src="/public/js/index.js"></script>
-<script src="/public/js/modal.js"></script>
-<script src="/public/js/app.js"></script>
-<!-- ===== AOS (Animate On Scroll) =====-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-duration: 1500,
-anchor: "top center",
-});
-
-window.addEventListener("load", AOS.refresh);
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/loader.css" />
+    <link rel="stylesheet" href="/public/css/base.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/modal.css" />
+
+    <!-- ===== MATERIAL ICONS =====-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- ===== FAVICON =====-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/img/favicon/site.webmanifest" />
+
+    <title>
+      Alpha Yele: L'agence panafricaine Tech & Digital qui crée le futur!
+    </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body ng-controller="MainController">
+    <!-- <<<<<<<< HEADER >>>>>>>> -->
+    <%-include('components/header')%>
+
+    <main class="homepage-main">
+      <!------------ ========== HERO SECTION ========== ------------>
+      <section class="flex-center hero">
+        <div class="flex-center h-container">
+          <div class="flex-center flex-col h-content">
+            <div class="flex-center flex-col hc-title">
+              <h1>Atteignez vos objectifs</h1>
+
+              <ul class="hct-list">
+                <li class="hctl active">Vente</li>
+                <li class="hctl">Leads</li>
+                <li class="hctl">Notoriété</li>
+              </ul>
+            </div>
+
+            <p>
+              Chez Alpha Yele, nous sommes passionnés par le fait d'aider nos
+              clients à accéder et à créer des solutions qui leur permettent de
+              connecter avec leur public.
+            </p>
+
+            <div class="flex-center hc-btns">
+              <button onclick="window.location.href = 'team'">
+                Découvrir AlphaYele
+              </button>
+              <button onclick="toggleQuote()">
+                Commencer
+                <span class="material-symbols-outlined"> arrow_outward </span>
+              </button>
+            </div>
+
+            <div class="flex-center hc-partners">
+              <div class="flex-center hcp">
+                <img
+                  src="public/img/partners/google-partner-2.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex-center hcp">
+                <img
+                  src="public/img/partners/meta-business.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex-center hcp">
+                <img
+                  src="public/img/partners/alx-africa.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex-center hcp">
+                <img
+                  src="public/img/partners/ispring.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-center h-img" data-aos="fade-up">
+            <img
+              src="/public/img/background/hero-3.svg"
+              alt=""
+              loading="lazy"
+              class="himg"
+            />
+
+            <div class="flex-center hi">
+              <p>
+                L'agence <strong>panafricaine</strong> Tech & Digital qui crée
+                le futur!
+              </p>
+
+              <img
+                src="/public/img/brand/emblem-white.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== PARTNERS SECTION ========== ------------>
+      <section class="flex-center partners">
+        <div class="flex-center flex-col pa-container">
+          <div class="flex-center flex-col pa-title">
+            <h3>Nos partneres</h3>
+            <span></span>
+          </div>
+
+          <div class="flex-center pa-cards">
+            <div class="pac">
+              <img
+                src="/public/img/partners/google.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="pac">
+              <img src="/public/img/partners/meta.svg" alt="" loading="lazy" />
+            </div>
+            <div class="pac">
+              <img
+                src="/public/img/partners/amazon.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="pac">
+              <img
+                src="/public/img/partners/linkedin.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="pac">
+              <img
+                src="/public/img/partners/tiktok.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== ABOUT SECTION ========== ------------>
+      <section class="flex-center about" id="about">
+        <div class="flex-center flex-col a-container">
+          <div class="flex-center flex-col a-title">
+            <div class="flex-center at-tags">
+              <p>Qui</p>
+              <span class="material-symbols-outlined"> add </span>
+              <p>nous</p>
+              <span class="material-symbols-outlined"> add </span>
+              <p>sommes</p>
+            </div>
+
+            <div class="flex-center at-text" data-aos="fade-up">
+              <h3>
+                Notre équipe est composée de jeunes professionnels formés par
+                les meilleures universités (African Leadership University ou
+                Holberton School) et ayant acquis des expériences variées et
+                précieuses au sein d'entreprises mondiales (<a href="">Google</a
+                >, <a href="">Meta</a> ou <a href="">Mckinsey & Company</a>).
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex-center a-cards">
+            <div class="flex-center flex-col ac" data-aos="fade-up">
+              <span>01.</span>
+              <h4>
+                Votre objectif, <br />
+                notre guide
+              </h4>
+              <p>
+                Nous écoutons, définissons des objectifs et développons des
+                solutions sur mesure pour vous aider à les atteindre.
+              </p>
+            </div>
+
+            <div
+              class="flex-center flex-col ac"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <span>02.</span>
+              <h4>Collaboration et Innovation</h4>
+              <p>
+                Notre culture est motivée par la performance, la collaboration
+                et une recherche constante de l'innovation.
+              </p>
+            </div>
+
+            <div
+              class="flex-center flex-col ac"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <span>03.</span>
+              <h4>Autonomiser l’Afrique par la digitalisation</h4>
+              <p>
+                Nous visualisons un continent où chaque entreprise prospère en
+                ligne.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex-center a-stats" data-aos="fade-up">
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="200">200</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>PME/An</p>
+            </div>
+
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="500">500</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>projets livrés</p>
+            </div>
+
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <sub>$</sub>
+                <h4 class="count" data-target="100">30K</h4>
+                <sub>k+</sub>
+              </div>
+              <span></span>
+              <p>Budget média mensuel</p>
+            </div>
+
+            <div class="flex-center flex-col as">
+              <div class="flex-center as-no">
+                <h4 class="count" data-target="10">10</h4>
+                <sub>+</sub>
+              </div>
+              <span></span>
+              <p>Experts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== SERVICES SECTION ========== ------------>
+      <section class="flex-center services">
+        <div class="flex-center flex-col s-container">
+          <div class="flex-center s-title">
+            <div class="flex-center set-tags">
+              <div class="sett active">
+                <p>Marketing Digital</p>
+              </div>
+              <div class="sett">
+                <p>Technologie et IA</p>
+              </div>
+              <div class="sett">
+                <p>SMS Marketing</p>
+              </div>
+              <div class="sett">
+                <p>Cloud BackUp</p>
+              </div>
+              <div class="sett">
+                <p>Alpha Print</p>
+              </div>
+              <div class="sett">
+                <p>Alpha Influenceurs</p>
+              </div>
+              <div class="sett">
+                <p>Alpha Podcast Room</p>
+              </div>
+              <div class="sett">
+                <p>Alpha Academy</p>
+              </div>
+            </div>
+
+            <div class="flex-center st-link">
+              <button onclick="toggleQuote()">
+                Commencer
+                <span class="material-symbols-outlined"> arrow_right_alt </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-center s-main" data-aos="fade-up">
+            <div class="flex-center flex-col sm active">
+              <div class="flex-center sm-title">
+                <h3>Marketing Digital</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/Marketing-Digital.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Stratégie digitale, Création de contenu, Gestion des réseaux
+                    sociaux, Optimisation : Confiez votre présence digitale à
+                    des consultants expérimentés. Ensemble, atteignons vos
+                    objectifs et développons votre entreprise.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>100<span>+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>PME/Mois</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>
+                        4.8/5
+                        <span class="material-symbols-outlined"> star </span>
+                      </h4>
+                      <span id="smcs-line"></span>
+                      <p>Avis</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>3<span>x</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Bénéfices</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'dm'"
+                  >
+                    En savoir plus
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>Technologie et IA</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/Technologie-Ai.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Site Internet, Applications, Logiciels d'automatisation,
+                    collecte et analyse de données : Nos solutions sur mesure
+                    vous aideront à atteindre vos objectifs.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>30<span>+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Website/Mois</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>
+                        20
+                        <span>+</span>
+                      </h4>
+                      <span id="smcs-line"></span>
+                      <p>Solutions basées sur l'IA</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>70<span>+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Systèmes automatisés</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'ita'"
+                  >
+                    Découvrir
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>SMS Marketing</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/sms.jpg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Nos experts copywriters et magnats du marketing vous guident
+                    dans la création de messages engageants, personnalisés et
+                    efficaces. Nous le faisons pour plus de 100 PME/mois, vous
+                    pouvez aussi en profiter.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>99<span>%</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Taux d'ouverture</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>
+                        4.8/5
+                        <span>⭐</span>
+                      </h4>
+                      <span id="smcs-line"></span>
+                      <p>Avis</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>999<span>k</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>SMS délivrés</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'sms'"
+                  >
+                    Envoyer des SMS
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>Cloud Backup</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/cloud-backup.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    En tant qu'entrepreneurs aussi, nous comprenons l'inquiétude
+                    constante concernant la sécurité des données et le fardeau
+                    des sauvegardes manuelles. C'est pourquoi nous avons créé
+                    une solution de sauvegarde cloud spécialement conçue pour
+                    vous.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>300<span>+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Clients/An</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>
+                        99.9
+                        <span>%</span>
+                      </h4>
+                      <span id="smcs-line"></span>
+                      <p>Données récupérées</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>100<span>%</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Sécurité</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'cloud'"
+                  >
+                    Sécuriser vos données
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>Alpha Print</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/Alpha-Print.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Si vous pouvez l'imaginer, nous pouvons le concevoir et le
+                    mettre à votre disposition sur n'importe quel support
+                    physique.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>500<span>+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Projets livrés</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>
+                        5/5
+                        <span class="material-symbols-outlined"> star </span>
+                      </h4>
+                      <span id="smcs-line"></span>
+                      <p>Avis</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>90<span>%</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Clients récurrents</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'ap'"
+                  >
+                    En savoir plus
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>Alpha Influenceurs</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/Alpha-Influencers.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Externalisez vos campagnes d’influence avec succès! De la
+                    sélection des influenceurs au reporting des résultats, nous
+                    nous occupons de tout.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>15<span>K+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Créateurs</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>1<span>M+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Engagements</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>500<span>K+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Ventes</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'ai'"
+                  >
+                    Réservez votre créateur
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>Alpha Podcast Room</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/Podcast-Room.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Prêt à transformer vos rêves de podcast en réalité? Alpha
+                    Podcast Room est votre spot unique pour les services
+                    professionnels d’enregistrement, d’édition et de marketing.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>4<span>+</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Différents Set</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>One</h4>
+                      <span id="smcs-line"></span>
+                      <p>Équipe de rêve</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>100<span>%</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Clients satisfaits</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'pr'"
+                  >
+                    En savoir plus
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col sm">
+              <div class="flex-center sm-title">
+                <h3>Alpha Academy</h3>
+
+                <div class="flex-center smt-img">
+                  <img
+                    src="/public/img/brand/emblem-black.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-center sm-content">
+                <div class="flex-center smc-img">
+                  <img
+                    src="/public/img/services/Alpha-Academie.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="flex-center flex-col smc-text">
+                  <p>
+                    Boostez vos collaborateurs avec les compétences digitales
+                    d’aujourd’hui et de demain! Nous dotons les auditeurs de
+                    compétences en Web, Word, PowerPoint, Excel,, Vente,
+                    Marketing , Création de contenu et Intelligence
+                    Artificielle.
+                  </p>
+
+                  <div class="flex-center smc-stats">
+                    <div class="flex-center flex-col smcs">
+                      <h4>5<span>K</span></h4>
+                      <span id="smcs-line"></span>
+                      <p>Auditeurs</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>25</h4>
+                      <span id="smcs-line"></span>
+                      <p>Experts</p>
+                    </div>
+
+                    <div class="flex-center flex-col smcs">
+                      <h4>
+                        4.9/5<span class="material-symbols-outlined">
+                          star
+                        </span>
+                      </h4>
+                      <span id="smcs-line"></span>
+                      <p>Avis</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="flex-center smc-btn"
+                    onclick="window.location.href = 'aa'"
+                  >
+                    Commencer
+                    <span class="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-center s-header">
+          <div class="flex-center sh">
+            <p>Marketing Digital</p>
+            <i class="bx bxs-circle"></i>
+            <p>Technologie et IA</p>
+            <i class="bx bxs-circle"></i>
+            <p>Alpha Print</p>
+            <i class="bx bxs-circle"></i>
+          </div>
+
+          <div class="flex-center sh">
+            <p>Alpha Influenceurs</p>
+            <i class="bx bxs-circle"></i>
+            <p>Alpha Podcast Room</p>
+            <i class="bx bxs-circle"></i>
+            <p>Alpha Academy</p>
+            <i class="bx bxs-circle"></i>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== STEPS SECTION ========== ------------>
+      <section class="flex-center steps">
+        <div class="flex-center flex-col st-container">
+          <div class="flex-center st-title">
+            <h3>Votre projet en <span>3 étapes</span></h3>
+
+            <div class="flex-center stt">
+              <p>Projet ponctuel</p>
+            </div>
+          </div>
+
+          <div class="flex-center stm">
+            <div class="flex-center flex-col stmc">
+              <span>Etape 01.</span>
+
+              <div class="flex-center stmc-text">
+                <p>Passez votre commande et payez</p>
+              </div>
+
+              <div class="flex-center stmc-btn">
+                <button onclick="toggleQuote()">Commencer un projet</button>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col stmc">
+              <span>Etape 02.</span>
+
+              <div class="flex-center stmc-text">
+                <p>Remplissez le formulaire de détails du projet</p>
+              </div>
+
+              <div class="flex-center stmc-btn">
+                <button onclick="toggleQuote()">Commencer un projet</button>
+              </div>
+            </div>
+
+            <div class="flex-center flex-col stmc">
+              <span>Etape 03.</span>
+
+              <div class="flex-center stmc-text">
+                <p>Livraison du produit final</p>
+              </div>
+
+              <div class="flex-center stmc-btn">
+                <button onclick="toggleQuote()">Commencer un projet</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== CLIENT SECTION ========== ------------>
+      <section class="flex-center client">
+        <div class="flex-center flex-col cl-container">
+          <div class="flex-center cl-title">
+            <h3>
+              Nous sommes reconnaissants de travailler avec des
+              <span>clients incroyables</span>
+            </h3>
+          </div>
+
+          <div class="flex-center cl-cards">
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/Bi.flaz/bif-1.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/studios-africa/sa-2.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/talenbo/tal-3.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/Bontuteur/bon-3.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/HEC/hec.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/hmc/hmc.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------ ========== FAQ SECTION ========== ------------>
+      <%-include('components/faq-home')%>
+
+      <!------------ ========== CONTACT SECTION ========== ------------>
+      <%-include('components/contact-us')%>
+    </main>
+
+    <!-- <<<<<<<< FOOTER >>>>>>>> -->
+    <%-include('components/footer')%>
+
+    <!-- ============= [QUOTE MODAL] ============= -->
+    <%-include('components/modal')%>
+
+    <!-- <<<<<<<< SCRIPT >>>>>>>> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var items = document.querySelectorAll(".hctl");
+        var currentIndex = 0;
+
+        function showNextItem() {
+          items[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex + 1) % items.length;
+          items[currentIndex].classList.add("active");
+        }
+
+        setInterval(showNextItem, 3000); // Adjust the interval as needed (in milliseconds)
+      });
+    </script>
+
+    <script src="/public/js/popup.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/public/js/modal.js"></script>
+    <script src="/public/js/app.js"></script>
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        anchor: "top center",
+      });
+
+      window.addEventListener("load", AOS.refresh);
+    </script>
+  </body>
 </html>

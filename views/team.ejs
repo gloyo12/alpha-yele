@@ -1,453 +1,482 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
 
-<!-- CSS -->
-<link rel="stylesheet" href="/public/css/loader.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<link rel="stylesheet" href="/public/css/base.css" />
-<link rel="stylesheet" href="/public/css/style.css" />
-<link rel="stylesheet" href="/public/css/modal.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/loader.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/public/css/base.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/modal.css" />
 
-<!-- ===== MATERIAL ICONS =====-->
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
+    <!-- ===== MATERIAL ICONS =====-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
-<!-- ===== BOXICONS =====-->
-<link
-href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-rel="stylesheet"
-/>
+    <!-- ===== BOXICONS =====-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-<!-- ===== AOS (Animate On Scroll) =====-->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<!-- ===== FAVICON =====-->
-<link
-rel="apple-touch-icon"
-sizes="180x180"
-href="/public/img/favicon/apple-touch-icon.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="32x32"
-href="/public/img/favicon/favicon-32x32.png"
-/>
-<link
-rel="icon"
-type="image/png"
-sizes="16x16"
-href="/public/img/favicon/favicon-16x16.png"
-/>
-<link rel="manifest" href="/public/img/favicon/site.webmanifest" />
+    <!-- ===== FAVICON =====-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/img/favicon/site.webmanifest" />
 
-<title>The Team - Alpha Creative</title>
-</head>
+    <title>The Team - Alpha Creative</title>
+  </head>
 
-<body ng-controller="MainController">
+  <body ng-controller="MainController">
+    <!-- <<<<<<<< HEADER >>>>>>>> -->
+    <%-include('components/header')%>
 
-<!-- <<<<<<<< HEADER >>>>>>>> -->
-<%-include('components/header')%>
+    <main class="team-main">
+      <!------------ ========== AERO SECTION ========== ------------>
+      <section class="flex-center aero">
+        <div class="flex-center ae-container" data-aos="fade-up">
+          <div class="flex-center ae-content">
+            <h1>
+              Nous sommes des Alphas <span>au service</span> de nos
+              collaborateurs, partenaires et clients.
+            </h1>
 
+            <span class="material-symbols-outlined" id="ae-arrow">
+              arrow_outward
+            </span>
+          </div>
+        </div>
+      </section>
 
-<main class="team-main">
-<!------------ ========== AERO SECTION ========== ------------>
-<section class="flex-center aero">
-<div class="flex-center ae-container" data-aos="fade-up">
-<div class="flex-center ae-content">
-<h1>
-Nous sommes des Alphas <span>au service</span> de nos collaborateurs, partenaires et clients.
-</h1>
+      <!------------ ========== A-ABOUT SECTION ========== ------------>
+      <section class="flex-center a-about">
+        <div class="flex-center flex-col aa-container">
+          <div class="flex-center flex-col aa-title">
+            <h3>En savoir plus sur AlphaYele</h3>
 
-<span class="material-symbols-outlined" id="ae-arrow">
-arrow_outward
-</span>
-</div>
-</div>
-</section>
+            <div class="flex-center aat">
+              <p>Mission</p>
+              <span class="material-symbols-outlined"> add </span>
+              <p>Vision</p>
+              <span class="material-symbols-outlined"> add </span>
+              <p>Culture</p>
+            </div>
+          </div>
 
-<!------------ ========== A-ABOUT SECTION ========== ------------>
-<section class="flex-center a-about">
-<div class="flex-center flex-col aa-container">
-<div class="flex-center flex-col aa-title">
-<h3>En savoir plus sur AlphaYele</h3>
+          <div class="flex-center aa-about">
+            <div class="aaa" data-aos="fade-up">
+              <p>Notre mission</p>
+              <span
+                >Aider nos partenaires à réaliser leurs objectifs de leads,
+                vente et notoriété.</span
+              >
+            </div>
 
-<div class="flex-center aat">
-<p>Mission</p>
-<span class="material-symbols-outlined"> add </span>
-<p>Vision</p>
-<span class="material-symbols-outlined"> add </span>
-<p>Culture</p>
-</div>
-</div>
+            <div class="aaa" data-aos="fade-up" data-aos-delay="300">
+              <p>Notre Vision</p>
+              <span
+                >Des Alphas qui aspirent à avoir un impact positif sur nos
+                collaborateurs, partenaires et clients.</span
+              >
+            </div>
 
-<div class="flex-center aa-about">
-<div class="aaa" data-aos="fade-up">
-<p>Notre mission</p>
-<span
->Aider nos partenaires à réaliser leurs objectifs de leads, vente et notoriété.</span
->
-</div>
+            <div class="aaa" data-aos="fade-up" data-aos-delay="400">
+              <p>Culture</p>
+              <span>Empathie - Collaboration - Performance</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="aaa" data-aos="fade-up" data-aos-delay="300">
-<p>Notre Vision</p>
-<span
->Des Alphas qui aspirent à avoir un impact positif sur nos collaborateurs, partenaires et clients.</span
->
-</div>
+      <!------------ ========== A-TEAM SECTION ========== ------------>
+      <section class="flex-center a-team">
+        <div class="flex-center flex-col ate-container">
+          <div class="flex-center flex-col ate-title">
+            <h3>
+              Nous apportons une <span>riche expérience</span> issue d'un large
+              éventail d'horizons
+            </h3>
+            <p>
+              Nous sommes constitués de professionnels formés par des experts et
+              possédant une expérience inestimable dans des entreprises
+              mondiales (Google, Meta ou Mckinsey & Company). Notre philosophie
+              est simple : embaucher des gens formidables et leur donner les
+              ressources et le soutien dont ils ont besoin pour devenir la
+              meilleure version d'eux-mêmes.
+            </p>
+          </div>
 
-<div class="aaa" data-aos="fade-up" data-aos-delay="400">
-<p>Culture</p>
-<span>Empathie - Collaboration - Performance</span>
-</div>
-</div>
-</div>
-</section>
+          <div class="flex-center ate-cards" data-aos="fade-up">
+            <div class="flex-center flex-col atec">
+              <div class="flex-center atec-img">
+                <img
+                  src="/public/img/profile/ibrahima.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
 
-<!------------ ========== A-TEAM SECTION ========== ------------>
-<section class="flex-center a-team">
-<div class="flex-center flex-col ate-container">
-<div class="flex-center flex-col ate-title">
-<h3>
-Nous apportons une <span>riche expérience</span> issue d'un large éventail d'horizons
-</h3>
-<p>
-Nous sommes constitués de professionnels formés par des experts et possédant une expérience inestimable dans des entreprises mondiales (Google, Meta ou Mckinsey & Company).  Notre philosophie est simple : embaucher des gens formidables et leur donner les ressources et le soutien dont ils ont besoin pour devenir la meilleure version d'eux-mêmes.
-</p>
-</div>
+              <div class="flex-center flex-col atec-text">
+                <p>Ibrahima Sylla</p>
+                <span>Co-Founder & Business Lead</span>
+                <a
+                  href="https://www.linkedin.com/in/ibrahima-sylla/"
+                  target="_blank"
+                  >Say Hi 👋</a
+                >
+              </div>
+            </div>
 
-<div class="flex-center ate-cards" data-aos="fade-up">
-<div class="flex-center flex-col atec">
-<div class="flex-center atec-img">
-<img
-src="/public/img/profile/ibrahima.png"
-alt=""
-loading="lazy"
-/>
-</div>
+            <div class="flex-center flex-col atec">
+              <div class="flex-center atec-img">
+                <img src="/public/img/profile/ebo.jpeg" alt="" loading="lazy" />
+              </div>
 
-<div class="flex-center flex-col atec-text">
-<p>Ibrahima Sylla</p>
-<span>Co-Founder & Business Lead</span>
-<a
-href="https://www.linkedin.com/in/ibrahima-sylla/"
-target="_blank"
->Say Hi 👋</a
->
-</div>
-</div>
+              <div class="flex-center flex-col atec-text">
+                <p>Amichia Ebo</p>
+                <span>Co-founder & Operations Lead</span>
+                <a
+                  href="https://www.linkedin.com/in/amichia-ebo-b170a7133/"
+                  target="_blank"
+                  >Say Hi 👋</a
+                >
+              </div>
+            </div>
 
-<div class="flex-center flex-col atec">
-<div class="flex-center atec-img">
-<img src="/public/img/profile/ebo.jpeg" alt="" loading="lazy" />
-</div>
+            <div class="flex-center flex-col atec">
+              <div class="flex-center atec-img">
+                <img
+                  src="/public/img/profile/Yacine.jpeg"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
 
-<div class="flex-center flex-col atec-text">
-<p>Amichia Ebo</p>
-<span>Co-founder & Operations Lead</span>
-<a
-href="https://www.linkedin.com/in/amichia-ebo-b170a7133/"
-target="_blank"
->Say Hi 👋</a
->
-</div>
-</div>
+              <div class="flex-center flex-col atec-text">
+                <p>Yacine Coulibaly</p>
+                <span>People & Culture Lead</span>
+                <a
+                  href="https://www.linkedin.com/in/yacine-coulibaly-0a7500174/"
+                  target="_blank"
+                  >Say Hi 👋</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="flex-center flex-col atec">
-<div class="flex-center atec-img">
-<img
-src="/public/img/profile/Yacine.jpeg"
-alt=""
-loading="lazy"
-/>
-</div>
+      <!------------ ========== A-JOIN SECTION ========== ------------>
+      <section class="flex-center a-join">
+        <div class="flex-center flex-col aj-container">
+          <div class="flex-center flex-col aj-title">
+            <h3>Êtes-vous le prochain <span>Alpha</span>? Nous recrutons !</h3>
+            <p>
+              Nous croyons en un continent où chaque PME a une présence en ligne
+              qui correspond à ses valeurs et à ses objectifs. Êtes-vous prêt à
+              nous rejoindre ?
+            </p>
 
-<div class="flex-center flex-col atec-text">
-<p>Yacine Coulibaly</p>
-<span>People & Culture Lead</span>
-<a
-href="https://www.linkedin.com/in/yacine-coulibaly-0a7500174/"
-target="_blank"
->Say Hi 👋</a
->
-</div>
-</div>
-</div>
-</div>
-</section>
+            <button
+              class="ajt-btn"
+              onclick="window.location.href='https://app.dover.io/AlphaYele/careers/7e54fe3a-6581-436e-8f23-00bb41877073'"
+            >
+              Consulter nos offres d'emploi
+            </button>
+          </div>
 
-<!------------ ========== A-JOIN SECTION ========== ------------>
-<section class="flex-center a-join">
-<div class="flex-center flex-col aj-container">
-<div class="flex-center aj-title">
-<h3>
-Êtes-vous le prochain <span>Alpha</span>? Nous vous voulons
-</h3>
-<p>
-Si vous pensez correspondre parfaitement à notre équipe, nous serions ravis de vous entendre. Si vous ne trouvez pas de poste idéal, vous pouvez nous envoyer un mail à <a href="mailto:talent@alphayele.com">talent@alphayele.com</a> avec votre CV, votre portfolio (le cas échéant) et pourquoi vous aimeriez rejoindre notre équipe. Hâte d'avoir de vos nouvelles!
-</p>
-</div>
+          <div class="flex-center flex-col aj-list">
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+            >
+              <h4>Développeur web Full Stack</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div class="flex-center flex-col aj-list">
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
->
-<h4>Développeur web Full Stack</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <h4>UI/UX Designer</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="300"
->
-<h4>UI/UX Designer</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <h4>Graphic Designer</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="400"
->
-<h4>Graphic Designer</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4>Business Developer</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="500"
->
-<h4>Business Developer</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4>Demand Generator</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="500"
->
-<h4>Demand Generator</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4>Performance Manager</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="500"
->
-<h4>Performance Manager</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4>Account Manager</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="500"
->
-<h4>Account Manager</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4>Formateur Marketing Digital</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="500"
->
-<h4>Formateur Marketing Digital</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
+            <div
+              class="ajl"
+              onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4>Formateur Informatique & IA</h4>
+              <p>Remote - Full Time</p>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div
-class="ajl"
-onclick="redirectToLink('https://alphacreative.typeform.com/recrute')"
-data-aos="fade-up"
-data-aos-delay="500"
->
-<h4>Formateur Informatique & IA</h4>
-<p>Remote - Full Time</p>
-<span class="material-symbols-outlined"> arrow_outward </span>
-</div>
-</div>
-</div>
-</section>
+      <!------------ ========== A-WHY SECTION ========== ------------>
+      <section class="flex-center a-why">
+        <div class="flex-center flex-col aw-container">
+          <div class="flex-center flex-col aw-title">
+            <h3>Nos <span>Avantages</span> et Perk</h3>
+            <p>
+              Notre philosophie est simple ; Embauchez des gens formidables et
+              donnez-leur le ressources et soutien pour faire de leur mieux.
+            </p>
+          </div>
 
-<!------------ ========== A-WHY SECTION ========== ------------>
-<section class="flex-center a-why">
-<div class="flex-center flex-col aw-container">
-<div class="flex-center flex-col aw-title">
-<h3>Nos <span>Avantages</span> et Perk</h3>
-<p>
-Notre philosophie est simple ; Embauchez des gens formidables et donnez-leur le
-ressources et soutien pour faire de leur mieux.
-</p>
-</div>
+          <div class="flex-center aw-cards" data-aos="fade-up">
+            <div class="flex-center flex-col awc">
+              <p>Carrière Dev personnalisé</p>
+              <span
+                >Qu'il s'agisse de promotion, de mobilité interne ou de
+                mentorat, notre équipe People & Operations veille à ce que
+                chaque AlphaMate dispose d'un plan de développement de carrière
+                personnalisé.</span
+              >
+            </div>
 
-<div class="flex-center aw-cards" data-aos="fade-up">
-<div class="flex-center flex-col awc">
-<p>Carrière Dev personnalisé</p>
-<span
->Qu'il s'agisse de promotion, de mobilité interne ou de mentorat, notre équipe People & Operations veille à ce que chaque AlphaMate dispose d'un plan de développement de carrière personnalisé.</span
->
-</div>
+            <div class="flex-center flex-col awc">
+              <p>Welcome Pack</p>
+              <span
+                >Ordinateur dernière génération (Mac ou PC) selon le rôle,
+                goodies Alpha & Onboarding Lunch.</span
+              >
+            </div>
 
-<div class="flex-center flex-col awc">
-<p>Welcome Pack </p>
-<span
->Ordinateur dernière génération (Mac ou PC) selon le rôle, goodies Alpha & Onboarding Lunch.</span
->
-</div>
+            <div class="flex-center flex-col awc">
+              <p>Formation Continue</p>
+              <span
+                >Tous les AlphaMates (y compris les co-fondateurs) doivent
+                suivre un programme de formation obligatoire chaque trimestre
+                pour se perfectionner, car nous pensons que la croissance est un
+                processus sans fin.</span
+              >
+            </div>
 
-<div class="flex-center flex-col awc">
-<p>Formation Continue</p>
-<span
->Tous les AlphaMates (y compris les co-fondateurs) doivent suivre un programme de formation obligatoire chaque trimestre pour se perfectionner, car nous pensons que la croissance est un processus sans fin.</span
->
-</div>
+            <div class="flex-center flex-col awc">
+              <p>Team Remote ou Office?</p>
+              <span
+                >En vrai, ça dépend de vous! Peu importe d’où vous travaillez,
+                ce qui compte pour nous c’est votre capacité à avoir un impact
+                positif sur vos collègues, nos partenaires et nos clients.</span
+              >
+            </div>
 
-<div class="flex-center flex-col awc">
-<p>Team Remote ou Office?</p>
-<span
->En vrai, ça dépend de vous! Peu importe d’où vous travaillez, ce qui compte pour nous c’est votre capacité à avoir un impact positif sur vos collègues, nos partenaires et nos clients.</span
->
-</div>
+            <div class="flex-center flex-col awc">
+              <p>Crédits: Salle de sport & Spa</p>
+              <span
+                >Nous offrons des crédits (AlphaPass) qui permettent à chaque
+                AlphaMate de se faire rembourser jusqu'à 80% de leurs frais de
+                Gym, Massage & Transport.</span
+              >
+            </div>
 
-<div class="flex-center flex-col awc">
-<p>Crédits: Salle de sport & Spa</p>
-<span
->Nous offrons des crédits (AlphaPass) qui permettent à chaque AlphaMate de se faire rembourser jusqu'à 80% de leurs frais de Gym, Massage & Transport.</span
->
-</div>
+            <div class="flex-center flex-col awc">
+              <p>Prime de performance</p>
+              <span
+                >En plus d'un salaire compétitif et des avantages ci-dessus,
+                tous les AlphaMates ont droit à des primes trimestrielles basées
+                sur leurs performances.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="flex-center flex-col awc">
-<p>Prime de performance</p>
-<span
->En plus d'un salaire compétitif et des avantages ci-dessus, tous les AlphaMates ont droit à des primes trimestrielles basées sur leurs performances.</span
->
-</div>
-</div>
-</div>
-</section>
+      <!------------ ========== CLIENT SECTION ========== ------------>
+      <section class="flex-center client">
+        <div class="flex-center flex-col cl-container">
+          <div class="flex-center cl-title">
+            <h3>
+              Nous sommes reconnaissants de travailler avec des
+              <span>clients incroyables</span>
+            </h3>
+          </div>
 
-<!------------ ========== CLIENT SECTION ========== ------------>
-<section class="flex-center client">
-<div class="flex-center flex-col cl-container">
-<div class="flex-center cl-title">
-<h3>
-Nous sommes reconnaissants de travailler avec des <span>clients incroyables</span>
-</h3>
-</div>
+          <div class="flex-center cl-cards">
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/Bi.flaz/bif-1.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<div class="flex-center cl-cards">
-<div class="flex-center clc">
-<img
-src="/public/img/clients/Bi.flaz/bif-1.png"
-alt=""
-loading="lazy"
-/>
-</div>
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/studios-africa/sa-2.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<div class="flex-center clc">
-<img
-src="/public/img/clients/studios-africa/sa-2.svg"
-alt=""
-loading="lazy"
-/>
-</div>
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/talenbo/tal-3.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<div class="flex-center clc">
-<img
-src="/public/img/clients/talenbo/tal-3.svg"
-alt=""
-loading="lazy"
-/>
-</div>
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/Bontuteur/bon-3.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<div class="flex-center clc">
-<img
-src="/public/img/clients/Bontuteur/bon-3.svg"
-alt=""
-loading="lazy"
-/>
-</div>
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/HEC/hec.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
 
-<div class="flex-center clc">
-<img src="/public/img/clients/HEC/hec.png" alt="" loading="lazy" />
-</div>
+            <div class="flex-center clc">
+              <img
+                src="/public/img/clients/hmc/hmc.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="flex-center clc">
-<img src="/public/img/clients/hmc/hmc.png" alt="" loading="lazy" />
-</div>
-</div>
-</div>
-</section>
+      <!------------ ========== FAQ SECTION ========== ------------>
+      <%-include('components/faq-home')%>
 
-<!------------ ========== FAQ SECTION ========== ------------>
-<%-include('components/faq-home')%>
+      <!------------ ========== CONTACT SECTION ========== ------------>
+      <%-include('components/contact-us')%>
+    </main>
 
-<!------------ ========== CONTACT SECTION ========== ------------>
-<%-include('components/contact-us')%>
-</main>
+    <!-- <<<<<<<< FOOTER >>>>>>>> -->
+    <%-include('components/footer')%>
 
+    <!-- ============= [QUOTE MODAL] ============= -->
+    <%-include('components/modal')%>
 
+    <!-- <<<<<<<< SCRIPT >>>>>>>> -->
+    <script>
+      // JavaScript function to open the link in a new tab
+      function redirectToLink(url) {
+        window.open(url, "_blank"); // Open the specified URL in a new tab
+      }
+    </script>
 
+    <script src="/public/js/popup.js"></script>
+    <script src="/public/js/app.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/public/js/modal.js"></script>
+    <!-- ===== AOS (Animate On Scroll) =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        anchor: "top center",
+      });
 
-<!-- <<<<<<<< FOOTER >>>>>>>> -->
-<%-include('components/footer')%>
-
-<!-- ============= [QUOTE MODAL] ============= -->
-<%-include('components/modal')%>
-
-
-
-
-<!-- <<<<<<<< SCRIPT >>>>>>>> -->
-<script>
-// JavaScript function to open the link in a new tab
-function redirectToLink(url) {
-window.open(url, "_blank"); // Open the specified URL in a new tab
-}
-</script>
-
-
-<script src="/public/js/popup.js"></script>
-<script src="/public/js/app.js"></script>
-<script src="/public/js/index.js"></script>
-<script src="/public/js/modal.js"></script>
-<!-- ===== AOS (Animate On Scroll) =====-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-duration: 1500,
-anchor: "top center",
-});
-
-window.addEventListener("load", AOS.refresh);
-</script>
-</body>
+      window.addEventListener("load", AOS.refresh);
+    </script>
+  </body>
 </html>
